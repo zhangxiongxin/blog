@@ -5,21 +5,22 @@
   
 
   
-  <title>柯里化 | Hexo</title>
+  <title>柯里化 | Enchanter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="柯里化什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
+  <meta name="description" content="什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。   1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
+<meta name="keywords" content="javascript进阶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="柯里化">
 <meta property="og:url" content="http://yoursite.com/2019/07/23/柯里化/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="柯里化什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
+<meta property="og:site_name" content="Enchanter">
+<meta property="og:description" content="什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。   1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-23T09:58:10.317Z">
+<meta property="og:updated_time" content="2019-07-23T10:11:39.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="柯里化">
-<meta name="twitter:description" content="柯里化什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
+<meta name="twitter:description" content="什么是柯里化？把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。   1234567891011121314// 普通的add函数function add(x, y) &amp;#123;    return x + y&amp;#125;// Currying后function curryingAdd(x) &amp;#123;    retur">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Enchanter" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,7 +39,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Enchanter</a>
       </h1>
       
     </div>
@@ -70,6 +71,10 @@
   <time datetime="2019-07-23T08:44:48.896Z" itemprop="datePublished">2019-07-23</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -86,7 +91,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="柯里化"><a href="#柯里化" class="headerlink" title="柯里化"></a>柯里化</h3><h4 id="什么是柯里化？"><a href="#什么是柯里化？" class="headerlink" title="什么是柯里化？"></a>什么是柯里化？</h4><h5 id="把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。"><a href="#把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。" class="headerlink" title="把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。"></a>把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通的add函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Currying后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingAdd</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">y</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>)           <span class="comment">// 3</span></span><br><span class="line">curryingAdd(<span class="number">1</span>)(<span class="number">2</span>)   <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+        <h4 id="什么是柯里化？"><a href="#什么是柯里化？" class="headerlink" title="什么是柯里化？"></a>什么是柯里化？</h4><blockquote><p>把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。</p>
+</blockquote>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通的add函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Currying后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingAdd</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">y</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>)           <span class="comment">// 3</span></span><br><span class="line">curryingAdd(<span class="number">1</span>)(<span class="number">2</span>)   <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="柯里化的好处"><a href="#柯里化的好处" class="headerlink" title="柯里化的好处"></a>柯里化的好处</h4><ol>
 <li>参数复用</li>
@@ -102,6 +110,8 @@
       <a data-url="http://yoursite.com/2019/07/23/柯里化/" data-id="cjyfmy9590000s0vhxitbuuf6" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript进阶/">javascript进阶</a></li></ul>
+
     </footer>
   </div>
   
@@ -114,12 +124,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript进阶/">javascript进阶</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/javascript进阶/" style="font-size: 10px;">javascript进阶</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -153,7 +184,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2019 xcool<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
