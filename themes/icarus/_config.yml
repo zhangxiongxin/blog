@@ -131,7 +131,7 @@ widgets:
         # Author's current location to be shown in the profile widget
         location: http://www.enchanter.tech
         # Path or URL to the avatar to be shown in the profile widget
-        avatar: https://ws2.sinaimg.cn/large/0067tbKZgy1g6j281yfbqj30ox0oxq41.jpg
+        avatar: 
         # Email address for the Gravatar to be shown in the profile widget
         gravatar: 
         # Whether to show avatar image rounded or square
