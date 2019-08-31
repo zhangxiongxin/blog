@@ -1,0 +1,2907 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Catégorie: 重学前端 - Enchanter</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Enchanter">
+<meta property="og:url" content="http://yoursite.com/categories/重学前端/page/2/index.html">
+<meta property="og:site_name" content="Enchanter">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enchanter">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Enchanter" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Catégories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">重学前端</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:18.317Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    15 minutes read (About 2208 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/CSS Flex排版：为什么垂直居中这么难？/">CSS Flex排版：为什么垂直居中这么难？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。今天我们来谈谈Flex排版。</p>
+<p>我们在前面多次讲过，正常流排版的设计来源于数百年来出版行业的排版经验，而HTML诞生之初，也确实是作为一种“超文本”存在的。</p>
+<p>但是，自上世纪90年代以来，Web标准和各种Web应用蓬勃发展，网页的功能逐渐从“文本信息”向着“软件功能”过渡，这个思路的变化导致了：CSS的正常流逐渐不满足人民群众的需求了。</p>
+<p>这是因为文字排版的思路是“改变文字和盒的相对位置，把它放进特定的版面中”，而软件界面的思路则是“改变盒的大小，使得它们的结构保持固定”。</p>
+<p>因此，在早年的CSS中，“使盒按照外部尺寸变化”的能力非常弱。在我入行前端的时间（大约2006年），CSS三大经典问题：垂直居中问题，两列等高问题，自适应宽问题。这是在其它UI系统中最为基本的问题，而到了CSS中，却变成了困扰工程师的三座大山。</p>
+<p>机智的前端开发者们，曾经创造了各种黑科技来解决问题，包括著名的table布局、负margin、float与clear等等。在这种情况下，Flex布局被随着CSS3一起提出（最初叫box布局），可以说是解决了大问题。</p>
+<p>React Native则更为大胆地使用了纯粹的Flex排版，不再支持正常流，最终也很好地支持了大量的应用界面布局，这一点也证明了Flex排版的潜力。</p>
+<p>今天，我们就从设计、原理和应用三个方面来学习一下Flex布局，我们先从设计开始。</p>
+<h2 id="Flex的设计"><a href="#Flex的设计" class="headerlink" title="Flex的设计"></a>Flex的设计</h2><p>Flex在英文中是可伸缩的意思，一些翻译会把它译作弹性，我觉得有点不太准确，但是确实中文中没有更好的词。</p>
+<p>Flex排版的核心是display:flex和flex属性，它们配合使用。具有display:flex的元素我们称为flex容器，它的子元素或者盒被称作flex项。</p>
+<p>flex项如果有flex属性，会根据flex方向代替宽/高属性，形成“填补剩余尺寸”的特性，这是一种典型的“根据外部容器决定内部尺寸”的思路，也是我们最常用的Windows和Apple窗口系统的设计思路。</p>
+<h2 id="Flex的原理"><a href="#Flex的原理" class="headerlink" title="Flex的原理"></a>Flex的原理</h2><p>说完了设计，我们再来看看原理，Flex的实现并不复杂，我曾经写过一个基本实现提交给spritejs项目，代码可以<a href="https://github.com/spritejs/sprite-core/commit/8757b4d3888b4f237b1089e94e075ab58ca952a6#diff-677d382da9f8d81f61d50af24f937b32R32" target="_blank" rel="noopener">参考这里</a>。</p>
+<p>下面我们就来讲解一下，如何实现一个Flex布局。</p>
+<p>首先，Flex布局支持横向和纵向，这样我们就需要做一个抽象，我们把Flex延伸的方向称为“主轴”，把跟它垂直的方向称为“交叉轴”。这样，flex项中的width和height就会称为交叉轴尺寸或者主轴尺寸。</p>
+<p>而Flex又支持反向排布，这样，我们又需要抽象出交叉轴起点、交叉轴终点、主轴起点、主轴终点，它们可能是top、left、bottom、right。</p>
+<p>Flex布局中有一种特殊的情况，那就是flex容器没有被指定主轴尺寸，这个时候，实际上Flex属性完全没有用了，所有Flex尺寸都可以被当做0来处理，Flex容器的主轴尺寸等于其它所有flex项主轴尺寸之和。</p>
+<p>接下来我们开始做Flex排版。</p>
+<p><strong>第一步是把flex项分行，有flex属性的flex项可以暂且认为主轴尺寸为0，所以，它可以一定放进当前行。</strong></p>
+<p>接下来我们把flex项逐个放入行，不允许换行的话，我们就“无脑地”把flex项放进同一行。允许换行的话，我们就先设定主轴剩余空间为Flex容器主轴尺寸，每放入一个就把主轴剩余空间减掉它的主轴尺寸，直到某个flex项放不进去为止，换下一行，重复前面动作。</p>
+<p>分行过程中，我们会顺便对每一行计算两个属性：交叉轴尺寸和主轴剩余空间，交叉轴尺寸是本行所有交叉轴尺寸的最大值，而主轴剩余空间前面已经说过。</p>
+<p><strong>第二步我们来计算每个flex项主轴尺寸和位置。</strong></p>
+<p>如果Flex容器是不允许换行的，并且最后主轴尺寸超出了Flex容器，就要做等比缩放。</p>
+<p>如果Flex容器有多行，那么根据我们前面的分行算法，必然有主轴剩余空间，这时候，我们要找出本行所有的带Flex属性的flex项，把剩余空间按Flex比例分给它们即可。</p>
+<p>做好之后，我们就可以根据主轴排布方向，确定每个flex项的主轴位置坐标了。</p>
+<p>如果本行完全没有带flex属性的flex项，justify-content机制就要生效了，它的几个不同的值会影响剩余空白如何分配，作为实现者，我们只要在计算flex项坐标的时候，加上一个数值即可。</p>
+<p>例如，如果是flex-start就要加到第一个flex项身上，如果是center就给第一个flex项加一半的尺寸，如果是space-between，就要给除了第一个以外的每个flex项加上“flex项数减一分之一”。</p>
+<p><strong>第三步我们来计算flex项的交叉轴尺寸和位置。</strong></p>
+<p>交叉轴的计算首先是根据align-content计算每一行的位置，这部分跟justify-content非常类似。</p>
+<p>再根据alignItems和flex项的alignSelf来确定每个元素在行内的位置。</p>
+<p>计算完主轴和交叉轴，每个flex项的坐标、尺寸就都确定了，这样我们就完成了整个的Flex布局。</p>
+<h2 id="Flex的应用"><a href="#Flex的应用" class="headerlink" title="Flex的应用"></a>Flex的应用</h2><p>接下来我们来尝试用flex排版来解决一下当年的CSS三大经典问题（简直易如反掌）。</p>
+<p>垂直居中：</p>
+<pre><code>&lt;div id=&quot;parent&quot;&gt;
+  &lt;div id=&quot;child&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+#parent {
+  display:flex;
+  width:300px;
+  height:300px;
+  outline:solid 1px;
+  justify-content:center;
+  align-content:center;
+  align-items:center;
+}
+#child {
+  width:100px;
+  height:100px;
+  outline:solid 1px;
+}</code></pre><p>思路是创建一个只有一行的flexbox，然后用align-items:center;和align-content:center;来保证行位于容器中，元素位于行中。</p>
+<p>两列等高：</p>
+<pre><code>&lt;div class=&quot;parent&quot;&gt;
+  &lt;div class=&quot;child&quot; style=&quot;height:300px;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;child&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class=&quot;parent&quot;&gt;
+  &lt;div class=&quot;child&quot; &gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;child&quot; style=&quot;height:300px;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+.parent {
+  display:flex;
+  width:300px;
+  justify-content:center;
+  align-content:center;
+  align-items:stretch;
+}
+.child {
+  width:100px;
+  outline:solid 1px;
+}</code></pre><p>思路是创建一个只有一行的flexbox，然后用stretch属性让每个元素高度都等于行高。</p>
+<p>自适应宽：</p>
+<pre><code>&lt;div class=&quot;parent&quot;&gt;
+  &lt;div class=&quot;child1&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;child2&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+.parent {
+  display:flex;
+  width:300px;
+  height:200px;
+  background-color:pink;
+}
+.child1 {
+  width:100px;
+  background-color:lightblue;
+}
+.child2 {
+  width:100px;
+  flex:1;
+  outline:solid 1px;
+}</code></pre><p>这个就是Flex设计的基本能力了，给要自适应的元素添加flex属性即可。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天我们从Flex的设计、原理和应用三个方面一起学习了Flex排版。</p>
+<p>我们先从感性的角度，介绍了Flex的设计，Flex的设计是一种不同于流布局的，自外而内的设计思路。</p>
+<p>接下来我们讲解了Flex的实现原理，也就是具体的排版算法。要想理解Flex排版的原理，主轴和交叉轴是非常重要的抽象，Flex排版三个步骤：分行、计算主轴、计算交叉轴。</p>
+<p>最后我们给出了几个例子，解决了旧时代的CSS三大经典问题。</p>
+<p>最后，给你留一个小问题，请根据我的代码和文字，编写一段使用“position:absolute”来模拟Flex布局的js。大家可以根据自己的水平，简化需求，比如可以实现一个仅仅支持横向的、单行的所有flex项必须指定高度的Flex布局。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:16.398Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    22 minutes read (About 3320 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/HTML小实验：用代码分析HTML标准/">HTML小实验：用代码分析HTML标准</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>前面的课程中，我们已经讲解了大部分的HTML标签。</p>
+<p>然而，为了突出重点，我们还是会忽略一些标签类型。比如表单类标签和表格类标签，我认为只有少数前端工程师用过，比如我在整个手机淘宝的工作生涯中，一次表格类标签都没有用到，表单类则只用过input，也只有几次。</p>
+<p>那么，剩下的标签我们怎么样去了解它们呢？当然是查阅HTML标准。</p>
+<p>由于阅读标准有一定门槛，需要了解一些机制，这节课，我为你设计了一个小实验，用JavaScript代码去抽取标准中我们需要的信息。</p>
+<h2 id="HTML标准"><a href="#HTML标准" class="headerlink" title="HTML标准"></a>HTML标准</h2><p>我们采用WHATWG的living standard标准，我们先来看看标准是如何描述一个标签的，这里我们看到，有下面这些内容。</p>
+<pre><code>Categories:
+    Flow content.
+    Phrasing content.
+    Embedded content.
+    If the element has a controls attribute: Interactive content.
+    Palpable content.
+Contexts in which this element can be used:
+    Where embedded content is expected.
+Content model:
+    If the element has a src attribute: zero or more track elements, then transparent, but with no media element descendants.
+    If the element does not have a src attribute: zero or more source elements, then zero or more track elements, then transparent, but with no media element descendants.
+Tag omission in text/html:
+    Neither tag is omissible.
+Content attributes:
+    Global attributes
+    src — Address of the resource
+    crossorigin — How the element handles crossorigin requests
+    poster — Poster frame to show prior to video playback
+    preload — Hints how much buffering the media resource will likely need
+    autoplay — Hint that the media resource can be started automatically when the page is loaded
+    playsinline — Encourage the user agent to display video content within the element&apos;s playback area
+    loop — Whether to loop the media resource
+    muted — Whether to mute the media resource by default
+    controls — Show user agent controls
+    width — Horizontal dimension
+    height — Vertical dimension
+DOM interface:
+    [Exposed=Window, HTMLConstructor]
+    interface HTMLVideoElement : HTMLMediaElement {
+      [CEReactions] attribute unsigned long width;
+      [CEReactions] attribute unsigned long height;
+      readonly attribute unsigned long videoWidth;
+      readonly attribute unsigned long videoHeight;
+      [CEReactions] attribute USVString poster;
+      [CEReactions] attribute boolean playsInline;
+    };</code></pre><p>我们看到，这里的描述分为6个部分，有下面这些内容。</p>
+<ul>
+<li>Categories：标签所属的分类。</li>
+<li>Contexts in which this element can be used：标签能够用在哪里。</li>
+<li>Content model：标签的内容模型。</li>
+<li>Tag omission in text/html：标签是否可以省略。</li>
+<li>Content attributes：内容属性。</li>
+<li>DOM interface：用WebIDL定义的元素类型接口。</li>
+</ul>
+<p>这一节课，我们关注一下Categories、Contexts in which this element can be used、Content model这几个部分。我会带你从标准中抓取数据，做一个小工具，用来检查X标签是否能放入Y标签内。</p>
+<h2 id="代码角度分析HTML标准"><a href="#代码角度分析HTML标准" class="headerlink" title="代码角度分析HTML标准"></a>代码角度分析HTML标准</h2><p>HTML标准描述用词非常的严谨，这给我们抓取数据带来了巨大的方便，首先，我们打开单页面版HTML标准：</p>
+<ul>
+<li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener">https://html.spec.whatwg.org/</a></li>
+</ul>
+<p>在这个页面上，我们执行一下以下代码：</p>
+<pre><code>Array.prototype.map.call(document.querySelectorAll(&quot;.element&quot;), e=&gt;e.innerText);</code></pre><p>这样我们就得到了所有元素的定义了，现在有107个元素。</p>
+<p>不过，比较尴尬的是，这些文本中并不包含元素名，我们只好从id属性中获取，最后代码类似这样：</p>
+<pre><code>var elementDefinations = Array.prototype.map.call(document.querySelectorAll(&quot;.element&quot;), e =&gt; ({
+  text:e.innerText,
+  name:e.childNodes[0].childNodes[0].id.match(/the\-([\s\S]+)\-element:/)?RegExp.$1:null}));</code></pre><p>接下来我们用代码理解一下这些文本。首先我们来分析一下这些文本，它分成了6个部分，而且顺序非常固定，这样，我们可以用JavaScript的正则表达式匹配来拆分六个字段。</p>
+<p>我们这个小实验的目标是计算元素之间的包含关系，因此，我们先关心一下categories和contentModel两个字段。</p>
+<pre><code>for(let defination of elementDefinations) {
+
+  console.log(defination.name + &quot;:&quot;)
+  let categories = defination.text.match(/Categories:\n([\s\S]+)\nContexts in which this element can be used:/)[1].split(&quot;\n&quot;);
+  for(let category of categories) {
+      console.log(category);
+  }
+
+
+/*
+  let contentModel = defination.text.match(/Content model:\n([\s\S]+)\nTag omission in text\/html:/)[1].split(&quot;\n&quot;);
+  for(let line of contentModel)
+    console.log(line);
+*/
+}</code></pre><p>接下来我们来处理category。</p>
+<p>首先category的写法中，最基本的就是直接描述了category的句子，我们把这些不带任何条件的category先保存起来，然后打印出来其它的描述看看：</p>
+<pre><code>for(let defination of elementDefinations) {
+
+  //console.log(defination.name + &quot;:&quot;)
+  let categories = defination.text.match(/Categories:\n([\s\S]+)\nContexts in which this element can be used:/)[1].split(&quot;\n&quot;);
+  defination.categories = [];
+  for(let category of categories) {
+    if(category.match(/^([^ ]+) content./))
+      defination.categories.push(RegExp.$1);
+    else
+      console.log(category)  
+  }
+
+
+/*
+  let contentModel = defination.text.match(/Content model:\n([\s\S]+)\nTag omission in text\/html:/)[1].split(&quot;\n&quot;);
+  for(let line of contentModel)
+    console.log(line);
+*/
+}</code></pre><p>这里我们要处理的第一个逻辑是带if的情况。</p>
+<p>然后我们来看看剩下的情况：</p>
+<pre><code>None.
+Sectioning root.
+None.
+Sectioning root.
+None.
+Form-associated element.
+Listed and submittable form-associated element.
+None.
+Sectioning root.
+None.
+If the type attribute is not in the Hidden state: Listed, labelable, submittable, resettable, and autocapitalize-inheriting form-associated element.
+If the type attribute is in the Hidden state: Listed, submittable, resettable, and autocapitalize-inheriting form-associated element.
+Listed, labelable, submittable, and autocapitalize-inheriting form-associated element.
+Listed, labelable, submittable, resettable, and autocapitalize-inheriting form-associated element.
+None.
+Listed, labelable, submittable, resettable, and autocapitalize-inheriting form-associated element.
+Listed, labelable, resettable, and autocapitalize-inheriting form-associated element.
+Labelable element.
+Sectioning root.
+Listed and autocapitalize-inheriting form-associated element.
+None.
+Sectioning root.
+None.
+Sectioning root.
+Script-supporting element.</code></pre><p>这里出现了几个概念：</p>
+<ul>
+<li>None</li>
+<li>Sectioning root</li>
+<li>Form-associated element</li>
+<li>Labelable element</li>
+<li>Script-supporting element</li>
+</ul>
+<p>如果我们要真正完美地实现元素分类，就必须要在代码中加入正则表达式来解析这些规则，这里作为今天的课后问题，留给你自己完成。</p>
+<p>接下来我们看看Content Model，我们照例先处理掉最简单点的部分，就是带分类的内容模型：</p>
+<pre><code>for(let defination of elementDefinations) {
+
+  //console.log(defination.name + &quot;:&quot;)
+  let categories = defination.text.match(/Categories:\n([\s\S]+)\nContexts in which this element can be used:/)[1].split(&quot;\n&quot;);
+  defination.contentModel = [];
+  let contentModel = defination.text.match(/Content model:\n([\s\S]+)\nTag omission in text\/html:/)[1].split(&quot;\n&quot;);
+  for(let line of contentModel)
+    if(line.match(/^([^ ]+) content./))
+      defination.contentModel.push(RegExp.$1);
+    else
+      console.log(line)
+}</code></pre><p>好了，我们照例看看剩下了什么：</p>
+<pre><code>A head element followed by a body element.
+If the document is an iframe srcdoc document or if title information is available from a higher-level protocol: Zero or more elements of metadata content, of which no more than one is a title element and no more than one is a base element.
+Otherwise: One or more elements of metadata content, of which exactly one is a title element and no more than one is a base element.
+Text that is not inter-element whitespace.
+Nothing.
+Text that gives a conformant style sheet.
+One or more h1, h2, h3, h4, h5, h6 elements, optionally intermixed with script-supporting elements.
+Nothing.
+Zero or more li and script-supporting elements.
+Either: Zero or more groups each consisting of one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.
+Or: One or more div elements, optionally intermixed with script-supporting elements.
+Either: one figcaption element followed by flow content.
+Or: flow content followed by one figcaption element.
+Or: flow content.
+If the element is a child of a dl element: one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.
+If the element is not a child of a dl element: flow content.
+Transparent, but there must be no interactive content or a element descendants.
+See prose.
+Text.
+If the element has a datetime attribute: Phrasing content.
+Otherwise: Text, but must match requirements described in prose below.
+Nothing.
+Transparent.
+Zero or more source elements, followed by one img element, optionally intermixed with script-supporting elements.
+Nothing.
+Zero or more param elements, then, transparent.
+Nothing.
+If the element has a src attribute: zero or more track elements, then transparent, but with no media element descendants.
+If the element does not have a src attribute: zero or more source elements, then zero or more track elements, then transparent, but with no media element descendants.
+If the element has a src attribute: zero or more track elements, then transparent, but with no media element descendants.
+If the element does not have a src attribute: zero or more source elements, then zero or more track elements, then transparent, but with no media element descendants.
+Nothing.
+Transparent.
+Nothing.
+In this order: optionally a caption element, followed by zero or more colgroup elements, followed optionally by a thead element, followed by either zero or more tbody elements or one or more tr elements, followed optionally by a tfoot element, optionally intermixed with one or more script-supporting elements.
+If the span attribute is present: Nothing.
+If the span attribute is absent: Zero or more col and template elements.
+Nothing.
+Zero or more tr and script-supporting elements.
+Zero or more td, th, and script-supporting elements.
+Nothing.
+Zero or more option, optgroup, and script-supporting elements.
+Either: phrasing content.
+Or: Zero or more option and script-supporting elements.
+Zero or more option and script-supporting elements.
+If the element has a label attribute and a value attribute: Nothing.
+If the element has a label attribute but no value attribute: Text.
+If the element has no label attribute and is not a child of a datalist element: Text that is not inter-element whitespace.
+If the element has no label attribute and is a child of a datalist element: Text.
+Text.
+Optionally a legend element, followed by flow content.
+One summary element followed by flow content.
+Either: phrasing content.
+Or: one element of heading content.
+If there is no src attribute, depends on the value of the type attribute, but must match script content restrictions.
+If there is a src attribute, the element must be either empty or contain only script documentation that also matches script content restrictions.
+When scripting is disabled, in a head element: in any order, zero or more link elements, zero or more style elements, and zero or more meta elements.
+When scripting is disabled, not in a head element: transparent, but there must be no noscript element descendants.
+Otherwise: text that conforms to the requirements given in the prose.
+Nothing (for clarification, see example).
+Transparent
+Transparent, but with no interactive content descendants except for a elements, img elements with usemap attributes, button elements, input elements whose type attribute are in the Checkbox or Radio Button states, input elements that are buttons, select elements with a multiple attribute or a display size greater than 1, and elements that would not be interactive content except for having the tabindex attribute specified.</code></pre><p>这有点复杂，我们还是把它做一些分类，首先我们过滤掉带If的情况、Text和Transparent。</p>
+<pre><code>for(let defination of elementDefinations) {
+  //console.log(defination.name + &quot;:&quot;)
+  let categories = defination.text.match(/Categories:\n([\s\S]+)\nContexts in which this element can be used:/)[1].split(&quot;\n&quot;);
+  defination.contentModel = [];
+  let contentModel = defination.text.match(/Content model:\n([\s\S]+)\nTag omission in text\/html:/)[1].split(&quot;\n&quot;);
+  for(let line of contentModel)
+    if(line.match(/([^ ]+) content./))
+      defination.contentModel.push(RegExp.$1);
+    else if(line.match(/Nothing.|Transparent./));
+    else if(line.match(/^Text[\s\S]*.$/));
+    else
+      console.log(line)
+}</code></pre><p>这时候我们再来执行看看：</p>
+<pre><code>A head element followed by a body element.
+One or more h1, h2, h3, h4, h5, h6 elements, optionally intermixed with script-supporting elements.
+Zero or more li and script-supporting elements.
+Either: Zero or more groups each consisting of one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.
+Or: One or more div elements, optionally intermixed with script-supporting elements.
+If the element is a child of a dl element: one or more dt elements followed by one or more dd elements, optionally intermixed with script-supporting elements.
+See prose.
+Otherwise: Text, but must match requirements described in prose below.
+Zero or more source elements, followed by one img element, optionally intermixed with script-supporting elements.
+Zero or more param elements, then, transparent.
+If the element has a src attribute: zero or more track elements, then transparent, but with no media element descendants.
+If the element does not have a src attribute: zero or more source elements, then zero or more track elements, then transparent, but with no media element descendants.
+If the element has a src attribute: zero or more track elements, then transparent, but with no media element descendants.
+If the element does not have a src attribute: zero or more source elements, then zero or more track elements, then transparent, but with no media element descendants.
+In this order: optionally a caption element, followed by zero or more colgroup elements, followed optionally by a thead element, followed by either zero or more tbody elements or one or more tr elements, followed optionally by a tfoot element, optionally intermixed with one or more script-supporting elements.
+If the span attribute is absent: Zero or more col and template elements.
+Zero or more tr and script-supporting elements.
+Zero or more td, th, and script-supporting elements.
+Zero or more option, optgroup, and script-supporting elements.
+Or: Zero or more option and script-supporting elements.
+Zero or more option and script-supporting elements.
+If the element has a label attribute but no value attribute: Text.
+If the element has no label attribute and is not a child of a datalist element: Text that is not inter-element whitespace.
+If the element has no label attribute and is a child of a datalist element: Text.
+When scripting is disabled, in a head element: in any order, zero or more link elements, zero or more style elements, and zero or more meta elements.
+When scripting is disabled, not in a head element: transparent, but there must be no noscript element descendants.
+Otherwise: text that conforms to the requirements given in the prose.</code></pre><p>这下剩余的就少多了，我们可以看到，基本上剩下的都是直接描述可用的元素了，如果你愿意，还可以用代码进一步解析，不过如果是我的话，会选择手工把它们写成JSON了，毕竟只有三十多行文本。</p>
+<p>好了，有了contentModel和category，我们要检查某一元素是否可以作为另一元素的子元素，就可以判断一下两边是否匹配啦，首先，我们要做个索引：</p>
+<pre><code>var dictionary = Object.create(null);
+
+for(let defination of elementDefinations) {
+  dictionary[defination.name] = defination;
+}</code></pre><p>然后我们编写一下我们的check函数：</p>
+<pre><code>function check(parent, child) {
+  for(let category of child.categories)
+    if(parent.contentModel.categories.conatains(category))
+      return true;
+  if(parent.contentModel.names.conatains(child.name))
+      return true;
+  return false;
+}</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一节课，我们完成了一个小实验：利用工具分析Web标准文本，来获得元素的信息。</p>
+<p>通过这个实验，我希望能够传递一种思路，代码能够帮助我们从Web标准中挖掘出来很多想要的信息，编写代码的过程，也是更深入理解标准的契机。</p>
+<p>我们前面的课程中把元素分成了几类来讲解，但是这些分类只能大概地覆盖所有的标签，我设置课程的目标也是讲解标签背后的知识，而非每一种标签的细节。具体每一种标签的属性和细节，可以留给大家自己去整理。</p>
+<p>这一节课的产出，则是“绝对完整的标签列表”，也是我学习和阅读标准的小技巧，通过代码我们可以从不同的侧面分析标准的内容，挖掘需要注意的点，这是一种非常好的学习方法。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:14.378Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    16 minutes read (About 2424 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/HTML替换型元素：为什么link一个CSS要用href，而引入js要用src呢？/">HTML替换型元素：为什么link一个CSS要用href，而引入js要用src呢？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。我们今天来讲讲替换型元素。</p>
+<p>我们都知道一个常识，一个网页，它是由多个文件构成的，我们在之前的课程中，已经学过了一种引入文件的方案：链接。</p>
+<p>这节课我们要讲的替换型元素，就是另一种引入文件的方式了。替换型元素是把文件的内容引入，替换掉自身位置的一类标签。</p>
+<p>我们首先来看一种比较熟悉的标签：script标签。</p>
+<h2 id="script"><a href="#script" class="headerlink" title="script"></a>script</h2><p>我们之所以选择先讲解script标签，是因为script标签是为数不多的既可以作为替换型标签，又可以不作为替换型标签的元素。</p>
+<p>我们先来看看script标签的两种用法：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+console.log(&quot;Hello world!&quot;);
+&lt;/script&gt;
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;my.js&quot;&gt;&lt;/script&gt;</code></pre><p>这个例子中，我们展示了两种script标签的写法，一种是直接把脚本代码写在script标签之间，另一种是把代码放到独立的js文件中，用src属性引入。</p>
+<p>这两种写法是等效的。我想这种等效性可以帮助你理解替换型元素的“替换”是怎么一回事。</p>
+<p>这里我们就可以回答标题中的问题了：凡是替换型元素，都是使用src属性来引用文件的，而我们之前的课程中已经讲过，链接型元素是使用href标签的。</p>
+<p>虽然我不知道当初是怎么设计的，但是style标签并非替换型元素，不能使用src属性，这样，我们用link标签引入CSS文件，当然就是用href标签啦。</p>
+<p>接下来我们再看看别的替换型元素，先来了解一下img标签。</p>
+<h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>毫无疑问我们最熟悉的替换型标签就是img标签了，几乎每个前端都会日常使用img标签。</p>
+<p>img标签的作用是引入一张图片。这个标签是没有办法像script标签那样作为非替换型标签来使用的，它必须有src属性才有意义。</p>
+<p>如果一定不想要引入独立文件，可以使用data uri，我们来看个实际的例子：</p>
+<pre><code>&lt;img src=&apos;data:image/svg+xml;charset=utf8,&lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;rect width=&quot;300&quot; height=&quot;100&quot; style=&quot;fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)&quot;/&gt;&lt;/svg&gt;&apos;/&gt;</code></pre><p>这个例子中我们使用了data uri作为图片的src，这样，并没有产生独立的文件，客观上做到了和内联相同的结果，这是一个常用的技巧。</p>
+<p>img标签可以使用width和height指定宽度和高度。也可以只指定其中之一。我们看个例子：</p>
+<pre><code> &lt;img src=&apos;data:image/svg+xml;charset=utf8,&lt;svg width=&quot;600&quot; height=&quot;400&quot; version=&quot;1.1&quot;
+xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;ellipse cx=&quot;300&quot; cy=&quot;150&quot; rx=&quot;200&quot; ry=&quot;80&quot;
+style=&quot;fill:rgb(200,100,50);
+stroke:rgb(0,0,100);stroke-width:2&quot;/&gt;&lt;/svg&gt;&apos; width=&quot;100&quot;/&gt;</code></pre><p>这个例子中，为了方便你理解，我们把图片换成了椭圆，我们可以看到，当我们指定了宽度后，图片被<strong>等比例缩放了</strong>。这个特性非常重要，适用于那种我们既要限制图片尺寸，又要保持图片比例的场景。</p>
+<p>如果从性能的角度考虑，建议你同时给出图片的宽高，因为替换型元素加载完文件后，如果尺寸发生变换，会触发重排版（这个概念我们在浏览器原理部分已经讲过，可以复习一下）。</p>
+<p>此处要重点提到一个属性，alt属性，这个属性很难被普通用户感知，对于视障用户非常重要，可以毫不夸张地讲，给img加上alt属性，已经做完了可访问性的一半。</p>
+<p>img标签还有一组重要的属性，那就是srcset和sizes，它们是src属性的升级版（所以我们前面讲img标签必须有src属性，这是不严谨的说法）。</p>
+<p>这两个属性的作用是在不同的屏幕大小和特性下，使用不同的图片源。下面一个例子也来自MDN，它展示了srcset和sizes的用法</p>
+<pre><code>&lt;img srcset=&quot;elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w&quot;
+     sizes=&quot;(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px&quot;
+     src=&quot;elva-fairy-800w.jpg&quot; alt=&quot;Elva dressed as a fairy&quot;&gt;</code></pre><p>srcset提供了根据屏幕条件选取图片的能力，但是其实更好的做法，是使用picture元素。</p>
+<h2 id="picture"><a href="#picture" class="headerlink" title="picture"></a>picture</h2><p>picture元素可以根据屏幕的条件为其中的img元素提供不同的源，它的基本用法如下：</p>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset=&quot;image-wide.png&quot; media=&quot;(min-width: 600px)&quot;&gt;
+  &lt;img src=&quot;image-narrow.png&quot;&gt;
+&lt;/picture&gt;</code></pre><p>picture元素的设计跟audio和video保持了一致（稍后我会为你讲解这两个元素），它跟img搭配srcset和sizes不同，它使用source元素来指定图片源，并且支持多个。</p>
+<p>这里的media属性是media query，跟CSS的@media规则一致。</p>
+<h2 id="video"><a href="#video" class="headerlink" title="video"></a>video</h2><p>在HTML5早期的设计中，video标签跟img标签类似，也是使用src属性来引入源文件的，不过，我想应该是考虑到了各家浏览器支持的视频格式不同，现在的video标签跟picture元素一样，也是提倡使用source的。</p>
+<p>下面例子是一个古典的video用法：</p>
+<pre><code>&lt;video controls=&quot;controls&quot; src=&quot;movie.ogg&quot;&gt;
+&lt;/video&gt;</code></pre><p>这个例子中的代码用src来指定视频的源文件。但是因为一些历史原因，浏览器对视频的编码格式兼容问题分成了几个派系，这样，对于一些兼容性要求高的网站，我们使用单一的视频格式是不合适的。</p>
+<p>现在的video标签可以使用source标签来指定接入多个视频源。</p>
+<pre><code>&lt;video controls=&quot;controls&quot; &gt;
+  &lt;source src=&quot;movie.webm&quot; type=&quot;video/webm&quot; &gt;
+  &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot; &gt;
+  &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  You browser does not support video.
+&lt;/video&gt;</code></pre><p>从这个例子中，我们可以看到，source标签除了支持media之外，还可以使用type来区分源文件的使用场景。</p>
+<p>video标签的内容默认会被当做不支持video的浏览器显示的内容吗，因此，如果要支持更古老的浏览器，还可以在其中加入object或者embed标签，这里就不详细展开了。</p>
+<p>video中还支持一种标签：track。</p>
+<p>track是一种播放时序相关的标签，它最常见的用途就是字幕。track标签中，必须使用 srclang 来指定语言，此外，track具有kind属性，共有五种。</p>
+<ul>
+<li>subtitles：就是字幕了，不一定是翻译，也可能是补充性说明。</li>
+<li>captions：报幕内容，可能包含演职员表等元信息，适合听障人士或者没有打开声音的人了解音频内容。</li>
+<li>descriptions：视频描述信息，适合视障人士或者没有视频播放功能的终端打开视频时了解视频内容。</li>
+<li>chapters：用于浏览器视频内容。</li>
+<li>metadata：给代码提供的元信息，对普通用户不可见。</li>
+</ul>
+<p>一个完整的video标签可能会包含多种track和多个source，这些共同构成了一个视频播放所需的全部信息。</p>
+<h2 id="audio"><a href="#audio" class="headerlink" title="audio"></a>audio</h2><p>接下来我们来讲讲audio，跟picture和video两种标签一样，audio也可以使用source元素来指定源文件。我们看一下例子：</p>
+<pre><code>&lt;audio controls&gt;
+  &lt;source src=&quot;song.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+  &lt;source src=&quot;song.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;p&gt;You browser does not support audio.&lt;/p&gt;
+&lt;/audio&gt;</code></pre><p>但比起video，audio元素的历史问题并不严重，所以使用src也是没有问题的。</p>
+<h2 id="iframe"><a href="#iframe" class="headerlink" title="iframe"></a>iframe</h2><p>最后我们来讲一下iframe，这个标签能够嵌入一个完整的网页。</p>
+<p>不过，在移动端，iframe受到了相当多的限制，它无法指定大小，里面的内容会被完全平铺到父级页面上。</p>
+<p>同时很多网页也会通过http协议头禁止自己被放入iframe中。</p>
+<p>iframe标签也是各种安全问题的重灾区。opener、window.name、甚至css的opacity都是黑客可以利用的漏洞。</p>
+<p>因此，在2019年，当下这个时间点，任何情况下我都不推荐在实际开发中用以前的iframe。</p>
+<p>当然，不推荐使用是一回事，因为没人能保证不遇到历史代码，我们还是应该了解一下iframe的基本用法：</p>
+<pre><code>&lt;iframe src=&quot;http://time.geekbang.org&quot;&gt;&lt;/iframe&gt;</code></pre><p>这个例子展示了古典的iframe用法。</p>
+<p>在新标准中，为iframe加入了sandbox模式和srcdoc属性，这样，给iframe带来了一定的新场景。我们来看看例子：</p>
+<pre><code>&lt;iframe sandbox srcdoc=&quot;&lt;p&gt;Yeah, you can see it &lt;a href=&quot;/gallery?mode=cover&amp;amp;amp;page=1&quot;&gt;in my gallery&lt;/a&gt;.&quot;&gt;&lt;/iframe&gt;</code></pre><p>这个例子中，使用srcdoc属性创建了一个新的文档，嵌入在iframe中展示，并且使用了sandbox来隔离。</p>
+<p>这样，这个iframe就不涉及任何跨域问题了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这节课，我们又认识了一组HTML元素：替换型元素。它们的特点是，引入一个外部资源来进入页面，替换掉自身的位置。</p>
+<p>我们通过对script、img、picture、audio、video、iframe几个标签的讲解，了解了不同的资源引入方式：</p>
+<ul>
+<li>src属性；</li>
+<li>srcset属性；</li>
+<li>source标签；</li>
+<li>srcdoc属性。</li>
+</ul>
+<p>这中间，我们也介绍了一些小技巧，比如src属性的好朋友：data uri，这在实际开发中非常有用。</p>
+<p>最后，留给你一个小问题，请查资料总结一下，在多数现代浏览器兼容的范围内，src属性支持哪些协议的uri（如http和我们提到的data）。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:12.493Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    19 minutes read (About 2848 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript语法（四）：新加入的**运算符，哪里有些不一样呢？/">JavaScript语法（四）：新加入的**运算符，哪里有些不一样呢？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>上一节课我们已经给你介绍了表达式的一些结构，其中关于赋值表达式，我们讲完了它的左边部分，而留下了它右边部分，那么，我们这节课一起来详细讲解。</p>
+<p>在一些通用的计算机语言设计理论中，能够出现在赋值表达式右边的叫做：右值表达式（RightHandSideExpression），而在JavaScript标准中，规定了在等号右边表达式叫做条件表达式（ConditionalExpression），不过，在JavaScript标准中，从未出现过右值表达式字样。</p>
+<p>JavaScript标准也规定了左值表达式同时都是条件表达式（也就是右值表达式），此外，左值表达式也可以通过跟一定的运算符组合，逐级构成更复杂的结构，直到成为右值表达式。</p>
+<p>关于这块的知识，我们有时会看到按照运算符来组织的讲解形式。</p>
+<p>这样讲解形式是因为：对运算符来说的“优先级”，如果从我们语法的角度来看，那就是“表达式的结构”。讲“乘法运算的优先级高于加法”，从语法的角度看就是“乘法表达式和加号运算符构成加法表达式”。</p>
+<p>对于右值表达式来说，我们可以理解为以左值表达式为最小单位开始构成的，接下来我们就来看看左值表达式是如何一步步构成更为复杂的语法结构。</p>
+<h2 id="更新表达式-UpdateExpression"><a href="#更新表达式-UpdateExpression" class="headerlink" title="更新表达式 UpdateExpression"></a>更新表达式 UpdateExpression</h2><p>左值表达式搭配 <code>++``--</code> 运算符，可以形成更新表达式。</p>
+<pre><code>-- a;
+++ a;
+a --
+a ++</code></pre><p>更新表达式会改变一个左值表达式的值。分为前后自增，前后自减一共四种。</p>
+<p>我们要注意一下，这里在ES2018中，跟早期版本有所不同，前后自增自减运算被放到了同一优先级。</p>
+<h2 id="一元运算表达式-UnaryExpression"><a href="#一元运算表达式-UnaryExpression" class="headerlink" title="一元运算表达式 UnaryExpression"></a>一元运算表达式 UnaryExpression</h2><p>更新表达式搭配一元运算符，可以形成一元运算表达式，我们看下例子：</p>
+<pre><code>delete a.b;
+void a;
+typeof a;
+- a;
+~ a;
+! a;
+await a;</code></pre><p>它的特点就是一个更新表达式搭配了一个一元运算符。</p>
+<h2 id="乘方表达式-ExponentiationExpression"><a href="#乘方表达式-ExponentiationExpression" class="headerlink" title="乘方表达式 ExponentiationExpression"></a>乘方表达式 ExponentiationExpression</h2><p>乘方表达式也是由更新表达式构成的。它使用<code>**</code>号。</p>
+<pre><code>++i ** 30
+2 ** 30 //正确
+-2 ** 30 //报错</code></pre><p>我们看一下例子，-2这样的一元运算表达式，是不可以放入乘方表达式的，如果需要表达类似的逻辑，必须加括号。</p>
+<p>这里我们需要注意一下结合性，**运算是右结合的，这跟其它正常的运算符（也就是左结合运算符）都不一样。</p>
+<p>我们来看一个例子。</p>
+<pre><code>4 ** 3 ** 2</code></pre><p>事实上，它是这样被运算的：</p>
+<pre><code>4 ** (3 ** 2)</code></pre><p>而不是这样被运算的：</p>
+<pre><code>(4 ** 3) ** 2</code></pre><p>我们来实际在代码中执行一下试试。最终结果是262144， 而不是4096。</p>
+<h2 id="乘法表达式-MultiplicativeExpression"><a href="#乘法表达式-MultiplicativeExpression" class="headerlink" title="乘法表达式 MultiplicativeExpression"></a>乘法表达式 MultiplicativeExpression</h2><p>到这里，我们进入了比较熟悉的表达式类型，乘方表达式可以构成乘法表达式，用乘号或者除号、取余符号连接就可以了，我们看看例子：</p>
+<pre><code>x * 2;</code></pre><p>乘法表达式有三种运算符：</p>
+<pre><code>*
+/
+%</code></pre><p>它们分别表示乘、除和取余。它们的优先级是一样的，所以统一放在乘法运算表达式中。</p>
+<h2 id="加法表达式-AdditiveExpression"><a href="#加法表达式-AdditiveExpression" class="headerlink" title="加法表达式 AdditiveExpression"></a>加法表达式 AdditiveExpression</h2><p>加法表达式是由乘法表达式用加号或者减号连接构成的。我们看下例子:</p>
+<pre><code>a + b * c</code></pre><p>加法表达式有加号和减号两种运算符。</p>
+<pre><code>+ 
+-</code></pre><p>这就是我们小学学的加法和减法的意思了。不过要注意，加号还能表示字符串连接，这也比较符合一般的直觉。</p>
+<h2 id="移位表达式-ShiftExpression"><a href="#移位表达式-ShiftExpression" class="headerlink" title="移位表达式 ShiftExpression"></a>移位表达式 ShiftExpression</h2><p>移位表达式由加法表达式构成，移位是一种位运算，分成三种：</p>
+<pre><code>&lt;&lt; 向左移位
+&gt;&gt; 向右移位
+&gt;&gt;&gt; 无符号向右移位</code></pre><p>移位运算把操作数看做二进制表示的整数，然后移动特定位数。所以左移n位相当于乘以2的n次方，右移n位相当于除以2取整n次。</p>
+<p>普通移位会保持正负数。无符号移位会把减号视为符号位1，同时参与移位：</p>
+<pre><code>-1 &gt;&gt;&gt; 1</code></pre><p>这个会得到2147483647，也就是2的31次方，跟负数的二进制表示法相关，这里就不详细讲解了。</p>
+<p>在JavaScript中，二进制操作整数并不能提高性能，移位运算这里也仅仅作为一种数学运算存在，这些运算存在的意义也仅仅是照顾C系语言用户的习惯了。</p>
+<h2 id="关系表达式-RelationalExpression"><a href="#关系表达式-RelationalExpression" class="headerlink" title="关系表达式 RelationalExpression"></a>关系表达式 RelationalExpression</h2><p>移位表达式可以构成关系表达式，这里的关系表达式就是大于、小于、大于等于、小于等于等运算符号连接，统称为关系运算。</p>
+<pre><code>&lt;=
+&gt;=
+&lt;
+&gt;
+instanceof 
+in</code></pre><p>需要注意，这里的&lt;= 和 &gt;= 关系运算，完全是针对数字的，所以 &lt;= 并不等价于 &lt; 或 ==。例如：</p>
+<pre><code>null &lt;= undefined
+//false
+null == undefined
+//true</code></pre><p>请你务必不要用数学上的定义去理解这些运算符。</p>
+<h2 id="相等表达式-EqualityExpression"><a href="#相等表达式-EqualityExpression" class="headerlink" title="相等表达式 EqualityExpression"></a>相等表达式 EqualityExpression</h2><p>在语法上，相等表达式是由关系表达式用相等比较运算符（如 <code>==</code>）连接构成的。所以我们可以像下面这段代码一样使用，而不需要加括号。</p>
+<pre><code>a instanceof &quot;object&quot; == true</code></pre><p>相等表达式由四种运算符和关系表达式构成，我们来看一下运算符：</p>
+<ul>
+<li><code>==</code></li>
+<li><code>!=</code></li>
+<li><code>===</code></li>
+<li><code>!==</code></li>
+</ul>
+<p>相等表达式又包含一个JavaScript中著名的设计失误，那就是 <code>==</code> 的行为。</p>
+<p>一些编程规范甚至要求完全避免使用 <code>==</code> 运算，我觉得这样规定是比较合理的，但是这里我还是尽量解释一下 <code>==</code> 的行为。</p>
+<p>虽然标准中写的<code>==</code>十分复杂，但是归根结底，类型不同的变量比较时<code>==</code>运算只有三条规则：</p>
+<ul>
+<li>undefined与null相等；</li>
+<li>字符串和bool都转为数字再比较；</li>
+<li>对象转换成primitive类型再比较。</li>
+</ul>
+<p>这样我们就可以理解一些不太符合直觉的例子了，比如：</p>
+<ul>
+<li><code>false == &#39;0&#39;</code> true</li>
+<li><code>true == &#39;true&#39;</code> false</li>
+<li><code>[] == 0</code> true</li>
+<li><code>[] == false</code> true</li>
+<li><code>new Boolean(&#39;false&#39;) == false</code> false</li>
+</ul>
+<p>这里不太符合直觉的有两点：</p>
+<ul>
+<li>一个是即使字符串与boolean比较，也都要转换成数字；</li>
+<li>另一个是对象如果转换成了primitive类型跟等号另一边类型恰好相同，则不需要转换成数字。</li>
+</ul>
+<p>此外，<code>==</code> 的行为也经常跟if的行为（转换为boolean）混淆。总之，我建议，仅在确认 <code>==</code> 发生在Number和String类型之间时使用，比如：</p>
+<pre><code>document.getElementsByTagName(&apos;input&apos;)[0].value == 100</code></pre><p>在这个例子中，等号左边必然是string，右边的直接量必然是number，这样使用 == 就没有问题了。</p>
+<h2 id="位运算表达式"><a href="#位运算表达式" class="headerlink" title="位运算表达式"></a>位运算表达式</h2><p>位运算表达式含有三种：</p>
+<ul>
+<li>按位与表达式 BitwiseANDExpression</li>
+<li>按位异或表达式 BitwiseANDExpression</li>
+<li>按位或表达式 BitwiseORExpression。</li>
+</ul>
+<p>位运算表达式关系比较紧密，我们这里放到一起来讲。</p>
+<p>按位与表达式由按位与运算符（<code>&amp;</code>）连接按位异或表达式构成，按位与表达式把操作数视为二进制整数，然后把两个操作数按位做与运算。</p>
+<p>按位异或表达式由按位异或运算符（<code>^</code>）连接按位与表达式构成，按位异或表达式把操作数视为二进制整数，然后把两个操作数按位做异或运算。异或两位相同时得0，两位不同时得1。</p>
+<p>异或运算有个特征，那就是两次异或运算相当于取消。所以有一个异或运算的小技巧，就是用异或运算来交换两个整数的值。</p>
+<pre><code>let a = 102, b = 324;
+
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+
+console.log(a, b);</code></pre><p>按位或表达式由按位或运算符（<code>|</code>）连接相等表达式构成，按位或表达式把操作数视为二进制整数，然后把两个操作数按位做或运算。</p>
+<p>按位或运算常常被用在一种叫做Bitmask的技术上。Bitmask相当于使用一个整数来当做多个布尔型变量，现在已经不太提倡了。不过一些比较老的API还是会这样设计，比如我们在DOM课程中，提到过的Iterator API，我们看下例子：</p>
+<pre><code>var iterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_COMMENT, null, false);
+var node;
+while(node = iterator.nextNode())
+{
+    console.log(node);
+}</code></pre><p>这里的第二个参数就是使用了Bitmask技术，所以必须配合位运算表达式才能方便地传参。</p>
+<h2 id="逻辑与表达式和逻辑或表达式"><a href="#逻辑与表达式和逻辑或表达式" class="headerlink" title="逻辑与表达式和逻辑或表达式"></a>逻辑与表达式和逻辑或表达式</h2><p>逻辑与表达式由按位或表达式经过逻辑与运算符连接构成，逻辑或表达式则由逻辑与表达式经逻辑或运算符连接构成。</p>
+<p>这里需要注意的是，这两种表达式都不会做类型转换，所以尽管是逻辑运算，但是最终的结果可能是其它类型。</p>
+<p>比如：</p>
+<pre><code>false || 1;</code></pre><p>这句将会得到结果 1。</p>
+<pre><code>false &amp;&amp; undefined;</code></pre><p>这句将会得到undefined。</p>
+<p>另外还有一点，就是逻辑表达式具有短路的特性，例如：</p>
+<pre><code>true || foo();</code></pre><p>这里的foo将不会被执行，这种中断后面表达式执行的特性就叫做短路。</p>
+<h2 id="条件表达式-ConditionalExpression"><a href="#条件表达式-ConditionalExpression" class="headerlink" title="条件表达式 ConditionalExpression"></a>条件表达式 ConditionalExpression</h2><p>条件表达式由逻辑或表达式和条件运算符构成，条件运算符又称三目运算符，它有三个部分，由两个运算符<code>?</code>和<code>:</code>配合使用。</p>
+<pre><code>condition ? branch1 : branch2</code></pre><p>这里需要注意，条件表达式也像逻辑表达式一样，可能忽略后面表达式的计算。这一点跟C语言的条件表达式是不一样的。</p>
+<p>条件表达式实际上就是JavaScript中的右值表达式了 RightHandSideExpression，是可以放到赋值运算后面的表达式。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天我们讲解了表达式的右边部分，讲到了包括更新表达式、一元运算表达式、乘方表达式、乘法表达式、移位表达式等14种表达式。至此为止，我们已经讲全了表达式。你如果有不熟悉的地方，可以随时回头查阅。</p>
+<p>留一个小任务，我们试着总结下JavaScript中所有的运算符优先级和结合性。例如：</p>
+<p><img src="https://static001.geekbang.org/resource/image/4c/ca/4cb75eb863d5dffe7e9b6b0fb1161aca.jpg" alt></p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:10.529Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    17 minutes read (About 2616 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript语法（三）：什么是表达式语句？/">JavaScript语法（三）：什么是表达式语句？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>不知道你有没有注意到，我们在语句部分，讲到了很多种语句类型，但是，其实最终产生执行效果的语句不多。</p>
+<p>事实上，真正能干活的就只有表达式语句，其它语句的作用都是产生各种结构，来控制表达式语句执行，或者改变表达式语句的意义。</p>
+<p>今天的课程，我们就深入到表达式语句中来学习一下。</p>
+<h2 id="什么是表达式语句"><a href="#什么是表达式语句" class="headerlink" title="什么是表达式语句"></a>什么是表达式语句</h2><p>表达式语句实际上就是一个表达式，它是由运算符连接变量或者直接量构成的（关于直接量我们在下一节详细讲解）。</p>
+<p>一般来说，我们的表达式语句要么是函数调用，要么是赋值，要么是自增、自减，否则表达式计算的结果没有任何意义。</p>
+<p>但是从语法上，并没有这样的限制，任何合法的表达式都可以当做表达式语句使用。比如我们看下面的例子。</p>
+<pre><code>a + b;</code></pre><p>这句代码计算了a和b相加的值，但是不会显示出来，也不会产生任何执行效果（除非a和b是getter），但是不妨碍它符合语法也能够被执行。</p>
+<p>下面我们就一起来了解下都有哪些表达式，我们从粒度最小到粒度最大了解一下。</p>
+<h2 id="PrimaryExpression-主要表达式"><a href="#PrimaryExpression-主要表达式" class="headerlink" title="PrimaryExpression 主要表达式"></a>PrimaryExpression 主要表达式</h2><p>首先我们来给你讲解一下表达式的原子项：Primary Expression。它是表达式的最小单位，它所涉及的语法结构也是优先级最高的。</p>
+<p>Primary Expression包含了各种“直接量”，直接量就是直接用某种语法写出来的具有特定类型的值。我们已经知道，在运行时有各种值，比如数字123，字符串Hello world，所以通俗地讲，直接量就是在代码中把它们写出来的语法。</p>
+<p>我们在类型部分，已经介绍过一些基本类型的直接量。比如，我们当时用null关键字获取null值，这个用法就是null直接量，这里我们仅仅把它们简单回顾一下：</p>
+<pre><code>&quot;abc&quot;;
+123;
+null;
+true;
+false;</code></pre><p>除这些之外，JavaScript还能够直接量的形式定义对象，针对函数、类、数组、正则表达式等特殊对象类型，JavaScript提供了语法层面的支持。</p>
+<pre><code>({});
+(function(){});
+(class{ });
+[];
+/abc/g;</code></pre><p>需要注意，在语法层面，function、{ 和class开头的表达式语句与声明语句有语法冲突，所以，我们要想使用这样的表达式，必须加上括号来回避语法冲突。</p>
+<p>在JavaScript标准中，这些结构有的被称作直接量（Literal），有的被称作表达式（**Expression），在我看来，把它们都理解成直接量比较合适。</p>
+<p>Primary Expression还可以是this或者变量，在语法上，把变量称作“标识符引用”。</p>
+<pre><code>this;
+myVar;</code></pre><p>任何表达式加上圆括号，都被认为是Primary Expression，这个机制使得圆括号成为改变运算优先顺序的手段。</p>
+<pre><code>(a + b);</code></pre><p>这就是Primary Expression的几种形式了，接下来，我们讲讲由Primary Expression构成的更复杂的表达式：Member Expression。</p>
+<h2 id="MemberExpression-成员表达式"><a href="#MemberExpression-成员表达式" class="headerlink" title="MemberExpression 成员表达式"></a>MemberExpression 成员表达式</h2><p>Member Expression通常是用于访问对象成员的。它有几种形式：</p>
+<pre><code>a.b;
+a[&quot;b&quot;];
+new.target;
+super.b;</code></pre><p>前面两种用法都很好理解，就是用标识符的属性访问和用字符串的属性访问。而new.target是个新加入的语法，用于判断函数是否是被new调用，super则是构造函数中，用于访问父类的属性的语法。</p>
+<p>从名字就可以看出，Member Expression最初设计是为了属性访问的，不过从语法结构需要，以下两种在JavaScript标准中当做Member Expression：</p>
+<pre><code>f`a${b}c`;</code></pre><p>这是一个是带函数的模板，这个带函数名的模板表示把模板的各个部分算好后传递给一个函数。</p>
+<pre><code>new Cls();</code></pre><p>另一个是带参数列表的new运算，注意，不带参数列表的new运算优先级更低，不属于Member Expression。</p>
+<p>实际上，这两种被放入Member Expression，仅仅意味着它们跟属性运算属于同一优先级，没有任何语义上的关联。接下来我们看看Member Expression能组成什么。</p>
+<h2 id="NewExpression-NEW表达式"><a href="#NewExpression-NEW表达式" class="headerlink" title="NewExpression NEW表达式"></a>NewExpression NEW表达式</h2><p>这种非常简单，Member Expression加上new就是New Expression（当然，不加new也可以构成New Expression，JavaScript中默认独立的高优先级表达式都可以构成低优先级表达式）。</p>
+<p>注意，这里的New Expression特指没有参数列表的表达式。我们看个稍微复杂的例子：</p>
+<pre><code>new new Cls(1);</code></pre><p>直观看上去，它可能有两种意思：</p>
+<pre><code>new (new Cls(1));
+
+
+new (new Cls)(1);</code></pre><p>实际上，它等价于第一种。我们可以用以下代码来验证：</p>
+<pre><code>class Cls{
+  constructor(n){
+    console.log(&quot;cls&quot;, n);
+    return class {
+      constructor(n) {
+        console.log(&quot;returned&quot;, n);
+      }
+    }
+  }
+}
+
+new (new Cls(1));</code></pre><p>这段代码最后得到了下面这样的结果。</p>
+<pre><code>cls 1
+returned undefined</code></pre><p>这里就说明了，1被当做调用Cls时的参数传入了。</p>
+<h2 id="CallExpression-函数调用表达式"><a href="#CallExpression-函数调用表达式" class="headerlink" title="CallExpression 函数调用表达式"></a>CallExpression 函数调用表达式</h2><p>除了New Expression，Member Expression还能构成Call Expression。它的基本形式是Member Expression后加一个括号里的参数列表，或者我们可以用上super关键字代替Member Expression。</p>
+<pre><code>a.b(c);
+super();</code></pre><p>这看起来很简单，但是它有一些变体。比如：</p>
+<pre><code>a.b(c)(d)(e);
+a.b(c)[3];
+a.b(c).d;
+a.b(c)`xyz`;</code></pre><p>这些变体的形态，跟Member Expression几乎是一一对应的。实际上，我们可以理解为，Member Expression中的某一子结构具有函数调用，那么整个表达式就成为了一个Call Expression。</p>
+<p>而Call Expression就失去了比New Expression优先级高的特性，这是一个主要的区分。</p>
+<h2 id="LeftHandSideExpression-左值表达式"><a href="#LeftHandSideExpression-左值表达式" class="headerlink" title="LeftHandSideExpression 左值表达式"></a>LeftHandSideExpression 左值表达式</h2><p>接下来，我们需要理解一个概念：New Expression 和 Call Expression 统称LeftHandSideExpression，左值表达式。</p>
+<p>我们直观地讲，左值表达式就是可以放到等号左边的表达式。JavaScript语法则是下面这样。</p>
+<pre><code>a() = b;</code></pre><p>这样的用法其实是符合语法的，只是，原生的JavaScript函数，返回的值都不能被赋值。因此多数时候，我们看到的赋值将会是Call Expression的其它形式，如：</p>
+<pre><code>a().c = b;</code></pre><p>另外，根据JavaScript运行时的设计，不排除某些宿主会提供返回引用类型的函数，这时候，赋值就是有效的了。</p>
+<p>左值表达式最经典的用法是用于构成赋值表达式，但是其实如果你翻一翻JavaScript标准，你会发现它出现在各种场合，凡是需要“可以被修改的变量”的位置，都能见到它的身影。</p>
+<p>那么接下来我们就讲讲 AssignmentExpression 赋值表达式。</p>
+<h2 id="AssignmentExpression-赋值表达式"><a href="#AssignmentExpression-赋值表达式" class="headerlink" title="AssignmentExpression 赋值表达式"></a>AssignmentExpression 赋值表达式</h2><p>AssignmentExpression 赋值表达式也有多种形态，最基本的当然是使用等号赋值：</p>
+<pre><code>a = b</code></pre><p>这里需要理解的一个稍微复杂的概念是，这个等号是可以嵌套的：</p>
+<pre><code>a = b = c = d</code></pre><p>这样的连续赋值，是右结合的，它等价于下面这种：</p>
+<pre><code>a = (b = (c = d))</code></pre><p>也就是说，先把d的结果赋值给c，再把整个表达式的结果赋值给b，再赋值给a。</p>
+<p><strong>当然，这并非一个很好的代码风格，我们讲解语法是为了让你理解这样的用法，而不是推荐你这样写代码。</strong></p>
+<p>赋值表达式的使用，还可以结合一些运算符，例如：</p>
+<pre><code>a += b;</code></pre><p>相当于</p>
+<pre><code>a = a + b;</code></pre><p>能有这样用的运算符有下面这几种：</p>
+<p><code>*=</code>、<code>/=</code>、<code>%=</code>、<code>+=</code>、<code>-=</code>、<code>&lt;&lt;=</code>、<code>&gt;&gt;=</code>、<code>&gt;&gt;&gt;=</code>、<code>&amp;=</code>、<code>^=</code>、<code>|=</code>、<code>**=</code></p>
+<p>我想你已经注意到了，赋值表达式的等号左边和右边能用的表达式类型不一样，在这一课，我们已经关注完了表达式的左边部分（左值表达式）的语法结构，下一节课，我们将会给你重点讲解表达式的右边部分。</p>
+<h2 id="Expression-表达式"><a href="#Expression-表达式" class="headerlink" title="Expression 表达式"></a>Expression 表达式</h2><p>赋值表达式可以构成Expression表达式的一部分。在JavaScript中，表达式就是用逗号运算符连接的赋值表达式。</p>
+<p>在JavaScript中，比赋值运算优先级更低的就是逗号运算符了。我们可以把逗号可以理解为一种小型的分号。</p>
+<pre><code>a = b, b = 1, null;</code></pre><p>逗号分隔的表达式会顺次执行，就像不同的表达式语句一样。“整个表达式的结果”就是“最后一个逗号后的表达式结果”。比如我们文中的例子，整个<code>“a = b, b = 1, null;”</code>表达式的结果就是<code>“，”</code>后面的<code>null</code>。</p>
+<p>在很多场合，都不允许使用带逗号的表达式，比如我们在前面课程中提到，export后只能跟赋值表达式，意思就是表达式中不能含有逗号。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这节课我们开始讲解了运算符和表达式的一些相关知识，这节课上，我们已经学习了赋值表达式和赋值表达式的左边部分。下节课，我们将会讲一讲赋值表达式的右边部分。</p>
+<p>最后给你留一个作业，把今天讲到的所有运算符按优先级排列成一个表格，下节课我们会补完剩下的部分。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:08.620Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    27 minutes read (About 4053 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript语法（二）：你知道哪些JavaScript语句？/">JavaScript语法（二）：你知道哪些JavaScript语句？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>我们在上一节课中已经讲过了JavaScript语法的顶层设计，接下来我们进入到更具体的内容。</p>
+<p>JavaScript遵循了一般编程语言的“语句-表达式”结构，多数编程语言都是这样设计的。我们在上节课讲的脚本，或者模块都是由语句列表构成的，这一节课，我们就来一起了解一下语句。</p>
+<p>在JavaScript标准中，把语句分成了两种：声明和语句，不过，这里的区分逻辑比较奇怪，所以，这里我还是按照自己的思路给你整理一下。</p>
+<p>普通语句：</p>
+<p><img src="https://static001.geekbang.org/resource/image/81/55/8186219674547691cf59e5c095304d55.png" alt></p>
+<p>声明型语句：</p>
+<p><img src="https://static001.geekbang.org/resource/image/0e/38/0e5327528df12d1eaad52c4005efff38.jpg" alt></p>
+<p>我们根据上面的分类，来遍历学习一下这些语句。</p>
+<h2 id="语句块"><a href="#语句块" class="headerlink" title="语句块"></a>语句块</h2><p>我们可以这样去简单理解，语句块就是一对大括号。</p>
+<pre><code>{
+    var x, y;
+    x = 10;
+    y = 20;
+}</code></pre><p>语句块的意义和好处在于：让我们可以把多行语句视为同一行语句，这样，if、for等语句定义起来就比较简单了。不过，我们需要注意的是，语句块会产生作用域，我们看一个例子：</p>
+<pre><code>{
+    let x = 1;
+}
+console.log(x); // 报错</code></pre><p>这里我们的let声明，仅仅对语句块作用域生效，于是我们在语句块外试图访问语句块内的变量x就会报错。</p>
+<h2 id="空语句"><a href="#空语句" class="headerlink" title="空语句"></a>空语句</h2><p>空语句就是一个独立的分号，实际上没什么大用。我们来看一下：</p>
+<pre><code>;</code></pre><p>空语句的存在仅仅是从语言设计完备性的角度考虑，允许插入多个分号而不抛出错误。</p>
+<h2 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h2><p>if语句是条件语句。我想，对多数人来说，if语句都是熟悉的老朋友了，也没有什么特别需要注意的用法，但是为了我们课程的完备性，这里还是要讲一下。</p>
+<p>if语句示例如下：</p>
+<pre><code>if(a &lt; b)
+    console.log(a);</code></pre><p>if语句的作用是，在满足条件时执行它的内容语句，这个语句可以是一个语句块，这样就可以实现有条件地执行多个语句了。</p>
+<p>if语句还有else结构，用于不满足条件时执行，一种常见的用法是，利用语句的嵌套能力，把if和else连写成多分支条件判断：</p>
+<pre><code>if(a &lt; 10) {
+    //...
+} else if(a &lt; 20) {
+    //...
+} else if(a &lt; 30) {
+    //...
+} else {
+    //...
+}</code></pre><p>这段代码表示四个互斥的分支，分别在满足a&lt;10、a&lt;20、a&lt;30和其它情况时执行。</p>
+<h2 id="switch语句"><a href="#switch语句" class="headerlink" title="switch语句"></a>switch语句</h2><p>switch语句继承自Java，Java中的switch语句继承自C和C++，原本switch语句是跳转的变形，所以我们如果要用它来实现分支，必须要加上break。</p>
+<p>其实switch原本的设计是类似goto的思维。我们看一个例子：</p>
+<pre><code>switch(num) {
+case 1:
+    print(1);
+case 2:
+    print 2;
+case 3:
+    print 3;
+}</code></pre><p>这段代码当num为1时输出1 2 3，当num为2时输出2 3，当num为3时输出3。如果我们要把它变成分支型，则需要在每个case后加上break。</p>
+<pre><code>switch(num) {
+case 1:
+    print 1;
+    break;
+case 2:
+    print 2;
+    break;
+case 3:
+    print 3;
+    break;
+}</code></pre><p>在C时代，switch生成的汇编代码性能是略优于if else的，但是对JavaScript来说，则无本质区别。我个人的看法是，现在switch已经完全没有必要使用了，应该用if else结构代替。</p>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><p>循环语句应该也是你所熟悉的语句了，这里我们把重点放在一些新用法上。</p>
+<h3 id="while循环和do-while循环"><a href="#while循环和do-while循环" class="headerlink" title="while循环和do while循环"></a>while循环和do while循环</h3><p>这两个都是历史悠久的JavaScript语法了，示例大概如下：</p>
+<pre><code>let a = 100
+while(a--) {
+    console.log(&quot;*&quot;);
+}
+
+
+let a = 101;
+do {
+    console.log(a);
+} while(a &lt; 100)</code></pre><p>注意，这里do while循环无论如何至少会执行一次。</p>
+<h3 id="普通for循环"><a href="#普通for循环" class="headerlink" title="普通for循环"></a>普通for循环</h3><p>首先我们来看看普通的for循环。</p>
+<pre><code>for(i = 0; i &lt; 100; i++)
+    console.log(i);
+
+for(var i = 0; i &lt; 100; i++)
+    console.log(i);
+
+for(let i = 0; i &lt; 100; i++)
+    console.log(i);
+
+var j = 0;
+for(const i = 0; j &lt; 100; j++)
+    console.log(i);</code></pre><p>这里为了配合新语法，加入了允许let和const，实际上，const在这里是非常奇葩的东西，因为这里声明和初始化的变量，按惯例是用于控制循环的，但是它如果是const就没法改了。</p>
+<p>我想，这一点可能是从保持let和const一致性的角度考虑的吧。</p>
+<h3 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for in循环"></a>for in循环</h3><p>for in 循环枚举对象的属性，这里体现了属性的enumerable特征。</p>
+<pre><code>let o = { a: 10, b: 20}
+Object.defineProperty(o, &quot;c&quot;, {enumerable:false, value:30})
+
+for(let p in o)
+    console.log(p);</code></pre><p>这段代码中，我们定义了一个对象o，给它添加了不可枚举的属性c，之后我们用for in循环枚举它的属性，我们会发现，输出时得到的只有a和b。</p>
+<p>如果我们定义c这个属性时，enumerable为true，则for in循环中也能枚举到它。</p>
+<h3 id="for-of循环和for-await-of循环"><a href="#for-of循环和for-await-of循环" class="headerlink" title="for of循环和for await of循环"></a>for of循环和for await of循环</h3><p>for of循环是非常棒的语法特性。</p>
+<p>我们先看下基本用法，它可以用于数组：</p>
+<pre><code>for(let e of [1, 2, 3, 4, 5])
+    console.log(e);</code></pre><p>但是实际上，它背后的机制是iterator机制。</p>
+<p>我们可以给任何一个对象添加iterator，使它可以用于for of语句，看下示例：</p>
+<pre><code>let o = {  
+    [Symbol.iterator]:() =&gt; ({
+        _value: 0,
+        next(){
+            if(this._value == 10)
+                return {
+                    done: true
+                }
+            else return {
+                value: this._value++,
+                done: false
+            };
+        }
+    })
+}
+for(let e of o)
+    console.log(e);</code></pre><p>这段代码展示了如何为一个对象添加iterator。但是，在实际操作中，我们一般不需要这样定义iterator，我们可以使用generator function。</p>
+<pre><code>function* foo(){
+    yield 0;
+    yield 1;
+    yield 2;
+    yield 3;
+}
+for(let e of foo())
+    console.log(e);</code></pre><p>这段代码展示了generator function和foo的配合。</p>
+<p>此外，JavaScript还为异步生成器函数配备了异步的for of，我们来看一个例子：</p>
+<pre><code>function sleep(duration) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(resolve,duration);
+    })
+}
+async function* foo(){
+    i = 0;
+    while(true) {
+        await sleep(1000);
+        yield i++;
+    }
+
+}
+for await(let e of foo())
+    console.log(e);</code></pre><p>这段代码定义了一个异步生成器函数，异步生成器函数每隔一秒生成一个数字，这是一个无限的生成器。</p>
+<p>接下来，我们使用for await of来访问这个异步生成器函数的结果，我们可以看到，这形成了一个每隔一秒打印一个数字的无限循环。</p>
+<p>但是因为我们这个循环是异步的，并且有时间延迟，所以，这个无限循环的代码可以用于显示时钟等有意义的操作。</p>
+<h2 id="return"><a href="#return" class="headerlink" title="return"></a>return</h2><p>return语句用于函数中，它终止函数的执行，并且指定函数的返回值，这是大家非常熟悉语句了，也没有什么特殊之处。</p>
+<pre><code>function squre(x){
+    return x * x;
+}</code></pre><p>这段代码展示了return的基本用法。它后面可以跟一个表达式，计算结果就是函数返回值。</p>
+<h2 id="break语句和continue语句"><a href="#break语句和continue语句" class="headerlink" title="break语句和continue语句"></a>break语句和continue语句</h2><p>break语句用于跳出循环语句或者switch语句，continue语句用于结束本次循环并继续循环。</p>
+<p>这两个语句都属于控制型语句，用法也比较相似，所以我们就一起讲了。需要注意的是，它们都有带标签的用法。</p>
+<pre><code>outer:for(let i = 0; i &lt; 100; i++)
+    inner:for(let j = 0; j &lt; 100; j++)
+        if( i == 50 &amp;&amp; j == 50)
+            break outer;
+outer:for(let i = 0; i &lt; 100; i++)
+    inner:for(let j = 0; j &lt; 100; j++)
+        if( i &gt;= 50 &amp;&amp; j == 50)
+            continue outer;</code></pre><p>带标签的break和continue可以控制自己被外层的哪个语句结构消费，这可以跳出复杂的语句结构。</p>
+<h2 id="with语句"><a href="#with语句" class="headerlink" title="with语句"></a>with语句</h2><p>with语句是个非常巧妙的设计，但它把JavaScript的变量引用关系变得不可分析，所以一般都认为这种语句都属于糟粕。</p>
+<p>但是历史无法改写，现在已经无法去除with了。我们来了解一下它的基本用法即可。</p>
+<pre><code>let o = {a:1, b:2}
+with(o){
+    console.log(a, b);
+}</code></pre><p>with语句把对象的属性在它内部的作用域内变成变量。</p>
+<h2 id="try语句和throw语句"><a href="#try语句和throw语句" class="headerlink" title="try语句和throw语句"></a>try语句和throw语句</h2><p>try语句和throw语句用于处理异常。它们是配合使用的，所以我们就放在一起讲了。在大型应用中，异常机制非常重要。</p>
+<pre><code>try {
+    throw new Error(&quot;error&quot;);
+} catch(e) {
+    console.log(e);
+} finally {
+    console.log(&quot;finally&quot;);
+}</code></pre><p>一般来说，throw用于抛出异常，但是单纯从语言的角度，我们可以抛出任何值，也不一定是异常逻辑，但是为了保证语义清晰，不建议用throw表达任何非异常逻辑。</p>
+<p>try语句用于捕获异常，用throw抛出的异常，可以在try语句的结构中被处理掉：try部分用于标识捕获异常的代码段，catch部分则用于捕获异常后做一些处理，而finally则是用于执行后做一些必须执行的清理工作。</p>
+<p>catch结构会创建一个局部的作用域，并且把一个变量写入其中，需要注意，在这个作用域，不能再声明变量e了，否则会出错。</p>
+<p>在catch中重新抛出错误的情况非常常见，在设计比较底层的函数时，常常会这样做，保证抛出的错误能被理解。</p>
+<p>finally语句一般用于释放资源，它一定会被执行，我们在前面的课程中已经讨论过一些finally的特征，即使在try中出现了return，finally中的语句也一定要被执行。</p>
+<h2 id="debugger语句"><a href="#debugger语句" class="headerlink" title="debugger语句"></a>debugger语句</h2><p>debugger语句的作用是：通知调试器在此断点。在没有调试器挂载时，它不产生任何效果。</p>
+<p>介绍完普通语句，我们再来看看声明型语句。声明型语句跟普通语句最大区别就是声明型语句响应预处理过程，普通语句只有执行过程。</p>
+<h2 id="var"><a href="#var" class="headerlink" title="var"></a>var</h2><p>var声明语句是古典的JavaScript中声明变量的方式。而现在，在绝大多数情况下，let和const都是更好的选择。</p>
+<p>我们在上一节课已经讲解了var声明对全局作用域的影响，它是一种预处理机制。</p>
+<p>如果我们仍然想要使用var，我的个人建议是，把它当做一种“保障变量是局部”的逻辑，遵循以下三条规则：</p>
+<ul>
+<li>声明同时必定初始化；</li>
+<li>尽可能在离使用的位置近处声明；</li>
+<li>不要在意重复声明。</li>
+</ul>
+<p>例如：</p>
+<pre><code>var x = 1, y = 2;
+doSth(x, y);
+
+for(var x = 0; x &lt; 10; x++)
+    doSth2(x);</code></pre><p>这个例子中，两次声明了变量x，完成了两段逻辑，这两个x意义上可能不一定相关，这样，不论我们把代码复制粘贴在哪里，都不会出错。</p>
+<p>当然，更好的办法是使用let改造，我们看看如何改造：</p>
+<pre><code>{
+    let x = 1, y = 2;
+    doSth(x, y);
+}
+
+for(let x = 0; x &lt; 10; x++)
+    doSth2(x);</code></pre><p>这里我用代码块限制了第一个x的作用域，这样就更难发生变量命名冲突引起的错误了。</p>
+<h2 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h2><p>let和const是都是变量的声明，它们的特性非常相似，所以我们放在一起讲了。let和const是新设计的语法，所以没有什么硬伤，非常地符合直觉。let和const的作用范围是if、for等结构型语句。</p>
+<p>我们看下基本用法：</p>
+<pre><code>const a = 2;
+if(true){
+    const a = 1;
+    console.log(a);
+}
+console.log(a);</code></pre><p>这里的代码先在全局声明了变量a，接下来又在if内声明了a，if内构成了一个独立的作用域。</p>
+<p>const和let语句在重复声明时会抛错，这能够有效地避免变量名无意中冲突：</p>
+<pre><code>let a = 2
+const a = 1;</code></pre><p>这段代码中，先用let声明了a，接下来又试图使用const声明变量a，这时，就会产生错误。</p>
+<p>let和const声明虽然看上去是执行到了才会生效，但是实际上，它们还是会被预处理。如果当前作用域内有声明，就无法访问到外部的变量。我们来看这段代码：</p>
+<pre><code>const a = 2;
+if(true){
+    console.log(a); //抛错
+    const a = 1;   
+}</code></pre><p>这里在if的作用域中，变量a声明执行到之前，我们访问了变量a，这时会抛出一个错误，这说明const声明仍然是有预处理机制的。</p>
+<p>在执行到const语句前，我们的JavaScript引擎就已经知道后面的代码将会声明变量a，从而不允许我们访问外层作用域中的a。</p>
+<h2 id="class声明"><a href="#class声明" class="headerlink" title="class声明"></a>class声明</h2><p>我们在之前的课程中，已经了解过class相关的用法。这里我们再从语法的角度来看一遍：</p>
+<pre><code>class a {
+
+}</code></pre><p>class最基本的用法只需要class关键字、名称和一对大括号。它的声明特征跟const和let类似，都是作用于块级作用域，预处理阶段则会屏蔽外部变量。</p>
+<pre><code>const a = 2;
+if(true){
+    console.log(a); //抛错
+    class a {
+
+    }
+}</code></pre><p>class内部，可以使用constructor关键字来定义构造函数。还能定义getter/setter和方法。</p>
+<pre><code>class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  // Getter
+  get area() {
+    return this.calcArea();
+  }
+  // Method
+  calcArea() {
+    return this.height * this.width;
+  }
+}</code></pre><p>这个例子来自MDN，它展示了构造函数、getter和方法的定义。</p>
+<p>以目前的兼容性，class中的属性只能写在构造函数中，相关标准正在TC39讨论。</p>
+<p>需要注意，class默认内部的函数定义都是strict模式的。</p>
+<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>函数声明使用 function 关键字。</p>
+<p>在上一节课中，我们已经讨论过函数声明对全局作用域的影响了。这一节课，我们来看看函数声明具体的内容，我们先看一下函数声明的几种类型。</p>
+<pre><code>function foo(){
+
+}
+
+function* foo(){
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+async function foo(){
+    await sleep(3000);
+
+}
+
+async function* foo(){
+    await sleep(3000);
+    yield 1;
+}</code></pre><p>带*的函数是generator，我们在前面的部分已经见过它了。生成器函数可以理解为返回一个序列的函数，它的底层是iterator机制。</p>
+<p>async函数是可以暂停执行，等待异步操作的函数，它的底层是Promise机制。异步生成器函数则是二者的结合。</p>
+<p>函数的参数，可以只写形参名，现在还可以写默认参数和指定多个参数，看下例子：</p>
+<pre><code>function foo(a = 1, ...other) {
+    console.log(a, other)
+}</code></pre><p>这个形式可以代替一些对参数的处理代码，表意会更加清楚。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们一起学习了语句家族，语句分成了普通语句和声明型语句。</p>
+<p>普通语句部分，建议你把重点放在循环语句上面。声明型语句我觉得都很重要，尤其是它们的行为。熟练掌握了它们，我们就可以在工作中去综合运用它们，从而减少代码中的错误。新特性大多可以帮助我们发现代码中的错误。</p>
+<p>最后留一个小作业，请你找出所有具有Symbol.iterator的原生对象，并且看看它们的for of遍历行为。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:04.712Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    29 minutes read (About 4398 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript语法（一）：在script标签写export为什么会抛错？/">JavaScript语法（一）：在script标签写export为什么会抛错？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter，今天我们进入到语法部分的学习。在讲解具体的语法结构之前，这一堂课我首先要给你介绍一下JavaScript语法的一些基本规则。</p>
+<h2 id="脚本和模块"><a href="#脚本和模块" class="headerlink" title="脚本和模块"></a>脚本和模块</h2><p>首先，JavaScript有两种源文件，一种叫做脚本，一种叫做模块。这个区分是在ES6引入了模块机制开始的，在ES5和之前的版本中，就只有一种源文件类型（就只有脚本）。</p>
+<p>脚本是可以由浏览器或者node环境引入执行的，而模块只能由JavaScript代码用import引入执行。</p>
+<p>从概念上，我们可以认为脚本具有主动性的JavaScript代码段，是控制宿主完成一定任务的代码；而模块是被动性的JavaScript代码段，是等待被调用的库。</p>
+<p>我们对标准中的语法产生式做一些对比，不难发现，实际上模块和脚本之间的区别仅仅在于是否包含import 和 export。</p>
+<p>脚本是一种兼容之前的版本的定义，在这个模式下，没有import就不需要处理加载“.js”文件问题。</p>
+<p>现代浏览器可以支持用script标签引入模块或者脚本，如果要引入模块，必须给script标签添加type=“module”。如果引入脚本，则不需要type。</p>
+<pre><code>&lt;script type=&quot;module&quot; src=&quot;xxxxx.js&quot;&gt;&lt;/script&gt;</code></pre><p>这样，就回答了我们标题中的问题，script标签如果不加<code>type=“module”</code>，默认认为我们加载的文件是脚本而非模块，如果我们在脚本中写了export，当然会抛错。</p>
+<p>脚本中可以包含语句。模块中可以包含三种内容：import声明，export声明和语句。普通语句我们会在下一课专门给你讲解，下面我们就来讲讲import声明和export声明。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/44/43fdb35c0300e73bb19c143431f50a44.jpg" alt></p>
+<h3 id="import声明"><a href="#import声明" class="headerlink" title="import声明"></a>import声明</h3><p>我们首先来介绍一下import声明，import声明有两种用法，一个是直接import一个模块，另一个是带from的import，它能引入模块里的一些信息。</p>
+<pre><code>import &quot;mod&quot;; //引入一个模块
+import v from &quot;mod&quot;;  //把模块默认的导出值放入变量v</code></pre><p>直接import一个模块，只是保证了这个模块代码被执行，引用它的模块是无法获得它的任何信息的。</p>
+<p>带from的import意思是引入模块中的一部分信息，可以把它们变成本地的变量。</p>
+<p>带from的import细分又有三种用法，我们可以分别看下例子：</p>
+<ul>
+<li><code>import x from &quot;./a.js&quot;</code> 引入模块中导出的默认值。</li>
+<li><code>import {a as x, modify} from &quot;./a.js&quot;;</code> 引入模块中的变量。</li>
+<li><code>import * as x from &quot;./a.js&quot;</code> 把模块中所有的变量以类似对象属性的方式引入。</li>
+</ul>
+<p>第一种方式还可以跟后两种组合使用。</p>
+<ul>
+<li><code>import d, {a as x, modify} from &quot;./a.js&quot;</code></li>
+<li><code>import d, * as x from &quot;./a.js&quot;</code></li>
+</ul>
+<p>语法要求不带as的默认值永远在最前。注意，这里的变量实际上仍然可以受到原来模块的控制。</p>
+<p>我们看一个例子，假设有两个模块a和b。我们在模块a中声明了变量和一个修改变量的函数，并且把它们导出。我们用b模块导入了变量和修改变量的函数。</p>
+<p><strong>模块a：</strong></p>
+<pre><code>export var a = 1;
+
+export function modify(){
+    a = 2;
+}</code></pre><p><strong>模块b：</strong></p>
+<pre><code>import {a, modify} from &quot;./a.js&quot;;
+
+console.log(a);
+
+modify();
+
+console.log(a);</code></pre><p>当我们调用修改变量的函数后，b模块变量也跟着发生了改变。这说明导入与一般的赋值不同，导入后的变量只是改变了名字，它仍然与原来的变量是同一个。</p>
+<h3 id="export声明"><a href="#export声明" class="headerlink" title="export声明"></a>export声明</h3><p>我们再来说说export声明。与import相对，export声明承担的是导出的任务。</p>
+<p>模块中导出变量的方式有两种，一种是独立使用export声明，另一种是直接在声明型语句前添加export关键字。</p>
+<p>独立使用export声明就是一个export关键字加上变量名列表，例如：</p>
+<pre><code>export {a, b, c};</code></pre><p>我们也可以直接在声明型语句前添加export关键字，这里的export可以加在任何声明性质的语句之前，整理如下：</p>
+<ul>
+<li>var</li>
+<li>function (含async和generator)</li>
+<li>class</li>
+<li>let</li>
+<li>const</li>
+</ul>
+<p>export还有一种特殊的用法，就是跟default联合使用。export default 表示导出一个默认变量值，它可以用于function和class。这里导出的变量是没有名称的，可以使用<code>import x from &quot;./a.js&quot;</code>这样的语法，在模块中引入。</p>
+<p>export default 还支持一种语法，后面跟一个表达式，例如：</p>
+<pre><code>var a = {};
+export default a;</code></pre><p>但是，这里的行为跟导出变量是不一致的，这里导出的是值，导出的就是普通变量a的值，以后a的变化与导出的值就无关了，修改变量a，不会使得其他模块中引入的default值发生改变。</p>
+<p>在import语句前无法加入export，但是我们可以直接使用export from语法。</p>
+<pre><code>export a from &quot;a.js&quot;</code></pre><p>JavaScript引擎除了执行脚本和模块之外，还可以执行函数。而函数体跟脚本和模块有一定的相似之处，所以接下来，给你讲讲函数体的相关知识。</p>
+<h2 id="函数体"><a href="#函数体" class="headerlink" title="函数体"></a>函数体</h2><p>执行函数的行为通常是在JavaScript代码执行时，注册宿主环境的某些事件触发的，而执行的过程，就是执行函数体（函数的花括号中间的部分）。</p>
+<p>我们先看一个例子，感性地理解一下：</p>
+<pre><code>setTimeout(function(){
+    console.log(&quot;go go go&quot;);
+}, 10000)</code></pre><p>这段代码通过setTimeout函数注册了一个函数给宿主，当一定时间之后，宿主就会执行这个函数。</p>
+<p>你还记得吗，我们前面已经在运行时这部分讲过，宿主会为这样的函数创建宏任务。</p>
+<p>当我们学习了语法之后，我们可以认为，宏任务中可能会执行的代码包括“脚本(script)”“模块（module）”和“函数体（function body）”。正因为这样的相似性，我们把函数体也放到本课来讲解。</p>
+<p>函数体其实也是一个语句的列表。跟脚本和模块比起来，函数体中的语句列表中多了return语句可以用。</p>
+<p>函数体实际上有四种，下面，我来分别介绍一下。</p>
+<ul>
+<li><p>普通函数体，例如：</p>
+<p>  function foo(){</p>
+<pre><code>//Function body</code></pre><p>  }</p>
+</li>
+</ul>
+<ul>
+<li><p>异步函数体，例如：</p>
+<p>  async function foo(){</p>
+<pre><code>//Function body</code></pre><p>  }</p>
+</li>
+</ul>
+<ul>
+<li><p>生成器函数体，例如：</p>
+<p>  function *foo(){</p>
+<pre><code>//Function body</code></pre><p>  }</p>
+</li>
+</ul>
+<ul>
+<li><p>异步生成器函数体，例如：</p>
+<p>  async function *foo(){</p>
+<pre><code>//Function body</code></pre><p>  }</p>
+</li>
+</ul>
+<p>上面四种函数体的区别在于：能否使用await或者yield语句。</p>
+<p>关于函数体、模块和脚本能使用的语句，我整理了一个表格，你可以参考一下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/0b/50/0b24e78625beb70e3346aad1e8cfff50.jpg" alt></p>
+<p>讲完了三种语法结构，我再来介绍两个JavaScript语法的全局机制：预处理和指令序言。</p>
+<p>这两个机制对于我们解释一些JavaScript的语法现象非常重要。不理解预处理机制我们就无法理解var等声明类语句的行为，而不理解指令序言，我们就无法解释严格模式。</p>
+<h2 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h2><p>JavaScript执行前，会对脚本、模块和函数体中的语句进行预处理。预处理过程将会提前处理var、函数声明、class、const和let这些语句，以确定其中变量的意义。</p>
+<p>因为一些历史包袱，这一部分内容非常复杂，首先我们看一下var声明。</p>
+<h3 id="var声明"><a href="#var声明" class="headerlink" title="var声明"></a>var声明</h3><p>var声明永远作用于脚本、模块和函数体这个级别，在预处理阶段，不关心赋值的部分，只管在当前作用域声明这个变量。</p>
+<p>我们还是从实例来进行学习。</p>
+<pre><code>var a = 1;
+
+function foo() {
+    console.log(a);
+    var a = 2;
+}
+
+foo();</code></pre><p>这段代码声明了一个脚本级别的a，又声明了foo函数体级别的a，我们注意到，函数体级的<code>var</code>出现在console.log语句之后。</p>
+<p>但是预处理过程在执行之前，所以有函数体级的变量a，就不会去访问外层作用域中的变量a了，而函数体级的变量a此时还没有赋值，所以是undefined。我们再看一个情况：</p>
+<pre><code>var a = 1;
+
+function foo() {
+    console.log(a);
+    if(false) {
+        var a = 2;
+    }
+}
+
+foo();</code></pre><p>这段代码比上一段代码在<code>var a = 2</code>之外多了一段if，我们知道if(false)中的代码永远不会被执行，但是预处理阶段并不管这个，var的作用能够穿透一切语句结构，它只认脚本、模块和函数体三种语法结构。所以这里结果跟前一段代码完全一样，我们会得到undefined。</p>
+<p>我们看下一个例子，我们在运行时部分讲过类似的例子。</p>
+<pre><code>var a = 1;
+
+function foo() {
+    var o= {a:3}
+    with(o) {
+        var a = 2;
+    }
+    console.log(o.a);
+    console.log(a);
+}
+
+foo();</code></pre><p>在这个例子中，我们引入了with语句，我们用with(o)创建了一个作用域，并把o对象加入词法环境，在其中使用了<code>var a = 2;</code>语句。</p>
+<p>在预处理阶段，只认<code>var</code>中声明的变量，所以同样为foo的作用域创建了a这个变量，但是没有赋值。</p>
+<p>在执行阶段，当执行到<code>var a = 2</code>时，作用域变成了with语句内，这时候的a被认为访问到了对象o的属性a，所以最终执行的结果，我们得到了2和undefined。</p>
+<p>这个行为是JavaScript公认的设计失误之一，一个语句中的a在预处理阶段和执行阶段被当做两个不同的变量，严重违背了直觉，但是今天，在JavaScript设计原则“don’t break the web”之下，已经无法修正了，所以你需要特别注意。</p>
+<p>因为早年JavaScript没有let和const，只能用var，又因为var除了脚本和函数体都会穿透，人民群众发明了“立即执行的函数表达式（IIFE）”这一用法，用来产生作用域，例如：</p>
+<pre><code>for(var i = 0; i &lt; 20; i ++) {
+    void function(i){
+        var div = document.createElement(&quot;div&quot;);
+        div.innerHTML = i;
+        div.onclick = function(){
+            console.log(i);
+        }
+        document.body.appendChild(div);
+    }(i);
+}</code></pre><p>这段代码非常经典，常常在实际开发中见到，也经常被用作面试题，为文档添加了20个div元素，并且绑定了点击事件，打印它们的序号。</p>
+<p>我们通过IIFE在循环内构造了作用域，每次循环都产生一个新的环境记录，这样，每个div都能访问到环境中的i。</p>
+<p>如果我们不用IIFE：</p>
+<pre><code>for(var i = 0; i &lt; 20; i ++) {
+    var div = document.createElement(&quot;div&quot;);
+    div.innerHTML = i;
+    div.onclick = function(){
+        console.log(i);
+    }
+    document.body.appendChild(div);
+}</code></pre><p>这段代码的结果将会是点每个div都打印20，因为全局只有一个i，执行完循环后，i变成了20。</p>
+<h3 id="function声明"><a href="#function声明" class="headerlink" title="function声明"></a>function声明</h3><p>function声明的行为原本跟var非常相似，但是在最新的JavaScript标准中，对它进行了一定的修改，这让情况变得更加复杂了。</p>
+<p>在全局（脚本、模块和函数体），function声明表现跟var相似，不同之处在于，function声明不但在作用域中加入变量，还会给它赋值。</p>
+<p>我们看一下function声明的例子：</p>
+<pre><code>console.log(foo);
+function foo(){
+
+}</code></pre><p>这里声明了函数foo，在声明之前，我们用console.log打印函数foo，我们可以发现，已经是函数foo的值了。</p>
+<p>function声明出现在if等语句中的情况有点复杂，它仍然作用于脚本、模块和函数体级别，在预处理阶段，仍然会产生变量，它不再被提前赋值：</p>
+<pre><code>console.log(foo);
+if(true) {
+    function foo(){
+
+    }
+}</code></pre><p>这段代码得到undefined。如果没有函数声明，则会抛出错误。</p>
+<p>这说明function在预处理阶段仍然发生了作用，在作用域中产生了变量，没有产生赋值，赋值行为发生在了执行阶段。</p>
+<p>出现在if等语句中的function，在if创建的作用域中仍然会被提前，产生赋值效果，我们会在下一节课继续讨论。</p>
+<h3 id="class声明"><a href="#class声明" class="headerlink" title="class声明"></a>class声明</h3><p>class声明在全局的行为跟function和var都不一样。</p>
+<p>在class声明之前使用class名，会抛错：</p>
+<pre><code>console.log(c);
+class c{
+
+}</code></pre><p>这段代码我们试图在class前打印变量c，我们得到了个错误，这个行为很像是class没有预处理，但是实际上并非如此。</p>
+<p>我们看个复杂一点的例子：</p>
+<pre><code>var c = 1;
+function foo(){
+    console.log(c);
+    class c {}
+}
+foo();</code></pre><p>这个例子中，我们把class放进了一个函数体中，在外层作用域中有变量c。然后试图在class之前打印c。</p>
+<p>执行后，我们看到，仍然抛出了错误，如果去掉class声明，则会正常打印出1，也就是说，出现在后面的class声明影响了前面语句的结果。</p>
+<p>这说明，class声明也是会被预处理的，它会在作用域中创建变量，并且要求访问它时抛出错误。</p>
+<p>class的声明作用不会穿透if等语句结构，所以只有写在全局环境才会有声明作用，这部分我们将会在下一节课讲解。</p>
+<p>这样的class设计比function和var更符合直觉，而且在遇到一些比较奇怪的用法时，倾向于抛出错误。</p>
+<p>按照现代语言设计的评价标准，及早抛错是好事，它能够帮助我们尽量在开发阶段就发现代码的可能问题。</p>
+<h2 id="指令序言机制"><a href="#指令序言机制" class="headerlink" title="指令序言机制"></a>指令序言机制</h2><p>脚本和模块都支持一种特别的语法，叫做指令序言（Directive Prologs）。</p>
+<p>这里的指令序言最早是为了use strict设计的，它规定了一种给JavaScript代码添加元信息的方式。</p>
+<pre><code>&quot;use strict&quot;;
+function f(){
+    console.log(this);
+};
+f.call(null);</code></pre><p>这段代码展示了严格模式的用法，我这里定义了函数f，f中打印this值，然后用call的方法调用f，传入null作为this值，我们可以看到最终结果是null原封不动地被当做this值打印了出来，这是严格模式的特征。</p>
+<p>如果我们去掉严格模式的指令需要，打印的结果将会变成global。</p>
+<p><code>&quot;use strict&quot;</code>是JavaScript标准中规定的唯一一种指令序言，但是设计指令序言的目的是，留给JavaScript的引擎和实现者一些统一的表达方式，在静态扫描时指定JavaScript代码的一些特性。</p>
+<p>例如，假设我们要设计一种声明本文件不需要进行lint检查的指令，我们可以这样设计：</p>
+<pre><code>&quot;no lint&quot;;
+&quot;use strict&quot;;
+function doSth(){
+    //......
+}
+//......</code></pre><p>JavaScript的指令序言是只有一个字符串直接量的表达式语句，它只能出现在脚本、模块和函数体的最前面。</p>
+<p>我们看两个例子：</p>
+<pre><code>function doSth(){
+    //......
+}
+&quot;use strict&quot;;
+var a = 1;
+//......</code></pre><p>这个例子中，<code>&quot;use strict&quot;</code>没有出现在最前，所以不是指令序言。</p>
+<pre><code>&apos;use strict&apos;;
+function doSth(){
+    //......
+}
+var a = 1;
+//......</code></pre><p>这个例子中，<code>&#39;use strict&#39;</code>是单引号，这不妨碍它仍然是指令序言。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天，我们一起进入了JavaScript的语法部分，在开始学习之前，我先介绍了一部分语法的基本规则。</p>
+<p>我们首先介绍了JavaScript语法的全局结构，JavaScript有两种源文件，一种叫做脚本，一种叫做模块。介绍完脚本和模块的基础概念，我们再来把它们往下分，脚本中可以包含语句。模块中可以包含三种内容：import声明，export声明和语句。</p>
+<p>最后，我介绍了两个JavaScript语法的全局机制：预处理和指令序言。</p>
+<p>最后，给你留一个小任务，我们试着用babel，分析一段JavaScript的模块代码，并且找出它中间的所有export的变量。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:02.752Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    27 minutes read (About 4101 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/用户故事 | 那些你与“重学前端”的不解之缘/">用户故事 | 那些你与“重学前端”的不解之缘</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h2><p>不知不觉，专栏已经更新了一半有余了。在两个月的时间里，我收到了很多同学的留言，很开心可以跟大家保持交流，也很惊喜见证了大家的成长。</p>
+<p>在整个学习过程中，你有没有一些学习感悟呢，有哪些新的学习收获，又有哪些实践感悟？有没有对前端的知识架构有了更为深刻的认识，是否规划好了自己的前端之路。</p>
+<p>如果你有想分享的经验，可以在文章下留言，如果你的留言被选中作为用户故事，我们将会为你送出“极客时间”&amp; winter联名T恤一件。分享你的收获，我们一起成长。</p>
+<p><img src="https://static001.geekbang.org/resource/image/aa/b3/aae94a1c13a5fefa7238999e271b82b3.png" alt></p>
+<p>下面我们就一起来看看三位同学的分享。</p>
+<h2 id="极客时间用户-阿成-分享"><a href="#极客时间用户-阿成-分享" class="headerlink" title="极客时间用户@阿成 分享"></a>极客时间用户@阿成 分享</h2><p>在我进入知乎社区的时候，winter 老师就已经不在这个社区了，虽然是退隐了江湖，但是江湖上还流传着他的传说，后来我在 Google Feed 中看到 winter 老师的开篇词，看完就感觉是我要的东西，还正好赶上打折，就毫不犹豫地买了。</p>
+<p>我本科学的是光电信息，所以并不算是科班出身的程序员（虽然也有学C啦）。我本身对计算机程序一直很有兴趣，所以从大三开始，我就决定放弃从事本专业，做一名程序员。要说为什么选择前端领域，自然也是烂俗的“门槛低”理由。</p>
+<p>不过，我没想到的是，前端的学习曲线到后面是如此陡峭，并且前端发展的速度如此之快，让人目不暇接，也让很多人产生了“技术焦虑”。</p>
+<p>在这样的环境中，我也产生了迷茫，作为一名前端开发人员，我到底应该学什么，怎么学。毕业后两年多的时间里，我从使用原生的HTML/CSS/JavaScript，到现在流行的视图库Vue/React，看似我好像学会了很多，但是离开这些库，或者说将来这些库被淘汰了，我又剩下了什么呢？</p>
+<p><strong>我逐渐意识到，我需要的可能是一些更“底层”的东西。</strong></p>
+<p>那么,什么是“底层”的东西呢，这里可不是指计算机底层，而是指不会被淘汰的东西，永远有用的东西。我认为对于任何程序员来说，最重要的就是：迅速获取某项知识的能力以及动手解决问题的能力。</p>
+<p><strong>前者需要我们建立自己的知识体系，也就是winter老师在第一讲中提到的，我们需要完善的知识架构。</strong></p>
+<p>我们不需要也不可能记住整个架构的知识，但我们却可以在需要的时候想起来这块知识的位置，是干什么的，能帮我们解决什么样的问题，可以通过什么关键词检索到，这就够了。</p>
+<p>其实你让我回忆winter老师这么多节课的所有内容，我也是好多想不起来的，但多少都留下了印象。我们的大脑容量是有限的，所以“按需加载”也许对人脑也是个不错的策略。</p>
+<p><strong>后者其实就归功于winter老师精心设计的课后题，光看这些课文总归是差了点什么，只有你动手去做，才能真正理解这节课所讲的内容。</strong></p>
+<p>在做的过程中，你多半会遇到困难（这其实也是winter老师的本意），如果你通过努力解决掉了，这个提升才是最大的。你的方案不一定是最好的，或者你可能实在没什么头绪，这时候也可以利用搜索引擎去看看别人的方案。</p>
+<p>因为我早上到公司要坐一个小时左右的公交，路上我基本上会用耳机听完课（不伤眼），然后剩下的时间去思考回顾一下，想想作业怎么完成。</p>
+<p>在中午吃完饭休息的时候，动手做一下，有时候时间不一定够，就利用晚上和第二天的时间完成。每个人的情况都不一样，不过，想要有收获，就得付出多一些。</p>
+<p>希望大家都能学有所成，有所收获。</p>
+<h2 id="极客时间用户-峰峰峰-分享"><a href="#极客时间用户-峰峰峰-分享" class="headerlink" title="极客时间用户@峰峰峰  分享"></a>极客时间用户@峰峰峰  分享</h2><p>先感谢极客时间给了我这次学习分享的机会，如果文中有不足之处，希望小伙伴们可以多多指导。</p>
+<p>我是转行过来学习前端的，目前在前端这个岗位上工作了大概一年半的样子，最初知道重学前端这个专栏，也是因为朋友圈里面的一些大牛分享的，比较好奇，并且老师又是非常有名的winter老师，就报了这门课程。</p>
+<p>我本人是对前端的技术非常感兴趣的，尤其是原生基础知识，因为我觉得一个人基础的扎实程度，能决定这个人在这个领域所能发展的高度。</p>
+<p>刚开始看到课程目录的时候我很吃惊，因为这个目录和我之前所学的所有的课的目录都不一样，从文法、运行时的角度去解释JavaScript这门语言，这让我非常兴奋，因为我知道，这正是我所需要的。</p>
+<p>通过跟随winter老师不断学习，我发现这把我原有的一些知识结构打乱了，但这并不是坏事，因为我以前的学习和知识结构都非常的混乱。</p>
+<p>通过这次学习，让我对JavaScript的理解更加深入了一些，同时，重新梳理我的知识点也让我的知识结构更加的清晰了起来。</p>
+<p>可能是我工作时间尚短的原因吧，我觉得老师的每一节课对于我来说都是一个新的东西。举个例子，就拿第3讲和第4讲来说吧，标签语义化我一直都知道，但是我在工作中用得很少，并且在理解上也只停留在非常浅的层面上，但是通过老师的讲解，让我理解到了语义化标签真正的含义。</p>
+<p>我现在在工作都会开始使用一些我比较熟悉的语义化标签。包括一些浏览器的工作原理，关于JavaScript这门语言是面向对象还是面向类的解释，以及JavaScript的执行等等，这些知识点都让我受益良多，非常感谢winter老师，希望以后还能有机会跟着老师继续学习。</p>
+<p>最后，分享一下我的学习方法吧。</p>
+<ol>
+<li>先提升知识的广度，再去拓展知识的深度。</li>
+<li>养成随时记录的习惯，可以是笔记，可以是代码（一定要写上注释）。</li>
+<li>多逛逛技术论坛，有条件的情况下多去实验一下论坛中自己感兴趣的代码。</li>
+<li>最后一条也是最重要的一条，坚持每天八小时工作外的学习和锻炼。</li>
+</ol>
+<p>以上就是我的学习心得，不足之处还请多多见谅，希望对小伙伴们有帮助。</p>
+<h2 id="极客时间用户-木易杨-分享"><a href="#极客时间用户-木易杨-分享" class="headerlink" title="极客时间用户@木易杨 分享"></a>极客时间用户@木易杨 分享</h2><p>我看了老师在“极客live”的直播，总结了他提到的一些观点。</p>
+<ol>
+<li><p>对于框架的使用没必要花太多时间，应该多研究一下三大框架背后的设计思想。</p>
+</li>
+<li><p>当一个程序员对算法、语言标准、底层、原生、英文文档这些词汇产生恐惧感的时候，他的技术生命已经走到尽头。</p>
+</li>
+<li><p>前端架构主要解决的是高复用性，架构能力提升方向主要是组件库开发、前端框架实现等。</p>
+</li>
+<li><p>对于前端进阶这个问题，其实看书的作用和意义已经不太明显，需要寻找好的平台和合适的项目，在项目中不断克服难题并挑战自己，遇到问题再去查资料总结。如果只是闭门看书那很难成为高手，书只是基础而已，真正的应用还是在项目中。</p>
+</li>
+<li><p>寒冬中能做的只有提升自己，但是光靠技术是不行的。</p>
+</li>
+<li><p>推荐 TensorFlow、可视化切图、PWA、WebGL。</p>
+</li>
+</ol>
+<ul>
+<li>TensorFlow 可以了解使用并做点东西出来，原理很难但不影响使用。</li>
+<li>PWA 有望进一步发展。</li>
+<li>WebGL 在未来会是一个很好的方向，它可以实现任何你想要的界面效果，但重点需要多掌握图形学的基础知识，它和算法，数据结构一样重要。</li>
+<li>Weex和 RN 虽然都叫 Hybird 但不太一样，前者适合大厂主要是嵌入 APP 中使用，后者更适合创业公司。</li>
+</ul>
+<ol start="7">
+<li>不推荐 SSR、TypeScript、函数式编程。</li>
+</ol>
+<ul>
+<li>SSR 不太看好，其主要是用于SEO，不太建议用做服务端渲染，其能够使用的场景不多，而且成本代价太大。</li>
+<li>TypeScript 是好东西，是很有前景的语言，但适用于十万行以上代码级别的大型项目，小项目并不适合，反而徒增复杂。</li>
+<li>用 JavaScript 做函数式编程并不靠谱，Map/Reduce/Redux/Hooks等并不是函数式编程，只是长得像而已。</li>
+</ul>
+<p>PS：笔记内容由自己和群友提供，仅供参考。</p>
+<h3 id="我的一些思考和尝试"><a href="#我的一些思考和尝试" class="headerlink" title="我的一些思考和尝试"></a>我的一些思考和尝试</h3><p>听完 winter 老师直播后对其观点很是赞同，但因为是面对所有人讲解，所以内容有点多范围有些广，但对个人来说还是找适合自己的方向，在自己相对熟悉的领域再去扩展去突破。横向只是拓宽你的眼界，纵向才是你的核心竞争力。</p>
+<p>对我来说感触最大的就是 3、4、5 这几点，因为我一直在思考以下的几个问题。</p>
+<ol>
+<li>我现在是高级前端，但又感觉自身很弱，那我如何才能夯实我高级的地基然后成为资深前端呢？</li>
+<li>项目迭代节奏快日常加班又多，那我如何做才能平衡工作和学习？</li>
+<li>单单提升技术好像还是有很大瓶颈，那我如何提升我的职场核心竞争力？</li>
+</ol>
+<p>结合 winter老师的专栏和最近看的几篇文章，说说我对这几个问题的思考。</p>
+<p>对于第一个问题，在 2 个多月前我还是不会写文章的小白，那个时候受到一些文章的触动，尝试把我的前端之路记录下来。</p>
+<p>我的想法很简单，就是把前端进阶 28 期的重难点知识全部讲完，目前已经进行到第 4 期了，通过写作把知识通俗易懂的介绍给别人，在这个过程自己肯定会收获很多很多。</p>
+<p>这就是我目前在尝试的学习方式，通过写作建立自己的知识架构，并且在这个架构上不断地进行优化，时间到了自然就进阶了。</p>
+<p>对于第二个问题，刚开始写作时精力充沛时间也很多，每天都会更新技术文章，但随着项目迭代压力增大，文章更新速度相应就变慢了一些。</p>
+<p>虽然文章质量提升了很多，但更新速度从日更变成了周更再变成了双周更，这个说实话我自身已经很难接受了，因为速度变慢导致我年初的计划要打折扣。</p>
+<p>所以说做项目和自我学习要如何权衡，是否说我要减少项目难度和时间并在工作中摸鱼去学习呢？</p>
+<p>我的结论是不，因为一句话，“最好的学习就是在项目中锻炼自己”。既然我有这么好的项目去锻炼，那为什么还要摸鱼去学习呢，这不就是南辕北辙嘛，道理很简单但不是所有人都懂。</p>
+<p>我最近在执行的方法是专注 + 锻炼 + 利用周末。</p>
+<p>专注即工作时专注于工作，努力做好每次迭代，遇到难题迎难而上，工作时不开微信，勤用笔记安排日常工作并整理文档。</p>
+<p>锻炼即一周抽出三天时间每次去健身房锻炼1小时，强壮的体魄才能撑住高强度的工作和学习，因为网易有健身房所以冬天锻炼也没什么问题，没办法去健身房的小伙伴可以尝试跑步或者在瑜伽垫上做 Keep。</p>
+<p>利用周末即加大周末和平常晚上熬夜的时间去写文章，减少娱乐的时间，正所谓时间挤一挤总会有的，但这件事情比较反人性，所以重在坚持。公众号写文章更容易坚持，原因在于文章发布后有正反馈，比如粉丝的增长，留言和鼓励，赞赏等等，这些都更能促使你坚持下去，时间长了自然就养成了习惯。</p>
+<p>对于第三个问题，winter 老师也说了，寒冬中光靠技术是不行的，那应该靠什么呢？幸好在最近看到的一篇文章中找到了答案，那就是表达能力。</p>
+<p>表达能力是形成自己的框架系统，有理有据并且逻辑清晰，而且能让外人听懂，大部分优秀的人都具备这样的能力。反观自己并没有这样的能力，所以我要努力提升这块，其中最重要的方法就是写作训练。</p>
+<p>兜兜转转那么多，其实我一直在尝试的进阶方法就是通过写作建立自己的知识架构体系，同时提高自身的表达能力，通过正反馈机制和锻炼保证我长久的坚持下去并最终养成习惯，习惯这一模式之后变成优秀的人也只是时间问题罢了。</p>
+<p>希望我的一些思考和尝试能对你有所帮助。</p>
+<p>（直播回顾：<a href="https://v.qq.com/x/page/x0830fc8xoj.html%EF%BC%89" target="_blank" rel="noopener">https://v.qq.com/x/page/x0830fc8xoj.html）</a></p>
+<hr>
+<p>恭喜幸运用户 @阿成、@峰峰峰、@木易杨，你们的经验被选取成为本期的用户故事。极客时间将送出“极客时间”&amp; winter联名T恤一件。1个工作日之内，工作人员会与你取得联系。</p>
+<p>读完了三位同学的故事后，你有哪些感受呢，留下你的收获，我们一起成长。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:03:00.818Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    15 minutes read (About 2294 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript语法（预备篇）：到底要不要写分号呢？/">JavaScript语法（预备篇）：到底要不要写分号呢？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>在我们介绍JavaScript语法的全局结构之前，我们先要探讨一个语言风格问题：究竟要不要写分号。</p>
+<p>这是一个非常经典的口水问题，“加分号”党和“不写分号”党之间的战争，可谓是经久不息。</p>
+<p>实际上，行尾使用分号的风格来自于Java，也来自于C语言和C++，这一设计最初是为了降低编译器的工作负担。</p>
+<p>但是，从今天的角度来看，行尾使用分号其实是一种语法噪音，恰好JavaScript语言又提供了相对可用的分号自动补全规则，所以，很多JavaScript的程序员都是倾向于不写分号。</p>
+<p>这里要特意说一点，在今天的文章中，我并不希望去售卖自己的观点（其实我是属于“加分号”党），而是希望比较中立地给你讲清楚相关的知识，让你具备足够的判断力。</p>
+<p>我们首先来了解一下自动插入分号的规则。</p>
+<h2 id="自动插入分号规则"><a href="#自动插入分号规则" class="headerlink" title="自动插入分号规则"></a>自动插入分号规则</h2><p>自动插入分号规则其实独立于所有的语法产生式定义，它的规则说起来非常简单，只有三条。</p>
+<ul>
+<li>要有换行符，且下一个符号是不符合语法的，那么就尝试插入分号。</li>
+<li>有换行符，且语法中规定此处不能有换行符，那么就自动插入分号。</li>
+<li>源代码结束处，不能形成完整的脚本或者模块结构，那么就自动插入分号。</li>
+</ul>
+<p>这样描述是比较难以理解的，我们一起看一些实际的例子进行分析：</p>
+<pre><code>let a = 1
+void function(a){
+    console.log(a);
+}(a);</code></pre><p>在这个例子中，第一行的结尾处有换行符，接下来void关键字接在1之后是不合法的，这命中了我们的第一条规则，因此会在void前插入换行符。</p>
+<pre><code>var a = 1, b = 1, c = 1;
+a
+++
+b
+++
+c</code></pre><p>这也是个著名的例子，我们看第二行的a之后，有换行符，后面遇到了++运算符，a后面跟++是合法的语法，但是我们看看JavaScript标准定义中，有[no LineTerminator here]这个字样，这是一个语法定义中的规则，你可以感受一下这个规则的内容（下一小节，我会给你详细介绍no LineTerminator here ）：</p>
+<pre><code>UpdateExpression[Yield, Await]:
+    LeftHandSideExpression[?Yield, ?Await]
+    LeftHandSideExpression[?Yield, ?Await][no LineTerminator here]++
+    LeftHandSideExpression[?Yield, ?Await][no LineTerminator here]--
+    ++UnaryExpression[?Yield, ?Await]
+    --UnaryExpression[?Yield, ?Await]</code></pre><p>于是，这里a的后面就要插入一个分号了。所以这段代码最终的结果，b和c都变成了2，而a还是1。</p>
+<pre><code>(function(a){
+    console.log(a);
+})()
+(function(a){
+    console.log(a);
+})()</code></pre><p>这个例子是比较有实际价值的例子，这里两个function调用的写法被称作IIFE（立即执行的函数表达式），是个常见技巧。</p>
+<p>这段代码意图上显然是形成两个IIFE。</p>
+<p>我们来看第三行结束的位置，JavaScript引擎会认为函数返回的可能是个函数，那么，在后面再跟括号形成函数调用就是合理的，因此这里不会自动插入分号。</p>
+<p>这是一些鼓励不写分号的编码风格会要求大家写IIFE时必须在行首加分号的原因。</p>
+<pre><code>function f(){
+    return/*
+        This is a return value.
+    */1;
+}
+f();</code></pre><p>在这个例子中，return和1被用注释分隔开了。</p>
+<p>根据JavaScript自动插入分号规则，<strong>带换行符的注释也被认为是有换行符</strong>，而恰好的是，return也有[no LineTerminator here]规则的要求。所以这里会自动插入分号，f执行的返回值是undefined。</p>
+<h2 id="no-LineTerminator-here-规则"><a href="#no-LineTerminator-here-规则" class="headerlink" title="no LineTerminator here 规则"></a>no LineTerminator here 规则</h2><p>好了，到这里我们已经讲清楚了分号自动插入的规则，但是我们要想彻底掌握分号的奥秘，就必须要对JavaScript的语法定义做一些数据挖掘工作。</p>
+<p>no LineTerminator here规则表示它所在的结构中的这一位置不能插入换行符。</p>
+<p>自动插入分号规则的第二条：有换行符，且语法中规定此处不能有换行符，那么就自动插入分号。跟no LineTerminator here规则强相关，那么我们就找出JavaScript语法定义中的这些规则。</p>
+<p><img src="https://static001.geekbang.org/resource/image/c3/ad/c3ffbc89e049ad1901d4108c8ad88aad.jpg" alt></p>
+<p>为了方便你理解，我把产生式换成了实际的代码。</p>
+<p>下面一段代码展示了，带标签的continue语句，不能在continue后插入换行。</p>
+<pre><code>outer:for(var j = 0; j &lt; 10; j++)
+    for(var i = 0; i &lt; j; i++)
+        continue /*no LineTerminator here*/ outter</code></pre><p>break跟continue是一样的，break后也不能插入换行：</p>
+<pre><code>outer:for(var j = 0; j &lt; 10; j++)
+    for(var i = 0; i &lt; j; i++)
+        break /*no LineTerminator here*/ outter</code></pre><p>我们前面已经提到过return和后自增、后自减运算符。</p>
+<pre><code>function f(){
+    return /*no LineTerminator here*/1;
+}
+
+
+i/*no LineTerminator here*/++
+i/*no LineTerminator here*/--</code></pre><p>以及，throw和Exception之间也不能插入换行符：</p>
+<pre><code>throw/*no LineTerminator here*/new Exception(&quot;error&quot;)</code></pre><p>凡是async关键字，后面都不能插入换行符：</p>
+<pre><code>async/*no LineTerminator here*/function f(){
+
+}
+const f = async/*no LineTerminator here*/x =&gt; x*x</code></pre><p>箭头函数的箭头前，也不能插入换行：</p>
+<pre><code>const f = x/*no LineTerminator here*/=&gt; x*x</code></pre><p>yield之后，不能插入换行：</p>
+<pre><code>function *g(){
+    var i = 0;
+    while(true)
+        yield/*no LineTerminator here*/i++;
+}</code></pre><p>到这里，我已经整理了所有标准中的no LineTerminator here规则，实际上，no LineTerminator here规则的存在，多数情况是为了保证自动插入分号行为是符合预期的，但是令人遗憾的是，JavaScript在设计的最初，遗漏了一些重要的情况，所以有一些不符合预期的情况出现，需要我们格外注意。</p>
+<h2 id="不写分号需要注意的情况"><a href="#不写分号需要注意的情况" class="headerlink" title="不写分号需要注意的情况"></a>不写分号需要注意的情况</h2><p>下面我们来看几种不写分号容易造成错误的情况，你可以稍微注意一下，避免发生同样的问题。</p>
+<h3 id="以括号开头的语句"><a href="#以括号开头的语句" class="headerlink" title="以括号开头的语句"></a>以括号开头的语句</h3><p>我们在前面的案例中，已经展示了一种情况，那就是以括号开头的语句：</p>
+<pre><code>(function(a){
+    console.log(a);
+})()/*这里没有被自动插入分号*/
+(function(a){
+    console.log(a);
+})()</code></pre><p>这段代码看似两个独立执行的函数表达式，但是其实第三组括号被理解为传参，导致抛出错误。</p>
+<h3 id="以数组开头的语句"><a href="#以数组开头的语句" class="headerlink" title="以数组开头的语句"></a>以数组开头的语句</h3><p>除了括号，以数组开头的语句也十分危险：</p>
+<pre><code>var a = [[]]/*这里没有被自动插入分号*/
+[3, 2, 1, 0].forEach(e =&gt; console.log(e))</code></pre><p>这段代码本意是一个变量a赋值，然后对一个数组执行forEach，但是因为没有自动插入分号，被理解为下标运算符和逗号表达式，我这个例子展示的情况，甚至不会抛出错误，这对于代码排查问题是个噩梦。</p>
+<h3 id="以正则表达式开头的语句"><a href="#以正则表达式开头的语句" class="headerlink" title="以正则表达式开头的语句"></a>以正则表达式开头的语句</h3><p>正则表达式开头的语句也值得你去多注意一下。我们来看这个例子。</p>
+<pre><code>var x = 1, g = {test:()=&gt;0}, b = 1/*这里没有被自动插入分号*/
+/(a)/g.test(&quot;abc&quot;)
+console.log(RegExp.$1)</code></pre><p>这段代码本意是声明三个变量，然后测试一个字符串中是否含有字母a，但是因为没有自动插入分号，正则的第一个斜杠被理解成了除号，后面的意思就都变了。</p>
+<p>注意，我构造的这个例子跟上面的例子一样，同样不会抛错，凡是这一类情况，都非常致命。</p>
+<h3 id="以Template开头的语句"><a href="#以Template开头的语句" class="headerlink" title="以Template开头的语句"></a>以Template开头的语句</h3><p>以Template开头的语句比较少见，但是跟正则配合时，仍然不是不可能出现：</p>
+<pre><code>var f = function(){
+  return &quot;&quot;;
+}
+var g = f/*这里没有被自动插入分号*/
+`Template`.match(/(a)/);
+console.log(RegExp.$1)</code></pre><p>这段代码本意是声明函数f，然后赋值给g，再测试Template中是否含有字母a。但是因为没有自动插入分号，函数f被认为跟Template一体的，进而被莫名其妙地执行了一次。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这一节课，我们讨论了要不要加分号的问题。</p>
+<p>首先我们介绍了自动插入分号机制，又对JavaScript语法中的no line terminator规则做了个整理，最后，我挑选了几种情况，为你介绍了不写分号需要注意的一些常见的错误。</p>
+<p>最后留给你一个问题，请找一些开源项目，看看它们的编码规范是否要求加分号，欢迎留言讨论。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:58.910Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    14 minutes read (About 2043 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/（小实验）理解编译原理：一个四则运算的解释器/">（小实验）理解编译原理：一个四则运算的解释器</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>在前面的课程中，我在JavaScript和CSS的部分，多次提到了编译原理相关的知识。这一部分的知识，如果我们从编译原理“龙书”等正规的资料中学习，就会耗费掉不少的时间，所以我在这里设计了一个小实验，帮助你快速理解编译原理相关的知识。</p>
+<p>今天的内容比较特殊，我们来做一段详细的代码实验，详细的代码我放在了文章里，如果你正在收听音频，可以点击文章查看详情。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>按照编译原理相关的知识，我们来设计一下工作，这里我们分成几个步骤。</p>
+<ul>
+<li>定义四则运算：产出四则运算的词法定义和语法定义。</li>
+<li>词法分析：把输入的字符串流变成token。</li>
+<li>语法分析：把token变成抽象语法树AST。</li>
+<li>解释执行：后序遍历AST，执行得出结果。</li>
+</ul>
+<h2 id="定义四则运算"><a href="#定义四则运算" class="headerlink" title="定义四则运算"></a>定义四则运算</h2><p>四则运算就是加减乘除四种运算，例如：</p>
+<pre><code>1 + 2 * 3</code></pre><p>首先我们来定义词法，四则运算里面只有数字和运算符，所以定义很简单，但是我们还要注意空格和换行符，所以词法定义大概是下面这样的。</p>
+<ul>
+<li><p>Token</p>
+</li>
+<li><p>Number: <code>1``2``3``4``5``6``7``8``9``0</code> 的组合</p>
+</li>
+<li><p>Operator: <code>+</code> 、<code>-</code>、 <code>*</code>、 <code>/</code> 之一</p>
+</li>
+<li><p>Whitespace: <code>&lt;sp&gt;</code></p>
+</li>
+<li><p>LineTerminator：<code>&lt;LF&gt;``&lt;CR&gt;</code></p>
+</li>
+</ul>
+<p>这里我们对空白和换行符没有任何的处理，所以词法分析阶段会直接丢弃。</p>
+<p>接下来我们来定义语法，语法定义多数采用BNF，但是其实大家写起来都是乱写的，比如JavaScript标准里面就是一种跟BNF类似的自创语法。</p>
+<p>不过语法定义的核心思想不会变，都是几种结构的组合产生一个新的结构，所以语法定义也叫语法产生式。</p>
+<p>因为加减乘除有优先级，所以我们可以认为加法是由若干个乘法再由加号或者减号连接成的：</p>
+<pre><code>&lt;Expression&gt; ::= 
+    &lt;AdditiveExpression&gt;&lt;EOF&gt;
+
+&lt;AdditiveExpression&gt; ::= 
+    &lt;MultiplicativeExpression&gt;
+    |&lt;AdditiveExpression&gt;&lt;+&gt;&lt;MultiplicativeExpression&gt;
+    |&lt;AdditiveExpression&gt;&lt;-&gt;&lt;MultiplicativeExpression&gt;</code></pre><p>这种BNF的写法类似递归的原理，你可以理解一下，它表示一个列表。为了方便，我们把普通数字也得当成乘法的一种特例了。</p>
+<pre><code>&lt;MultiplicativeExpression&gt; ::= 
+    &lt;Number&gt;
+    |&lt;MultiplicativeExpression&gt;&lt;*&gt;&lt;Number&gt;
+    |&lt;MultiplicativeExpression&gt;&lt;/&gt;&lt;Number&gt;</code></pre><p>好了，这就是四则运算的定义了。</p>
+<h2 id="词法分析：状态机"><a href="#词法分析：状态机" class="headerlink" title="词法分析：状态机"></a>词法分析：状态机</h2><p>词法分析部分，我们把字符流变成token流。词法分析有两种方案，一种是状态机，一种是正则表达式，它们是等效的，选择你喜欢的就好，这里我都会你介绍一下状态机。</p>
+<p>根据分析，我们可能产生四种输入元素，其中只有两种token，我们状态机的第一个状态就是根据第一个输入字符来判断进入了哪种状态：</p>
+<pre><code>var token = [];
+const start = char =&gt; {
+    if(char === &apos;1&apos; 
+        || char === &apos;2&apos;
+        || char === &apos;3&apos;
+        || char === &apos;4&apos;
+        || char === &apos;5&apos;
+        || char === &apos;6&apos;
+        || char === &apos;7&apos;
+        || char === &apos;8&apos;
+        || char === &apos;9&apos;
+        || char === &apos;0&apos;
+    ) {
+        token.push(char);
+        return inNumber;   
+    }
+    if(char === &apos;+&apos; 
+        || char === &apos;-&apos;
+        || char === &apos;*&apos;
+        || char === &apos;/&apos;
+    ) {
+        emmitToken(char, char);
+        return start
+    }
+    if(char === &apos; &apos;) {
+        return start;
+    }
+    if(char === &apos;\r&apos; 
+        || char === &apos;\n&apos;
+    ) {
+        return start;
+    }
+}
+const inNumber = char =&gt; {
+    if(char === &apos;1&apos; 
+        || char === &apos;2&apos;
+        || char === &apos;3&apos;
+        || char === &apos;4&apos;
+        || char === &apos;5&apos;
+        || char === &apos;6&apos;
+        || char === &apos;7&apos;
+        || char === &apos;8&apos;
+        || char === &apos;9&apos;
+        || char === &apos;0&apos;
+    ) {
+        token.push(char);
+        return inNumber;
+    } else {
+        emmitToken(&quot;Number&quot;, token.join(&quot;&quot;));
+        token = [];
+        return start(char); // put back char
+    }
+}</code></pre><p>这个状态机非常简单，它只有两个状态，因为我们只有Number不是单字符的token。</p>
+<p>这里我的状态机实现是非常经典的方式：用函数表示状态，用if表示状态的迁移关系，用return值表示下一个状态。</p>
+<p>下面我们来运行一下这个状态机试试看：</p>
+<pre><code>function emmitToken(type, value) {
+    console.log(value);
+}
+
+var input = &quot;1024 + 2 * 256&quot;
+
+var state = start;
+
+for(var c of input.split(&apos;&apos;))
+    state = state(c);
+
+state(Symbol(&apos;EOF&apos;))</code></pre><p>运行后我们发现输出如下：</p>
+<pre><code>1024
++
+2
+*
+256</code></pre><p>这是我们想要的答案。</p>
+<h2 id="语法分析：LL"><a href="#语法分析：LL" class="headerlink" title="语法分析：LL"></a>语法分析：LL</h2><p>做完了词法分析，我们开始进行语法分析，LL语法分析根据每一个产生式来写一个函数，首先我们来写好函数名：</p>
+<pre><code>function AdditiveExpression( ){
+
+
+}
+function MultiplicativeExpression(){
+
+
+}</code></pre><p>为了便于理解，我们就不做流式处理了，实际上一般编译代码都应该支持流式处理。</p>
+<p>所以我们假设token已经都拿到了：</p>
+<pre><code>var tokens = [{
+    type:&quot;Number&quot;,
+    value: &quot;1024&quot;
+}, {
+    type:&quot;+&quot;
+    value: &quot;+&quot;
+}, {
+    type:&quot;Number&quot;,
+    value: &quot;2&quot;
+}, {
+    type:&quot;*&quot;
+    value: &quot;*&quot;
+}, {
+    type:&quot;Number&quot;,
+    value: &quot;256&quot;
+}, {
+    type:&quot;EOF&quot;
+}];</code></pre><p>每个产生式对应着一个函数，例如：根据产生式，我们的AdditiveExpression需要处理三种情况：</p>
+<pre><code>&lt;AdditiveExpression&gt; ::= 
+    &lt;MultiplicativeExpression&gt;
+    |&lt;AdditiveExpression&gt;&lt;+&gt;&lt;MultiplicativeExpression&gt;
+    |&lt;AdditiveExpression&gt;&lt;-&gt;&lt;MultiplicativeExpression&gt;</code></pre><p>那么AddititveExpression中就要写三个if分支，来处理三种情况。</p>
+<p>AdditiveExpression的写法是根传入的节点，利用产生式合成新的节点</p>
+<pre><code>function AdditiveExpression(source){
+    if(source[0].type === &quot;MultiplicativeExpression&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            children:[source[0]]
+        }
+        source[0] = node;
+        return node;
+    } 
+    if(source[0].type === &quot;AdditiveExpression&quot; &amp;&amp; source[1].type === &quot;+&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            operator:&quot;+&quot;,
+            children:[source.shift(), source.shift(), MultiplicativeExpression(source)]
+        }
+        source.unshift(node);
+    }
+    if(source[0].type === &quot;AdditiveExpression&quot; &amp;&amp; source[1].type === &quot;-&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            operator:&quot;-&quot;,
+            children:[source.shift(), source.shift(), MultiplicativeExpression(source)]
+        }
+        source.unshift(node);
+    }
+}</code></pre><p>那么下一步我们就把解析好的token传给我们的顶层处理函数Expression。</p>
+<pre><code>Expression(tokens);</code></pre><p>接下来，我们看Expression该怎么处理它。</p>
+<p>我们Expression收到第一个token，是个Number，这个时候，Expression就傻了，这是因为产生式只告诉我们，收到了 AdditiveExpression 怎么办。</p>
+<p>这个时候，我们就需要对产生式的首项层层展开，根据所有可能性调用相应的处理函数，这个过程在编译原理中称为求“closure”。</p>
+<pre><code>function Expression(source){
+    if(source[0].type === &quot;AdditiveExpression&quot; &amp;&amp; source[1] &amp;&amp; source[1].type === &quot;EOF&quot; ) {
+        let node = {
+            type:&quot;Expression&quot;,
+            children:[source.shift(), source.shift()]
+        }
+        source.unshift(node);
+        return node;
+    }
+    AdditiveExpression(source);
+    return Expression(source);
+}
+function AdditiveExpression(source){
+    if(source[0].type === &quot;MultiplicativeExpression&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            children:[source[0]]
+        }
+        source[0] = node;
+        return AdditiveExpression(source);
+    } 
+    if(source[0].type === &quot;AdditiveExpression&quot; &amp;&amp; source[1] &amp;&amp; source[1].type === &quot;+&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            operator:&quot;+&quot;,
+            children:[]
+        }
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        MultiplicativeExpression(source);
+        node.children.push(source.shift());
+        source.unshift(node);
+        return AdditiveExpression(source);
+    }
+    if(source[0].type === &quot;AdditiveExpression&quot; &amp;&amp; source[1] &amp;&amp; source[1].type === &quot;-&quot;) {
+        let node = {
+            type:&quot;AdditiveExpression&quot;,
+            operator:&quot;-&quot;,
+            children:[]
+        }
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        MultiplicativeExpression(source);
+        node.children.push(source.shift());
+        source.unshift(node);
+        return AdditiveExpression(source);
+    }
+    if(source[0].type === &quot;AdditiveExpression&quot;)
+        return source[0];
+    MultiplicativeExpression(source);
+    return AdditiveExpression(source);
+}
+function MultiplicativeExpression(source){
+    if(source[0].type === &quot;Number&quot;) {
+        let node = {
+            type:&quot;MultiplicativeExpression&quot;,
+            children:[source[0]]
+        }
+        source[0] = node;
+        return MultiplicativeExpression(source);
+    } 
+    if(source[0].type === &quot;MultiplicativeExpression&quot; &amp;&amp; source[1] &amp;&amp; source[1].type === &quot;*&quot;) {
+        let node = {
+            type:&quot;MultiplicativeExpression&quot;,
+            operator:&quot;*&quot;,
+            children:[]
+        }
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        source.unshift(node);
+        return MultiplicativeExpression(source);
+    }
+    if(source[0].type === &quot;MultiplicativeExpression&quot;&amp;&amp; source[1] &amp;&amp; source[1].type === &quot;/&quot;) {
+        let node = {
+            type:&quot;MultiplicativeExpression&quot;,
+            operator:&quot;/&quot;,
+            children:[]
+        }
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        node.children.push(source.shift());
+        source.unshift(node);
+        return MultiplicativeExpression(source);
+    }
+    if(source[0].type === &quot;MultiplicativeExpression&quot;)
+        return source[0];
+
+    return MultiplicativeExpression(source);
+};
+
+var source = [{
+    type:&quot;Number&quot;,
+    value: &quot;3&quot;
+}, {
+    type:&quot;*&quot;,
+    value: &quot;*&quot;
+}, {
+    type:&quot;Number&quot;,
+    value: &quot;300&quot;
+}, {
+    type:&quot;+&quot;,
+    value: &quot;+&quot;
+}, {
+    type:&quot;Number&quot;,
+    value: &quot;2&quot;
+}, {
+    type:&quot;*&quot;,
+    value: &quot;*&quot;
+}, {
+    type:&quot;Number&quot;,
+    value: &quot;256&quot;
+}, {
+    type:&quot;EOF&quot;
+}];
+var ast = Expression(source);
+
+console.log(ast);</code></pre><h2 id="解释执行"><a href="#解释执行" class="headerlink" title="解释执行"></a>解释执行</h2><p>得到了AST之后，最困难的一步我们已经解决了。这里我们就不对这颗树做任何的优化和精简了，那么接下来，直接进入执行阶段。我们只需要对这个树做遍历操作执行即可。</p>
+<p>我们根据不同的节点类型和其它信息，写if分别处理即可：</p>
+<pre><code>function evaluate(node) {
+    if(node.type === &quot;Expression&quot;) {
+        return evaluate(node.children[0])
+    }
+    if(node.type === &quot;AdditiveExpression&quot;) {
+        if(node.operator === &apos;-&apos;) {
+            return evaluate(node.children[0]) - evaluate(node.children[2]);
+        }
+        if(node.operator === &apos;+&apos;) {
+            return evaluate(node.children[0]) + evaluate(node.children[2]);
+        }
+        return evaluate(node.children[0])
+    }
+    if(node.type === &quot;MultiplicativeExpression&quot;) {
+        if(node.operator === &apos;*&apos;) {
+            return evaluate(node.children[0]) * evaluate(node.children[2]);
+        }
+        if(node.operator === &apos;/&apos;) {
+            return evaluate(node.children[0]) / evaluate(node.children[2]);
+        }
+        return evaluate(node.children[0])
+    }
+    if(node.type === &quot;Number&quot;) {
+        return Number(node.value);
+    }
+}</code></pre><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在这个小实验中，我们通过一个小实验学习了编译原理的基本知识，小实验的目的是帮助你理解JavaScript课程中涉及到的编译原理基本概念，它离真正的编译原理学习还有很大的差距。</p>
+<p>通过实验，我们了解了产生式、词法分析、语法分析和解释执行的过程。</p>
+<p>最后留给你一些挑战，你可以根据自己的水平选择：</p>
+<ul>
+<li>补全emmitToken，使得我们的代码能完整工作起来。</li>
+<li>为四则运算加入小数。</li>
+<li>引入负数。</li>
+<li>添加括号功能。</li>
+</ul>
+<p>欢迎写好的同学留言给我。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/重学前端/">Préc</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/重学前端/page/3/">Suiv</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/重学前端/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/categories/重学前端/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/重学前端/page/3/">3</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/重学前端/page/6/">6</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="https://ws2.sinaimg.cn/large/0067tbKZgy1g6j281yfbqj30ox0oxq41.jpg" alt="xcool">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        xcool
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        enchanter
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>http://www.enchanter.tech</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Articles
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        99
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Catégories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhangxiongxin/blog" target="_blank">
+                SUIVRE</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/zhangxiongxin">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catégories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/许世伟的架构课/">
+            <span class="level-start">
+                <span class="level-item">许世伟的架构课</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">42</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/重学前端/">
+            <span class="level-start">
+                <span class="level-item">重学前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">57</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Nuage de tags
+        </h3>
+        
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Récents
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Récents
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Enchanter" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 xcool&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Articles',
+                PAGES: 'Pages',
+                CATEGORIES: 'Catégories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

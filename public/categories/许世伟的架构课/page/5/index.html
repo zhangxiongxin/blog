@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Catégorie: 许世伟的架构课 - Enchanter</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Enchanter">
+<meta property="og:url" content="http://yoursite.com/categories/许世伟的架构课/page/5/index.html">
+<meta property="og:site_name" content="Enchanter">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enchanter">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Enchanter" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Catégories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">许世伟的架构课</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:04.742Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    30 minutes read (About 4467 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/01 | 架构设计的宏观视角/">01 | 架构设计的宏观视角</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。今天我们来谈谈架构设计的宏观视角。</p>
+<p>在信息科技高度发展的今天，我们每个人随时随地都可以接触到由程序驱动的智能电子设备，包括手机（如iPhone、oppo拍照手机）、平板电脑（如iPad）、手表（如iWatch、小天才智能手表）、音箱（如天猫精灵）、汽车（如特斯拉）等等。</p>
+<p>这些东西背后是怎么工作的？单就其中的软件系统而言，这些小小的设备上往往运行着成千上万个软件模块，这些模块是如何如此精密地一起协作的？</p>
+<p>对此，我过去接触过很多的软件开发工程师，或者架构师，很多人对这些原理也是一知半解，虽然“知其然”，但却“不知其所以然”。甚至有些朋友可能觉得，学这些有什么用处呢，在我看来，这部分内容恰恰是我们成为架构师很重要的一门基础课。</p>
+<h2 id="为什么需要建立宏观视角？"><a href="#为什么需要建立宏观视角？" class="headerlink" title="为什么需要建立宏观视角？"></a>为什么需要建立宏观视角？</h2><p>如同造房子有建筑工人（负责搬砖）和建筑师（负责架构设计）一样，软件系统的开发过程同样需要有程序员（负责搬“砖”）和架构师（负责架构设计）。作为架构师，我们需要的第一个能力是宏观的全局掌控能力。</p>
+<p>如果把应用程序比作一座大厦，那么我们作为大厦的架构师，需要把大厦的结构搭建好，让程序员可以把砖填充进去，我们都知道，一个大厦的结构建得是否稳固，与地基密不可分。</p>
+<p>所以，我们首先就需要从大厦的地基开始，熟悉这座大厦。毕竟，你对所依赖的基础架构了解得越全面，做业务架构设计就会越发从容。</p>
+<p>介绍基础架构的知识点并不是让你真的去实现它们。但你仍然需要懂得它们的核心思想是什么，知道有哪些信息是你必须深刻理解的，以便可以更好地驾驭它们。</p>
+<p><strong>我们的整个专栏内容也会从基础架构开始讲起，最后逐步过渡到业务架构，到最终完成一个完整应用程序的设计过程。</strong></p>
+<p>那么，在今天的开篇第一篇，我们需要站在宏观视角，从基础架构开始，逐渐来解剖一个应用程序的整体构成，我希望，通过今天的文章，可以让你对于一个程序的全貌，形成完整的认识。</p>
+<p>我们从头开始。</p>
+<h2 id="应用程序的基础架构"><a href="#应用程序的基础架构" class="headerlink" title="应用程序的基础架构"></a>应用程序的基础架构</h2><p>我们想学习一个程序的基础架构，其实就是弄清楚电脑的工作原理，以及程序的运行原理。</p>
+<p>无论是什么样的智能电子设备，手机也好，汽车也罢，它们都可以称为“电脑”。所有的电脑都可以统一看作由“<strong>中央处理器+存储+一系列的输入输出设备</strong>”构成。</p>
+<p>中央处理器，也就是我们平常说的CPU，负责按指令执行命令；存储负责保存数据，包括我们要执行的命令，也是以数据形式保存在存储中的。</p>
+<p>每次在打开电脑的电源后，中央处理器都会从存储的某个固定位置处开始读入数据（也就是指令），并且按指令执行命令，执行完一条指令就会继续执行下一条指令。电脑就这样开始工作了。</p>
+<p>你可能会说，就这么简单？是的，就是这么简单。</p>
+<p><strong>那这么简单的话，为何电脑能够完成这么多复杂而多样化的工作？</strong></p>
+<p>这整个过程，在我看来主要依赖两点。</p>
+<p><strong>第一是可编程性。</strong>大体来说，中央处理器（CPU）的指令分为如下这几类。</p>
+<ul>
+<li>计算类，也就是支持我们大家都熟知的各类数学运算，如加减乘除、sin/cos等等。</li>
+<li>I/O类，（从存储读写数据）从输入输出设备读数据、写数据。</li>
+<li>指令跳转类，在满足特定条件下跳转到新的当前程序执行位置。</li>
+</ul>
+<p>虽然， CPU 指令是一个很有限的指令集，但是CPU 执行的指令序列（或者叫“程序”）并不是固定的，而是依赖保存在存储中的数据—— 由软件工程师（或者叫“程序员”）编写的软件来决定。指令序列的可能性是无穷的，这也就意味着电脑能够做的事情的可能性也是无穷的。</p>
+<p><strong>第二是开放设计的外部设备支持。</strong>虽然我们电脑可以连接非常非常多种类的外部设备，比如键盘、打印机、屏幕、汽车马达等等，但CPU 并不理解这些设备具体有什么样的能力，它只和这些设备交换数据。它能够做的是从某个编号的设备（通常这个设备编号被称为“端口”）读入一段数据，或者向设备的端口写入一段数据。</p>
+<p>例如，当你在键盘上按下了A的时候，CPU 可以从键盘连接的端口读到一段数据，通过这段数据来表达你按了“A”，可能CPU 会向打印机连接的端口发送一段数据，来驱动打印机打印特定的文本；还有可能CPU 会向汽车马达所在的端口发送数据，来驱动马达转动，从而让汽车按照预期来行驶。</p>
+<p>值得注意的是，CPU 知道的是如何和这些设备交换数据，但是并不理解数据代表什么含义。这些外部设备的厂商在提供设备硬件的同时，往往也需要提供和硬件匹配的软件，来完成和CPU 的协作，让软件工程师可以轻松使用这些设备。</p>
+<p>从上面可以看出，<strong>电脑的 CPU 是一个非常简洁的模型，它只读入和写出数据，对数据进行计算。</strong>这也是为什么我们往往把电脑也叫作“计算机”，这是因为 CPU 这个计算机的大脑的确只会做“计算”。</p>
+<p>这个基础的设计体系，我们很多人都知道，这就是冯·诺依曼计算机体系。1945年6月，冯·诺依曼以“关于EDVAC的报告草案”为题起草的长达101页的总结报告，定义了“冯·诺依曼体系结构”，他现在也被称为计算机之父。我想看到这里，你应该不难理解他的伟大之处了吧？</p>
+<p>有了这个基础的计算机体系之后，我们就可以编写软件了。</p>
+<p>当然我们遇到的第一个问题是<strong>直接用机器指令编写软件太累，而且这些机器指令像天书一样没人看得懂，没法维护。</strong></p>
+<p>所以，<strong>编程语言+编译器</strong>就出现了。编译器负责把我们人类容易理解的语言，转换为机器可以理解的机器指令，这样一来就大大解放了编写软件的门槛。</p>
+<p>在编写软件不是问题时，我们遇到的第二个问题，就是<strong>多个软件在同一个电脑上怎么共处。多个软件大家往同一个存储地址写数据冲突怎么办？一起往打印机去发送打印指令怎么办？有的软件可能偷偷搞破坏怎么办？</strong></p>
+<p>于是，<strong>操作系统</strong>就出现了。</p>
+<p><strong>它首先要解决的是软件治理的问题。</strong>它要建立安全保护机制，确保你的电脑免受恶意软件侵害。同时，它也要建立软件之间的协作秩序，让大家按照期望的方式进行协作。比如存储你写到这里，那么我就要写到别处；使用打印机要排队，你打完了，我才能接着去打印。</p>
+<p>操作系统<strong>其次解决的是基础编程接口问题。</strong>这些编程接口一方面简化了软件开发，另一方面提供了多软件共存（多任务）的环境，实现了软件治理。</p>
+<p>例如，对于屏幕设备，操作系统需要提供多任务窗口系统，以避免屏幕被多个软件画得乱七八糟；对于键盘输入设备，操作系统引入焦点窗口，以确定键盘输入的事件被正确发送到正确的软件程序。</p>
+<p>你会发现，今天的我们开发软件的时候，已经处于一些基础的架构设计之中。像冯·诺依曼计算机体系，像操作系统和编程语言，这些都是我们开发一个应用程序所依赖的基础架构。</p>
+<p>基础架构解决的是与业务无关的一些通用性的问题，这些问题往往无论你具体要做什么样的应用都需要面对。而且，基础架构通常以独立的软件存在，所以也称为基础软件。</p>
+<p>例如，我们熟知的Linux、Nginx、MySQL、PHP 等这些软件都属于基础软件，这些基础软件极大地降低了应用开发的难度。在今天软件服务化的大趋势下，很多基础软件最终以互联网服务的方式提供，这就是所谓的“云计算”。</p>
+<h2 id="完整的程序架构是怎样的？"><a href="#完整的程序架构是怎样的？" class="headerlink" title="完整的程序架构是怎样的？"></a>完整的程序架构是怎样的？</h2><p>讲完了程序的地基，让我们来总览一下程序的完整架构。</p>
+<p>在越强大的基础架构支撑下，应用程序开发需要关注的问题就越收敛，我们的开发效率就越高。<strong>在我们只需要关注应用程序本身的业务问题如何构建时，我们说自己是在设计应用程序的业务架构（或者叫“应用架构”）。</strong></p>
+<p>业务架构虽然会因为应用的领域不同而有很大的差异，但不同业务架构之间，仍然会有许多共通的东西。它们不只遵循相同的架构原则，还可以遵循相同的设计范式。</p>
+<p>一些设计范式被人们以应用程序框架的方式固化下来。例如，在用户交互领域有著名的MVC 框架（如JavaScript 语言的Angular，PHP 语言的Zend，Python 语言的 Django），在游戏开发领域有各种游戏引擎（如JavaScript 语言的 Phaser，C# 语言的 Unity3D），等等。</p>
+<p><strong>对于一个服务端应用程序来说，其完整的架构体系大体如下，</strong>如果你在收听音频，你可以点击文稿查看：</p>
+<p><img src="https://static001.geekbang.org/resource/image/55/37/5553453858eb86bf88a5623255f20037.png" alt></p>
+<p>对于客户端应用程序来说，和服务端的情况会有非常大的差别。客户端首先面临的是多样性的挑战。</p>
+<p>单就操作系统来说，PC 就有Windows、Mac、Linux 等数十种，手机也有Android、iOS，Windows Mobile 等等。而设备种类而言就更多了，不只有笔记本、平板电脑，还有手机、手表、汽车，未来只会更加多样化。</p>
+<p>第一个想消除客户端的多样性，并且跨平台提供统一编程接口的，是浏览器。</p>
+<p>可能在很多人看来，浏览器主要改变的是软件分发的方式，让软件可以即取即用，无需安装。但从技术角度来说，底层操作系统对软件的支持同样可以做到即取即用。</p>
+<p>这方面苹果在iOS 上已经在尝试，大家可能已经留意到，如果你一个软件很久没有用，iPhone 就会把这个软件从本地清理出去，而在你下一次使用它时又自动安装回来。</p>
+<p>假如软件包足够小，那么这种行为和 Web 应用就毫无区别。不同之处只在于Web 应用基于的指令不是机器码，而是更高阶的 JavaScript 脚本。</p>
+<p>JavaScript 因为指令更高阶，所以程序的尺寸比机器码会有优势。但另一方面来说 JavaScript 是文本指令，表达效率又要比机器码低。</p>
+<p>但这一点也在发生变化，近年来 WebAssembly 技术开始蓬勃发展，JavaScript 作为浏览器的机器码的地位会被逐步改变，我们前端开发会面临更多的可能性。</p>
+<p>浏览器的地位非常特殊，我们可以看作操作系统之上的操作系统。一旦某种浏览器流行起来，开发人员都在浏览器上做应用，那么必然会导致底层操作系统管道化，这是操作系统厂商所不愿意看到的。</p>
+<p>而如果浏览器用户量比较少，那么通过它能够触达的用户量就太少，消除不同底层操作系统差异的价值就不存在，开发人员也就不乐意在上面开发应用。</p>
+<p>我们知道，PC 的浏览器之战打到今天，基本上就剩下Chrome、Internet Explorer、Safari、Firefox 等。</p>
+<p>有趣的是，移动浏览器的战场似乎是从中国开始打起的，这就是微信引发的小程序之战，它本质上是一场浏览器的战争。</p>
+<p>浏览器是一个基础软件，它能够解决多大的问题，依赖于它的市场占有率。但是基于同样的浏览器技术核心也可以构建出跨平台的应用框架。我们看到 React Native 就是沿着这个思路走的。当然这不是唯一的一条路，还有人会基于类似 QT 这样的传统跨平台方案。</p>
+<p><strong>整体来说，对于一个客户端应用程序来说，其完整的架构体系大体如下</strong>，你可以点击文稿查看：</p>
+<p><img src="https://static001.geekbang.org/resource/image/3a/c7/3af7a4830566a5b3e1058f409422b7c7.png" alt></p>
+<p>对于架构师来说，不仅仅只是想清楚业务应该怎么去做好分解，整个应用从底到最顶层的上层建筑，每一层都需要进行各种决策。先做 iOS 版本，还是先做小程序？是选择 Java 还是 Go 语言？这些都是架构的一部分。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天，我们从“计算机是如何工作”开始，一起登高鸟瞰，总览了程序完整的架构体系。</p>
+<p><strong>可能有人看到今天的内容心里会有些担心：“原来架构师要学这么多东西，看来我离成为架构师好远。”</strong></p>
+<p>好消息是：我们就是来打消这个担心的。如果我们把写代码的能力比作武功招式，那么架构能力就好比内功。内功修炼好了，武功招式的运用才能得心应手。</p>
+<p><strong>而架构能力的提升，本质上是对你的知识脉络（全身经络）的反复梳理与融会贯通的过程。</strong>具备架构思维并不难，而且极有必要。不管今天的你是不是团队里的一位架构师，对任何一位程序员来说，具备架构思维将会成为让你脱颖而出的关键。</p>
+<p>这就像你没有从事云计算行业，但是你仍然需要理解云计算的本质，需要驾驭云计算。你也不必去做出一个浏览器，但是你需要理解它们的思考方式，因为你在深度依赖于它们。</p>
+<p>接下来我们将进一步展开来谈这个程序架构体系里面的每一个环节。你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:02.769Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    24 minutes read (About 3662 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/开篇词 | 怎样成长为优秀的软件架构师？/">开篇词 | 怎样成长为优秀的软件架构师？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是许式伟。从今天起，我想和你一起来聊聊架构的话题。</p>
+<p>开始之前，我先来和你简单介绍下我自己。</p>
+<p>我是2000年开始工作的，曾经做过WPS的首席架构师，也在盛大从事过技术研究方面的工作，后来在2011年创立了七牛云，现在我是一名创业者、CEO。但不管角色怎么轮换，我觉得我的另一面始终是一名程序员、架构师（如果你想了解更多我的经历，可以观看下面的短视频）。</p>
+<p>让我们来想象一下，如果把信息世界看成一座大厦，把程序员看成这个世界的建筑师，那么，现在的你在负责什么样的工作呢？</p>
+<p>当我们把程序员类比成建筑师时，按照能力水平来分，我觉得大体可以分为三个层次：搬砖师、工程师、架构师。</p>
+<p>软件搬砖师之名对应到建筑行业的建筑工人，他们的编程能力和业务基本上停留在堆叠代码，按照要求去实现功能需求的层面。</p>
+<p>只要能让程序跑起来，能正确地实现业务逻辑，就可以称为“会编程”的人。有时候，我们也会看见程序员自称为“码农”“搬砖的”，虽然二者的工种不同，但从基础工作的相似度来说，确实有可类比的成分。</p>
+<p>很多外行的人都会觉得程序员是一个很神秘的职业，但实际上程序员的基础门槛并不算高。我自己从2016年2月开始至今，一直在教几位8~12岁的小朋友学习编程。这个实践经验告诉我：小学生完全有能力学编程。而且，并不是只有部分小学生可以，而是任何一位小学生都可以学会。</p>
+<p>然而，只让代码跑起来是不够的。这个世界是不断变化的，作为程序员，我们更多的时间是用来维护代码：增加新的需求，对已有的功能进行调整，修改之前代码遗留下来的问题，优化性能等等。</p>
+<p>这是因为一个软件诞生之后，后续就是需要花费大量的代价去维护它，演进它。一个人是完全维护不过来的，需要更多的人，很多的团队一起协作。如果面临了员工离职、岗位调整等情况，还会导致软件代码在不同人之间流转。</p>
+<p>所以，一些有追求的程序员会关注代码的质量。代码质量的评判可以有这样一些基本维度：可阅读性（方便代码流转）、可扩展性/可维护性（方便修改功能，添加新功能）、可测试性（质量管理）、可复用性（简化后续功能开发的难度）。</p>
+<p>这一类致力于不断提升软件代码的工程质量的程序员，我们可以称他们为软件工程师。</p>
+<p>工程师不会简单把写代码看作一门工作，把任务交代过去就完事。他们会有“洁癖”，代码在他们眼里是一种艺术，是自己生命的一部分。</p>
+<p>他们会把写出来的代码改了又改，直到让自己满意为止。阅读和维护软件工程师写的代码会有一种赏心悦目的感觉。</p>
+<p>但是，大部分商业软件都是一项极其复杂的工程，它们远比很多传统的建筑工程复杂得多，无论是涉及的人力、时间还是业务的变数都要多很多。</p>
+<p>人力上，大部分大型的软件系统都有几千甚至几万人的规模，而这几千几万人中，却没有两个人的工作是重复的，他们都是在从事着前所未有的创造性工作。</p>
+<p>时间上，只要软件还在服务客户中，程序员们的创造过程便不会停止，软件系统仍然持续迭代更新，以便形成更好的市场竞争力。</p>
+<p>这些都与传统建筑工程的模式大相径庭。一幢建筑自它完成之后，所有的变化便主要集中在一些软装的细节上，很少会再发生剧烈的变动，更不会持续地发生变动。但软件却不是这样，它从诞生之初到其生命周期结束，自始至终都在迭代变化，从未停止。</p>
+<p>所以，光靠把控软件工程师的水平，依赖他们自觉保障的工程质量，是远远不够的。软件工程是一项非常复杂的系统工程，它需要依赖一个能够掌控整个工程全局的团队，来规划和引导整个系统的演变过程。这个团队就是架构师团队。</p>
+<p>软件架构师的职责，并不单单是我们通常理解的，对软件系统进行边界划分和模块规格的定义。</p>
+<p>从根本目标来说，软件架构师要对软件工程的执行结果负责，这包括：按时按质进行软件的迭代和发布、敏捷地响应需求变更、防范软件质量风险（避免发生软件质量事故）、降低迭代维护成本。</p>
+<p><strong>那怎么才能成长为优秀的软件架构师？软件架构师和软件工程师最根本的差别又在哪里？我认为关键在于四个字：掌控全局。</strong></p>
+<p>掌控全局，就是对系统的全貌了然于胸。从传统的建筑工程来说，建筑架构师并不单单要会画建筑图纸，而是要对地基构建、土质、材料、建筑工艺等等所有有可能影响建筑质量的因素都要了然于胸。</p>
+<p>掌控全局，并不是无所不能，不是成为全栈，怎么做到掌控全局？核心在于对知识脉络的体系化梳理。这是架构能力构建和全面提升的关键。这种方法不单单是在软件工程中适用。</p>
+<p>比如学数学，我个人非常喜欢做的一件事情是自己去推导书上所有的公式。每一个公式我都亲自推导而来。</p>
+<p>这样做的核心意义在于，我在尝试从0开始，去构建整个精彩纷呈的数学世界，整个数学发展史在自己的笔下重新演绎了一遍，来龙去脉清清楚楚。有时候你甚至会推导出还没有学到的公式，但是在后面学到了。这种体验非常有趣而又让人满足。</p>
+<p>是的，掌控全局的前提是：在自己心中去重新构建出整个世界。在这个过程中，你不需要一上来沉浸在某个技术的实现细节（除非它影响了你对这个世界构建过程的理解），但是你知道整个世界的脉络，知道整个世界的骨架。</p>
+<p>这个时候，你对这个世界的感觉是完全不同的，因为，你已经成为了这个世界的构建者。</p>
+<p>而架构的本质，不也正是构建和创造么？</p>
+<p>作为一个软件行业的从业人员，我们可能接触各种各样的技术书籍。有讲编程语言的、讲数据结构与算法的、讲操作系统的、讲编译原理的、讲架构设计的，还有领域技术类的（比如数据库、存储、大数据、人工智能之类）。</p>
+<p>大部分类别的技术书，多多少少都能够找到几本经典著作。但是，架构设计很可能是个例外，当我想推荐一本经典的架构设计书时，我并不能非常快速地想到应该推荐哪本。</p>
+<p>从个人经验来说，我接触过的与架构相关的图书，大概有如下这些分类。</p>
+<ul>
+<li>架构思维类。这类图书通常从一些著名的架构理论讲起，比如开闭原则、单一职责原则、依赖倒置原则、接口分离原则，等等。这种图书的问题在于过度理论化。计算机科学归根到底属于工程技术类，实践第一。</li>
+<li>设计模式类。这一类图书则一下子进入架构的局部细节，每个模式的来龙去脉并不容易理解。就算理解了某个具体的模式，但是也很难真正做到活学活用，不知道还是不知道。</li>
+<li>分布式系统架构设计类。这类图书通常从服务端的通用问题如一致性、高可用、高并发挑战等话题讲起，讲大型业务系统面临的挑战。这些知识是非常有价值的，但无法延伸到通用业务架构，对大部分企业的架构实践并不具备真正的指导意义。</li>
+<li>重构类。这类图书主要讲怎么把坏代码一步步改进到好代码。我认为这是最实用的一类。但在没有优秀架构师主导的情况下，大部分公司的代码不可避免地越变越坏，直到不堪重负最后不得不重写。实际上，一个模块最初的地基是最重要的，基本决定了这座大厦能够撑多久，而重构更多侧重于大厦建成之后，在服务于人的前提下怎么去修修补补，延长生命。</li>
+</ul>
+<p>这些架构类的图书并没有达到我个人的期望。因为它们都没有揭开架构设计的全貌。</p>
+<p>我自己在职业生涯中前后大概做过十几次的架构类演讲，这也是我最为重视、重复次数最多的一类演讲。但同样地，这样零星的演讲对于传递架构设计思想来说，仍然远远不够。</p>
+<p><strong>所以一直以来，我就心存着这样一个念头：“要写一本不一样的架构类图书”。这个念想，也正是今天这个专栏的由来。</strong></p>
+<p>这个专栏的内容组织算是我的一次尝试。它和今天你看得到的大部分架构书并不太一样。我基本上围绕着两个脉络主线来展开内容：</p>
+<ul>
+<li>如何从零开始一步步构建出整个信息世界；</li>
+<li>在整个信息世界的构建过程中，都用了哪些重要的架构思维范式，以及这些范式如何去运用于你平常的工程实践中。</li>
+</ul>
+<p>这两大脉络相辅相成。首先，我们通过还原信息世界的构建过程，剥离出了整个信息世界的核心骨架，这也是最真实、最宏大的架构实践案例。其次，我们结合这个宏大的架构实践来谈架构思维，避免因对架构思维的阐述过于理论化而让人难以理解。</p>
+<p>我想，每个程序员都有一颗成为架构师的心。所以，从内容设计来说，我希望这是一个门槛最低的架构设计专栏，也希望它可以帮助到想成为架构师的初学者，达成自己的目标。</p>
+<p>在行文上，我会尽量避免深奥的术语，尽可能以通俗易懂的文字，来描述信息世界构建者们的所思所想。如果你在阅读的过程中遇到了理解上的障碍，非常欢迎你来给我留言，我将尽可能地根据你的反馈，做出必要的调整。</p>
+<p>如果你已经成为了架构师，我也希望可以为你规避一些错误的经验。在过去的工作经历里，我看到不少架构师都会倾向于把架构看作一项纯技术性的行为。他们的工作流程是这样的：产品经理根据用户的需求做出产品设计，然后架构师再依据产品设计给出实现，也就是软件的架构设计方案。</p>
+<p>在我看来，这其实是个误解。架构关乎的是整个复杂的软件工程，它关乎实现它的人，它又因团队的能力而异。</p>
+<p>同时，架构也关乎用户需求，作为架构师，我们不只是要知道当前的用户需求是什么，我们还要预测需求未来可能的变化，预判什么会发生，而什么一定不会发生。预测什么不会发生最为重要，只有做到这一点，才能真正防止架构的过度设计，把简单的事情复杂化。</p>
+<p>谈了这么多，那么，应该怎样成长为优秀的软件架构师？<strong>我想，一靠匠心，二靠悟心。</strong>架构设计并无标准答案，但我仍然希望把我这些年的所思所想分享给你，更希望这些内容能给你一些启发。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/许世伟的架构课/page/4/">Préc</a>
+        </div>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/许世伟的架构课/page/6/">Suiv</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/">1</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/page/4/">4</a></li>
+            
+            <li><a class="pagination-link is-current" href="/categories/许世伟的架构课/page/5/">5</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="https://ws2.sinaimg.cn/large/0067tbKZgy1g6j281yfbqj30ox0oxq41.jpg" alt="xcool">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        xcool
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        enchanter
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>http://www.enchanter.tech</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Articles
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        99
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Catégories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhangxiongxin/blog" target="_blank">
+                SUIVRE</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/zhangxiongxin">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catégories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/许世伟的架构课/">
+            <span class="level-start">
+                <span class="level-item">许世伟的架构课</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">42</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/重学前端/">
+            <span class="level-start">
+                <span class="level-item">重学前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">57</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Nuage de tags
+        </h3>
+        
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Récents
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Récents
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Enchanter" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 xcool&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Articles',
+                PAGES: 'Pages',
+                CATEGORIES: 'Catégories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

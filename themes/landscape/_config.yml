@@ -12,9 +12,9 @@ fancybox: true
 sidebar: right
 widgets:
 - category
-- tag
-- tagcloud
-- archive
+# - tag
+# - tagcloud
+# - archive
 - recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
@@ -26,7 +26,9 @@ index_widgets:
 # widget behavior
 archive_type: 'monthly'
 show_count: false
-
+index_generator:
+  path: ''
+  per_page: 10
 # Miscellaneous
 google_analytics:
 gauges_analytics:
@@ -35,3 +37,4 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+copyright: false
