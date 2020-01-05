@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Category: 许世伟的架构课 - Enchanter</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Enchanter">
+<meta property="og:url" content="http://193.112.81.28:3002/categories/许世伟的架构课/page/2/index.html">
+<meta property="og:site_name" content="Enchanter">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://193.112.81.28:3002/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enchanter">
+<meta name="twitter:image" content="http://193.112.81.28:3002/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Enchanter" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">许世伟的架构课</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:08:03.885Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    24 minutes read (About 3647 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/29 | 实战（四）：怎么设计一个“画图”程序？/">29 | 实战（四）：怎么设计一个“画图”程序？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>今天继续我们的画图程序。上一讲完成后，我们的画图程序不只是功能实用，并且还支持了离线编辑与存储。</p>
+<p>今天我们开始考虑服务端。</p>
+<p>我们从哪里开始？</p>
+<p>第一步，我们要考虑的是网络协议。</p>
+<h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><p>为了简化，我们暂时不考虑多租户带授权的场景。后面我们在下一章服务端开发篇会继续实战这个画图程序，将其改造为多租户。</p>
+<p>在浏览器中，一个浏览器的页面编辑的是一个文档，不同页面编辑不同的文档。所以在我们的浏览器端的 dom.js 里面，大家可以看到，我们的 DOM 模型是单文档的设计。</p>
+<p>但显然，服务端和浏览器端这一点是不同的，就算没有多租户，但是多文档是跑不了的。我们不妨把 QPaint 的文档叫drawing，如此服务端的功能基本上是以下这些：</p>
+<ul>
+<li>创建新 drawing 文档；</li>
+<li>获取 drawing 文档；</li>
+<li>删除 drawing 文档；</li>
+<li>在 drawing 文档中创建一个新 shape；</li>
+<li>取 drawing 文档中的一个 shape；</li>
+<li>修改 drawing 文档中的一个 shape，包括移动位置、修改图形样式；</li>
+<li>修改 drawing 文档中的一个 shape 的 zorder 次序（浏览器端未实现）；</li>
+<li>删除 drawing 文档的一个 shape。</li>
+</ul>
+<p>完整的网络协议见下表：</p>
+<p><img src="https://static001.geekbang.org/resource/image/1b/c3/1b174cea94808537e21c5328ad2b8bc3.png" alt></p>
+<p>其中<code>&lt;Shape&gt;</code>是这样的：</p>
+<pre><code>&quot;path&quot;: {
+    &quot;points&quot;: [
+        {&quot;x&quot;: &lt;X&gt;, &quot;y&quot;: &lt;Y&gt;},
+        ...
+    ],
+    &quot;close&quot;: &lt;Boolean&gt;,
+    &quot;style&quot;: &lt;ShapeStyle&gt;
+}</code></pre><p>或:</p>
+<pre><code>&quot;line&quot;: {
+    &quot;pt1&quot;: {&quot;x&quot;: &lt;X&gt;, &quot;y&quot;: &lt;Y&gt;},
+    &quot;pt2&quot;: {&quot;x&quot;: &lt;X&gt;, &quot;y&quot;: &lt;Y&gt;},
+    &quot;style&quot;: &lt;ShapeStyle&gt;
+}</code></pre><p>或：</p>
+<pre><code>&quot;rect&quot;: {
+    &quot;x&quot;: &lt;X&gt;,
+    &quot;y&quot;: &lt;Y&gt;,
+    &quot;width&quot;: &lt;Width&gt;,
+    &quot;height&quot;: &lt;Height&gt;,
+    &quot;style&quot;: &lt;ShapeStyle&gt;
+}</code></pre><p>或：</p>
+<pre><code>&quot;ellipse&quot;: {
+    &quot;x&quot;: &lt;X&gt;,
+    &quot;y&quot;: &lt;Y&gt;,
+    &quot;radiusX&quot;: &lt;RadiusX&gt;,
+    &quot;radiusY&quot;: &lt;RadiusY&gt;,
+    &quot;style&quot;: &lt;ShapeStyle&gt;
+}</code></pre><p>其中<code>&lt;ShapeStyle&gt;</code>是这样的：</p>
+<pre><code>{
+    &quot;lineWidth&quot;: &lt;Width&gt;,  // 线宽
+    &quot;lineColor&quot;: &lt;Color&gt;,  // 线型颜色
+    &quot;fillColor&quot;: &lt;Color&gt;   // 填充色
+}</code></pre><p>其中<code>&lt;ZorderOperation&gt;</code>可能的值为：</p>
+<ul>
+<li>“top”: 到最顶</li>
+<li>“bottom”: 到最底</li>
+<li>“front”: 往前一层</li>
+<li>“back”: 往后一层</li>
+</ul>
+<p>整体来说，这套网络协议比较直白体现了其对应的功能含义。我们遵循这样一套网络协议定义的范式：</p>
+<ul>
+<li>创建对象：POST /objects</li>
+<li>修改对象：POST /objects/<code>&lt;ObjectID&gt;</code></li>
+<li>删除对象：DELETE /objects/<code>&lt;ObjectID&gt;</code></li>
+<li>查询对象：GET /objects/<code>&lt;ObjectID&gt;</code></li>
+</ul>
+<p>其实还有一个列出对象，只不过我们这里没有用到：</p>
+<ul>
+<li>列出所有对象：GET /objects</li>
+<li>列出符合条件的对象：GET /objects?key=value</li>
+</ul>
+<p>另外，有一个在网络设计时需要特别注意的点是：对重试的友好性。</p>
+<p>为什么我们必须要充分考虑重试的友好性？因为网络是不稳定的。这意味着，在发生一次网络请求失败时，在一些场景下你不一定能确定请求的真实状态。</p>
+<p>在小概率的情况下，有可能服务端已经执行了预期的操作，只不过返还给客户端的时候网络出现了问题。在重试时你以为只是重试，但实际上是同一个操作执行了两遍。</p>
+<p>所谓重试的友好性，是指同一个操作执行两遍，其执行结果和只执行一遍一致。</p>
+<p>只读操作，比如查询对象或列出对象，毫无疑问显然是重试友好的。</p>
+<p>创建对象（POST /objects）往往容易被实现为重试不友好的，执行两遍会创建出两个对象来。我们对比一下这里创建新drawing和创建新shape的差别：</p>
+<pre><code>POST /drawings
+
+
+POST /drawings/&lt;DrawingID&gt;/shapes
+Content-Type: application/json
+
+{
+    &quot;id&quot;: &lt;ShapeID&gt;,
+    &lt;Shape&gt;
+}</code></pre><p>可以看到，创建新 shape 时传入了 ShapeID，也就是说是由客户（浏览器端）分配 ShapeID。这样做的好处是如果上一次服务端已经执行过该对象的创建，可以返回对象已经存在的错误（我们用 status = 409 冲突来表示）。</p>
+<p>而创建新 drawing 并没有传入什么参数，所以不会发生什么冲突，重复调用就会创建两个新 drawing 出来。</p>
+<p>通过以上分析，我们可以认为：创建新 shape 是重试友好的，而创建 drawing 不是重试友好的。那么怎么解决这个问题？有这么几种可能：</p>
+<ul>
+<li>客户端传 id（和上面创建新 shape 一样）；</li>
+<li>客户端传 name；</li>
+<li>客户端传 uuid。</li>
+</ul>
+<p>当然这三种方式本质上的差别并不大。比如客户端传 name，如果后面其他操作引用时用的也是 name，那么本质上这个 name 就是 id。</p>
+<p>传 uuid 可以认为是一种常规重试友好的改造手法。这里 uuid 并没有实际含义，你可以理解为它是 drawing 的唯一序列号，也可以理解为网络请求的唯一序列号。当然这两种不同理解的网络协议表现上会略有不同，如下：</p>
+<pre><code>POST /drawings
+Content-Type: application/json
+
+{
+    &quot;uuid&quot;: &lt;DrawingUUID&gt;
+}
+
+
+POST /drawings
+Content-Type: application/json
+X-Req-Uuid: &lt;RequestUUID&gt;</code></pre><p>修改对象和删除对象，往往是比较容易做到重试友好。但这并不绝对，比如我们这个例子中 “修改shape的顺序”，它的网络协议是这样的：</p>
+<pre><code>POST /drawings/&lt;DrawingID&gt;/shapes/&lt;ShapeID&gt;
+Content-Type: application/json
+
+{
+    &quot;zorder&quot;: &lt;ZorderOperation&gt;
+}</code></pre><p>其中<code>&lt;ZorderOperation&gt;</code>可能的值为：</p>
+<ul>
+<li>“top”: 到最顶</li>
+<li>“bottom”: 到最底</li>
+<li>“front”: 往前一层</li>
+<li>“back”: 往后一层</li>
+</ul>
+<p>在 ZorderOperation 为 “front” 或 “back” 时，重复执行两遍就会导致 shape 往前（或往后）移动 2 层。</p>
+<p>怎么调整？</p>
+<p>有两个办法。一个方法是把修改操作用绝对值表示，而不是相对值。比如 ZorderOperation 为 “front” 或 “back” 是相对值，但是 Zorder = 5 是绝对值。</p>
+<p>另一个方法是通用的，就是用请求的序列号（RequestUUID），这个方法在上面创建新 drawing 已经用过了，这里还可以用：</p>
+<pre><code>POST /drawings/&lt;DrawingID&gt;/shapes/&lt;ShapeID&gt;
+Content-Type: application/json
+X-Req-Uuid: &lt;RequestUUID&gt;
+
+{
+    &quot;zorder&quot;: &lt;ZorderOperation&gt;
+}</code></pre><p>当然用请求序列号是有额外代价的，因为这意味着服务端要把最近执行成功的所有的请求序列号（RequestUUID）记录下来，在收到带请求序列号的请求时，检查该序列号的请求是否已经成功执行，已经执行过就报冲突。</p>
+<p>在网络协议的设计上，还有一个业务相关的细节值得一提。</p>
+<p>细心的你可能留意到，我们 Shape 的 json 表示，在网络协议和 localStorage 存储的格式并不同。在网络协议中是：</p>
+<pre><code>{
+    &quot;id&quot;: &lt;ShapeID&gt;,
+    &quot;path&quot;: {
+        &quot;points&quot;: [
+            {&quot;x&quot;: &lt;X&gt;, &quot;y&quot;: &lt;Y&gt;},
+            ...
+        ],
+        &quot;close&quot;: &lt;Boolean&gt;,
+        &quot;style&quot;: &lt;ShapeStyle&gt;
+    }  
+}</code></pre><p>而在 localStorage 中的是：</p>
+<pre><code>{
+    &quot;type&quot;: &quot;path&quot;,
+    &quot;id&quot;: &lt;ShapeID&gt;,
+    &quot;points&quot;: [
+        {&quot;x&quot;: &lt;X&gt;, &quot;y&quot;: &lt;Y&gt;},
+        ...
+    ],
+    &quot;close&quot;: &lt;Boolean&gt;,
+    &quot;style&quot;: &lt;ShapeStyle&gt;
+}</code></pre><p>从结构化数据的 Schema 设计角度，localStorage 中的实现是无 Schema 模式，过于随意。这是因为 localStorage 只是本地自己用的缓存，影响范围比较小，故而我们选择了怎么方便怎么来的模式。而网络协议未来有可能作为业务的开放 API ，需要严谨对待。</p>
+<h2 id="版本升级"><a href="#版本升级" class="headerlink" title="版本升级"></a>版本升级</h2><p>另外，这个画图程序毕竟只是一个 DEMO 程序，所以还有一些常见网络协议的问题并没有在考虑范围之内。</p>
+<p>比如从更长远的角度，网络协议往往还涉及协议的版本管理问题。网络协议是一组开放 API 接口，一旦放出去了就很难收回，需要考虑协议的兼容。</p>
+<p>为了便于未来协议升级的边界，很多网络协议都会带上版本号。比如：</p>
+<pre><code>POST /v1/objects
+POST /v1/objects/&lt;ObjectID&gt;
+DELETE /v1/objects/&lt;ObjectID&gt;
+GET /v1/objects/&lt;ObjectID&gt;
+GET /v1/objects?key=value</code></pre><p>在协议发生了不兼容的变更时，我们会倾向于升级版本，比如升为 v2 版本：</p>
+<pre><code>POST /v2/objects
+POST /v2/objects/&lt;ObjectID&gt;
+DELETE /v2/objects/&lt;ObjectID&gt;
+GET /v2/objects/&lt;ObjectID&gt;
+GET /v2/objects?key=value</code></pre><p>这样做有这么一些好处：</p>
+<ul>
+<li>可以逐步下线旧版本的流量，一段时间内让两个版本的协议并存；</li>
+<li>可以新老版本的业务服务器相互独立，前端由 nginx 或其他的应用网关来分派。</li>
+</ul>
+<h2 id="第一个实现版本"><a href="#第一个实现版本" class="headerlink" title="第一个实现版本"></a>第一个实现版本</h2><p>聊完了网络协议，我们就要开始考虑服务端的实现。在选择第一个实现版本怎么做时，有这样几种可能性。</p>
+<p>第一种，当然是常规的憋大招模式。直接做业务架构设计、架构评审、编码、测试，并最后上线。</p>
+<p>第二种，是做一个 Mock 版本的服务端程序。</p>
+<p>两者有什么区别？</p>
+<p>区别在于，服务端程序从架构设计角度，就算是非业务相关的通用型问题也是很多的，比如高可靠和高可用。</p>
+<p>高可靠是指数据不能丢。就算服务器的硬盘坏了，数据也不能丢。这还没什么，很多服务甚至要求，在机房层面出现大面积事故比如地震，也不能出现数据丢失。</p>
+<p>高可用是指服务不能存在单点故障。任何一台甚至几台服务器停机了，用户还要能够正常访问。一些服务比如支付宝，甚至要求做到跨机房的异地双活。在一个机房故障时，整个业务不能出现中断。</p>
+<p>在没有好的基础设施下，要做好一个好的服务端程序并不那么容易。所以另一个选择是先做一个 Mock 版本的服务端程序。</p>
+<p>这不是增加了工作量？有什么意义？</p>
+<p>其一，是让团队工作并行。不同团队协作的基础就是网络协议。一个快速被打造的 Mock 的最小化版本服务端，可以让前端不用等待后端。而后端则可以非常便捷地自主针对网络协议进行单元测试，做很高的测试覆盖率以保证质量，进度不受前端影响。</p>
+<p>其二 ，是让业务逻辑最快被串联，快速验证网络协议的有效性。中途如果发现网络协议不满足业务需求，可以及时调整过来。</p>
+<p>所以我们第一版的服务端程序，是 Mock 的版本。Mock 版本不必考虑太多服务端领域的问题，它的核心价值就是串联业务。所以 Mock 版本的服务器甚至不需要依赖数据库，直接所有的业务逻辑基于内存中的数据结构就行。</p>
+<p>代码如下：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/tree/v29/paintdom" target="_blank" rel="noopener">https://github.com/qiniu/qpaint/tree/v29/paintdom</a></li>
+</ul>
+<p>正式版画图程序的服务端，我们会在后面服务端开发一章的实战中继续去完成。</p>
+<p>从架构角度来说，这个 paintdom 程序分为两层：Model 层和 Controller 层。</p>
+<p>我们首先看一下 Model 层。它的源代码是：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/blob/v29/paintdom/shape.go" target="_blank" rel="noopener">paintdom/shape.go</a></li>
+<li><a href="https://github.com/qiniu/qpaint/blob/v29/paintdom/drawing.go" target="_blank" rel="noopener">paintdom/drawing.go</a></li>
+</ul>
+<p>Model 层与网络无关，有的只是纯纯粹粹的业务核心逻辑。它实现了一个多文档版本的画图程序，逻辑结构也是一棵 DOM 树，只不过比浏览器端多了一层：</p>
+<ul>
+<li>Document =&gt; Drawing =&gt; Shape =&gt; ShapeStyle</li>
+</ul>
+<p>浏览器端的 QPaintDoc，对应的是这里的 Drawing，而不是这里的 Document。</p>
+<p>我们再来看一下 Controller 层。它的源代码是：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/blob/v29/paintdom/service.go" target="_blank" rel="noopener">paintdom/service.go</a></li>
+</ul>
+<p>Controller 层实现的是网络协议。你可能觉得奇怪，我为什么会把网络协议层看作 Controller 层，那么 MVC 中 View 层去了哪里。</p>
+<p>首先服务端程序大部分情况下并不需要显示模块，所以不存在 View 层。网络协议层为什么可以看作 Controller 层，是因为它负责接受用户输入。只不过用户输入不是我们日常理解的用户交互，而是来自某个自动化控制（Automation）程序的 API 请求。</p>
+<p>虽然这个 paintdom 程序的实现，有一些 Go 语言相关的知识点是挺值得讲的，尤其是网络协议实现相关的部分。不过我这里就不做展开了，感兴趣的同学可以自行学习一下 Go 语言。</p>
+<p>总体来说，业务逻辑相关的部分理解起来相对容易，我们这里不再赘述。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们重点讨论了 “画图” 程序的网络协议，给出了常规网络协议设计上的一些考量点。网络协议的地位非常关键，它是一个 B/S 或 C/S 程序前后端耦合的使用界面，因而也是影响团队开发效率的关键点。</p>
+<p>如何及早稳定网络协议？如何及早让前端程序员可以与服务端联调？这些都是我们应该重点关注的地方。</p>
+<p>定义清楚网络协议后，我们给出了满足我们定义的网络协议的第一个服务端实现版本 paintdom 程序，用于串联业务逻辑。这个实现版本是 Mock 程序，它只关注业务逻辑，不关心服务端程序的固有的高可靠、高可用等需求。后续在下一章服务端开发中，我们会继续迭代它。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们会把这个 paintdom 服务端程序，和我们的 paintweb 画图程序串联起来。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:08:01.778Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    17 minutes read (About 2574 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/28 | 实战（三）：怎么设计一个“画图”程序？/">28 | 实战（三）：怎么设计一个“画图”程序？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>前面的两节课结束后，我们的画图程序已经基本实用。它有如下功能：</p>
+<ul>
+<li>可以选择全局的图形样式（lineWidth、lineColor、fillColor）；</li>
+<li>可以以全局的图形样式来创建各类图形（Path、FreePath、Line、Rect、Ellipse、Circle）；</li>
+<li>可以选择已经创建的图形，并修改其图形样式；</li>
+<li>可以删除选择的图形；</li>
+<li>可以移动选择的图形。</li>
+</ul>
+<p>前面有一些同学的反馈，我这里想回答一下。</p>
+<p>有一个反馈是对 JavaScript 的使用，我为什么会用 class 关键字。</p>
+<p>这是因为我不太希望这是一篇某个语言的教程，我选择的是如何用最接近大家思维的表达方式来表达程序逻辑，你就算没有系统学过 JavaScript，也应该能够理解这段程序想要做什么。</p>
+<p>另外有一个反馈，是希望我不要一上来就从 MVC 这种模式讲起，而是如果没有 MVC，我们用最基础的裸写代码，会写出一个什么样的程序来，里面有哪些弊端，从而引入 MVC 来让程序架构变得更加清晰，功能之间解耦。</p>
+<p>这个意见我觉得是比较中肯的，后面我们会补充一讲来裸写 MVP 版本的画图程序。</p>
+<p>今天我们开始进入“实战：怎么设计一个‘画图’程序”的第三讲，怎么和服务端连接。</p>
+<p>考虑到大家普遍反馈内容有点深，我们把服务端连接分为两节课去聊。今天这一讲我们谈的是在浏览器端进行持久化。</p>
+<p>为什么需要在浏览器端进行持久化？</p>
+<p>因为我们需要有更好的用户体验。在用户断网的情况下，这个画图程序还可以正常编辑，并且在恢复联网的情况下，需要能够把所有离线编辑的内容自动同步到服务端。</p>
+<p>结合前面几讲的介绍，你可能立刻想到 Google 推的 PWA，它非常关注浏览器应用的离线体验。</p>
+<p>但是当我们做一个技术选型的时候，显然首先要考虑的是这个技术的兼容性如何。我们今天并不基于 PWA 来干这件事情，而是基于更传统的 localStorage 技术来干。</p>
+<p>具体我们改的代码如下：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/compare/v27...v28" target="_blank" rel="noopener">https://github.com/qiniu/qpaint/compare/v27…v28</a></li>
+</ul>
+<p>最核心的变化是 Model 层。完整的离线支持的 Model 层代码如下：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/blob/v28/paintweb/www/dom.js" target="_blank" rel="noopener">dom.js</a></li>
+</ul>
+<h2 id="对象-ID"><a href="#对象-ID" class="headerlink" title="对象 ID"></a>对象 ID</h2><p>为了支持持久化，我们给每一个 Model 层 DOM 树的根 —— QPaintDoc 类引入了两个 ID，如下：</p>
+<ul>
+<li>localID: string</li>
+<li>displayID: string</li>
+</ul>
+<p><img src="https://static001.geekbang.org/resource/image/eb/56/eb45f019508b3c9f7a1f6bc868a5ac56.png" alt></p>
+<p>其中 displayID 顾名思义，是用户可见的ID。我们的画图程序之前本地调试的行为是打开 <a href="http://localhost:8888/" target="_blank" rel="noopener">http://localhost:8888/</a> 来编辑一篇文档（QPaintDoc），但是现在会自动跳转到 <a href="http://localhost:8888/#t10001" target="_blank" rel="noopener">http://localhost:8888/#t10001</a> 或类似的 URL。这里 t10001 就是文档的 displayID。</p>
+<p>其中，displayID 前面带 t 开头，表示这篇文档从它被创建开始，从未与服务器同步过，是一篇临时的文档。一旦它完成与服务端的同步后，就会改用服务端返回的文档 ID。</p>
+<p>那么，localID 是什么？顾名思义，是这篇文档的本地 ID。在文档还没有和服务端同步时，它和 displayID 是有关系的，如果 displayID 是 t10001，那么 localID 就是 10001。但是文档第一次保存到服务端后，它的 displayID 会变化，而 localID 则并不改变。</p>
+<p><strong>这有什么好处？</strong></p>
+<p><strong>好处在于，我们在 localStorage 存储 DOM 树的时候，并不是把整篇文档 JSON 化后保存，而是分层的，QPaintDoc 里面的 shapes 数组保存的只是 shapeID。</strong></p>
+<p>是的，每个 Shape（图形）也引入了一个 ID。这样，当 Shape 发生变化，比如修改图形样式、移动，我们修改 shapeID =&gt; shapeJsonData。</p>
+<p>请注意，在浏览器的 localStorage 里面，shapeID 是要全局唯一的，我们实际存储的是 QPaintDoc.localID + “:” + shape.id。</p>
+<p>看到这里我们回过头来看，为什么 QPaintDoc 有 displayID 和 localID 就可以理解了。如果只有一个 ID 并且这个 ID 是会发生变化的，那么在 ID 变化时，所有保存在 localStorage 中的这篇文档的图形对象 shapeID =&gt; shapeJsonData 数据都需要跟着变化。</p>
+<p>引入 localID 就是让 QPaintDoc 一旦初始化（QPaintDoc.init 方法）后 ，ID 就固定下来了，只需要保证在同一个浏览器下是唯一就行。</p>
+<p>所以，我们第一次访问 <a href="http://localhost:8888/" target="_blank" rel="noopener">http://localhost:8888/</a> 自动跳转的是 <a href="http://localhost:8888/#t10001" target="_blank" rel="noopener">http://localhost:8888/#t10001</a> ，第二次访问自动跳转的就是  <a href="http://localhost:8888/#t10002" target="_blank" rel="noopener">http://localhost:8888/#t10002</a> 了。这是因为在同一个浏览器下，我们不会让两个 QPaintDoc.localID 相同。</p>
+<h2 id="数据变更"><a href="#数据变更" class="headerlink" title="数据变更"></a>数据变更</h2><p>我们把数据变更分为了两级：</p>
+<ul>
+<li>shapeChanged</li>
+<li>documentChanged</li>
+</ul>
+<p>什么情况下叫 shapeChanged？有这样三种：</p>
+<ul>
+<li>增加一个图形（addShape），这个新增的 shape 发生了 shapeChanged；</li>
+<li>修改一个 shape 的图形样式（setProp），这个被修改的 shape 发生了 shapeChanged；</li>
+<li>移动一个 shape 的位置（move），这个位置改变的 shape 发生了 shapeChanged。</li>
+</ul>
+<p>什么情况下发生 documentChanged？有这样两种：</p>
+<ul>
+<li>增加一个图形（addShape），它会导致文档的图形数量增加一个，发生 documentChanged；</li>
+<li>删除一个图形（deleteShape），它会导致文档的图形数量减少一个，发生 documentChanged。</li>
+</ul>
+<p>当然，可以预见的未来，我们支持不同 shape 交换次序（改变 Z-Order），这时文档虽然图形的数目不变，但是 shapes 数组的内容还是发生了改变，发生 documentChanged。</p>
+<p>发生数据变更做什么？</p>
+<p>在 shapeChanged 时，更新 localStorage 中的 shapeID =&gt;  shapeJsonData 数据。在 documentChanged 时，更新 localID =&gt; documentJsonData 数据。</p>
+<p>从未来的预期来说，数据变更不只是发生在用户交互。考虑多人同时编辑一篇文档的场景。数据变更消息，也会来自其他浏览器端的变更。具体的过程是：</p>
+<ul>
+<li>Client B 操作 =&gt; Client B 的 DOM 变更 =&gt; 服务端数据变更 =&gt; Client A 收到数据变更 =&gt; Client A 的 DOM 变更 =&gt; Client A 的 View 更新</li>
+</ul>
+<p>在前面 26 讲、27 讲中，我们并没有引入数据变更事件，而是 Controller 变更完数据后，就自己主动调用 qview.invalidateRect 来通知 View 层重新绘制。这样做比较简单，虽然它并不符合标准的 MVC 架构。因为从 MVC 架构来说，界面更新并不是由 Controller 触发，而应该由 Model 层的数据变更（DataChanged）事件触发。</p>
+<h2 id="存储的容量限制与安全"><a href="#存储的容量限制与安全" class="headerlink" title="存储的容量限制与安全"></a>存储的容量限制与安全</h2><p>localStorage 的存储容量是有限制的，不同的浏览器并不一样，大部分在 5-10M 这个级别。在同一个浏览器下，会有多个 QPaintDoc 的数据同时被保存在 localStorage 中。</p>
+<p>这意味着，随着时间的推移，localStorage 的存储空间占用会越来越大，所以我们需要考虑数据清理的机制。</p>
+<p>目前，我们通过 localStorage_setItem 函数来统一接管 localStorage.setItem 调用，一旦 setItem 发生 QuotaExceededError 异常，说明 localStorage 空间满，我们就淘汰掉最远创建的一篇文档。</p>
+<p>这样，我们就不会因为 localStorage 太满而没法保存。只要我们及时联网同步文档，数据也就不会丢失了。</p>
+<p>最后一个话题是安全。</p>
+<p>既然我们把数据保存在了 localStorage 中，只要用户打开浏览器，就能够去通过特定手段来查看 localStorage 的数据。</p>
+<p>这意味着如果文档中存在敏感数据的话，是可以被人感知的。尤其是我们画图程序如果未来支持多租户的话，在同一个浏览器下多个用户帐号登录登出时，就会发生多个用户的文档都在同一个 localStorage 中可见。</p>
+<p>这意味着你登出帐号之后，其他人用这个浏览器，其实还是可以看到你的数据。这样就有隐私泄漏的风险。</p>
+<p>解决这个问题最简单的方法是在用户帐号登出的时候，清空所有的 localStorage 中的文档。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们开始考虑 “画图” 程序的服务端连接。今天这一讲我们先做画图程序的本地浏览器存储的持久化，以便拥有更好的离线。</p>
+<p>支持离线持久化存储的程序会很不一样。我们今天结合画图程序聊了 DOM 树在 JavaScript 内存和在 localStorage 存储上的差别。为了支持更新数据的粒度不是整个文档每次都保存一遍，存储分成 shape、document 两个级别。相应的，我们数据更新事件也分了 shapeChanged、documentChanged 两个级别。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将继续实战一个联网版本的画图程序。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:59.890Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    22 minutes read (About 3289 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/27 | 实战（二）：怎么设计一个“画图”程序？/">27 | 实战（二）：怎么设计一个“画图”程序？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>上一讲开始，我们进入了实战模式。从目前看到的反馈看，我的预期目标并没有达到。</p>
+<p>我复盘了一下，虽然这个程序看起来比较简单，但是实际上仍然有很多需要交代而没有交代清楚的东西。</p>
+<p>我个人对这个例子的期望是比较高的。因为我认为 “画图” 程序非常适合作为架构实战的第一课。“画图” 程序需求的可伸缩性非常大，完完全全是一个迷你小 Office 程序，很适合由浅及深去谈架构的演进。</p>
+<p>所以我今天微调了一下计划，把服务端对接往后延后一讲，增加一篇 “实战（中）” 篇。这个“中”篇一方面把前面 “实战（上）” 篇没有交代清楚的补一下，另一方面对 “画图” 程序做一次需求的迭代。</p>
+<h2 id="MVP-版画图程序"><a href="#MVP-版画图程序" class="headerlink" title="MVP 版画图程序"></a>MVP 版画图程序</h2><p>先回到 “实战（上）” 篇。这个版本对画图程序来说，基本上是一个 MVP 版本：只能增加新图形，没法删除，也没法修改。</p>
+<p>怎么做？我们先看 Model 层，它的代码就是一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/dom.js" target="_blank" rel="noopener">dom.js</a> 文件。从数据结构来说，它是一棵以 QPaintDoc 为根的 DOM 树。这个 DOM 树只有三级：Document -&gt; Shape -&gt; LineStyle。具体细节可以参阅下表：</p>
+<p><img src="https://static001.geekbang.org/resource/image/5a/55/5a2233a851ae2cb234d001725e437755.png" alt></p>
+<p>这个表列出的是 Model 和 View、Controllers 的耦合关系：Model 都为它们提供了什么？可以看出，View 层当前对 Model 层除了绘制（onpaint），没有其他任何需求。而各个 Controller，对 Model 的需求看起来似乎方法数量不少，但是实质上目的也只有一个，那就是创建图形（addShape）。</p>
+<p>我们再看 View 层。它的代码主要是一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/index.htm" target="_blank" rel="noopener">index.htm</a> 文件和一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/view.js" target="_blank" rel="noopener">view.js</a> 文件。View 层只依赖 Model 层，并且只依赖一个 doc.onpaint 函数。所以我们把关注点放在 View 自身的功能。</p>
+<p>View 层只有一个 QPaintView 类。我们将其功能分为了三类：属于 Model 层职责相关的，属于 View 自身职责相关的，以及为 Controller 层服务的，得到下表。</p>
+<p><img src="https://static001.geekbang.org/resource/image/09/4e/09297c130d51b3f6e502522367284b4e.png" alt></p>
+<p>最后，我们来看 Controller 层。Controller 层的文件有很多，这还是一些 Controller 因为实现相近被合并到一个文件，如下所示。</p>
+<ul>
+<li>Menu, PropSelectors, MousePosTracker： <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/accel/menu.js" target="_blank" rel="noopener">accel/menu.js</a></li>
+<li>Create Path：<a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/path.js" target="_blank" rel="noopener">creator/path.js</a></li>
+<li>Create FreePath：<a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/freepath.js" target="_blank" rel="noopener">creator/freepath.js</a></li>
+<li>Create Line, Rect, Ellipse, Circle： <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/rect.js" target="_blank" rel="noopener">creator/rect.js</a></li>
+</ul>
+<p>Controller 位于 MVC 的最上层，我们对它的关注点就不再是它的规格本身，也没人去调用它的方法。所以我们把关注点放在了每个 Controller 都怎么用 Model 和 View 的。</p>
+<p>我们列了个表，如下。注意 Controller 对事件（Event）的使用从 View 中单独列出来了。</p>
+<p><img src="https://static001.geekbang.org/resource/image/76/2a/769fa627d0cf556a9fb8fb494005e92a.png" alt></p>
+<p>通过以上三张表对照着看，可以清晰看出 Model、View、Controllers 是怎么关联起来的。</p>
+<h2 id="改进版的画图程序"><a href="#改进版的画图程序" class="headerlink" title="改进版的画图程序"></a>改进版的画图程序</h2><p>MVP 版本的画图程序，用着就会发现不好用，毕竟图形创建完就没法改了。所以我们打算做一个新版本出来，功能上有这样一些改进。</p>
+<ul>
+<li>选择一个图形，允许删除、移动或者对其样式进行修改。</li>
+<li>图形样式增加 fillColor（填充色）。</li>
+<li>更加现代的交互范式：默认处于 ShapeSelector 状态，创建完图形后自动回到此状态。</li>
+<li>选择图形后，界面上的当前样式自动更新为被选图形的样式。</li>
+</ul>
+<p>怎么改我们的程序？</p>
+<p>完整的差异对比，请参见：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/compare/v26...v27" target="_blank" rel="noopener">https://github.com/qiniu/qpaint/compare/v26…v27</a></li>
+</ul>
+<p>下面，我们将详细讲解这些修改背后的思考。</p>
+<p>我们先看 Model 层，新的规格见下表。</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/dom.js" target="_blank" rel="noopener">dom.js</a></li>
+</ul>
+<p><img src="https://static001.geekbang.org/resource/image/a1/6e/a1faf9a3a19124e7240b06341a7d356e.png" alt></p>
+<p>为了方便大家理解，我们做了一个 Model 的 ChangeNotes 表格，如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/2a/42/2a0dbe3fe4a13e555b13dd3b247d7042.png" alt></p>
+<p>大部分是新功能的增加，不提。我们重点关注一个点：QLineStyle 改名为 QShapeStyle，且其属性 width、color 被改名为 lineWidth、lineColor。这些属于不兼容修改，相当于做了一次小重构。</p>
+<p>重构关键是要及时处理，把控质量。尤其对 JavaScript 这种弱类型语言，重构的心智负担较大。为了保证质量仍然可控，最好辅以足够多的单元测试。</p>
+<p>这也是我个人会更喜欢静态类型语言的原因，重构有任何遗漏，编译器会告诉你哪里漏改了。当然，这并不意味着单元测试可以省略，对每一门语言来说，自动化的测试永远是质量保障的重要手段。</p>
+<p>话题回到图形样式。最初我们 new QLine、QRect、QEllipse、QPath 的时候，传入的最后一个参数是 QLineStyle，从设计上这是一次失误，这意味着后面这些构造还是都需要增加更多参数如 QFillStyle 之类。</p>
+<p>把最后一个参数改为 QShapeStyle，这从设计上就完备了。后面图形样式就算有更多的演进，也会集中到 QShapeStyle 这一个类上。</p>
+<p>当前 QShapeStyle 的数据结构是这样的：</p>
+<pre><code>class QShapeStyle {
+  lineWidth: number
+  lineColor: string
+  fillColor: string
+}</code></pre><p>那么，这是合理的么？未来潜在的演进是什么？</p>
+<p>对需求演进的推演，关键是眼光看多远。当前各类 GDI 对 LineStyle、FillStyle 支持都非常丰富。所以如果作为一个实实在在要去迭代的画图程序来说，上面这个 QShapeStyle 必然还会面临一次重构。变成如下这个样子：</p>
+<pre><code>class QLineStyle {
+  width: number
+  color: string  
+}
+
+class QFillStyle {
+  color: string  
+}
+
+class QShapeStyle {
+  line: any
+  fill: any
+}</code></pre><p>为什么 QShapeStyle 里面的 line 不是 QLineStyle，fill 不是 QFillStyle，而是 any 类型？因为它们都只是简单版本的线型样式和填充样式。</p>
+<p>举个例子，在 GDI 系统中，FillStyle 往往还可以是一张图片平铺，也可以是多个颜色渐变填充，这些都无法用 QFillStyle 来表示。所以这里的 QFillStyle 更好的叫法也许是 QSimpleFillStyle。</p>
+<p>聊完了 Model 层，我们再来看 View 层。</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/view.js" target="_blank" rel="noopener">view.js</a></li>
+</ul>
+<p><img src="https://static001.geekbang.org/resource/image/97/0f/97573e6adacaccee0708b6d8937e650f.png" alt></p>
+<p>View 层的变化不大。为了给大家更直观的感觉，我这里也列了一个 ChangeNotes 表格，如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/74/35/74ec3e1f23a052d57f677603b1e9c035.png" alt></p>
+<p>其中，properties 改名为 style，以及删除了 get lineStyle()，和 properties 统一为 style。这个和我上面说的 Model 层的小重构相关，并不是本次新版本的功能引起的。</p>
+<p>所以 View 层真正的变化是两个：</p>
+<ul>
+<li>引入了 selection，当前只能单选一个 shape；在 selection 变化时会发出 onSelectionChanged 事件；</li>
+<li>引入了 onControllerReset 事件，它在 Controller 完成或放弃图形的创建时发出。</li>
+</ul>
+<p>引入 selection 比较常规。View 变复杂了通常都会有 selection，唯一需要考虑的是 selection 会有什么样的变化，对于 Office 类程序，如果 selection 只允许是单 shape 这不太合理，但我们这里略过，不进行展开。</p>
+<p>我们重点谈 onControllerReset 事件。</p>
+<p>onControllerReset 事件是创建图形的 Controller（例如 QPathCreator、QRectCreator 等）发出，并由 Menu 这个 Controller 接收。</p>
+<p>这就涉及了一个问题：类似情况还会有多少？以后是不是还会有更多的事件需要在 Controller 之间传递，需要 View 来中转的？</p>
+<p>这个问题就涉及了 View 层事件机制的设计问题。和这个问题相关的有：</p>
+<ul>
+<li>要不要支持任意的事件；</li>
+<li>监听事件是支持单播还是多播？</li>
+</ul>
+<p>从最通用的角度，肯定是支持任意事件、支持多播。比如我们定义一个 QEventManager 类，规格如下。</p>
+<pre><code>class QEventManager {
+  fire(eventName: string, params: ...any): void
+  addListener(eventName: string, handler: Handler): void
+  removeListener(eventName: string, handler: Handler): void
+}</code></pre><p>但是，View 的事件机制设定，需要在通用性与架构的可控性之平衡。一旦 View 聚合了这个 QEventManager，通用是通用了，但是 Controller 之间会有什么样的事件飞来飞去，就比较难去从机制上把控了。</p>
+<p>代码即文档。如果能够用代码约束的事情，最好不要在文档中来约束。</p>
+<p>所以，就算是我们底层实现 QEventManager 类，我个人也不倾向于在 View 的接口中直接将它暴露出去，而是定义更具体的 fireControllerReset、 onControllerReset/offControllerReset 方法，让架构的依赖直观化。</p>
+<p>具体代码看起来是这样的：</p>
+<pre><code>class QPaintView {
+  constructor() {
+    this._eventManager = new QEventManager()
+  }
+  onControllerReset(handler) {
+    this._eventManager.addListener(&quot;onControllerReset&quot;, handler)
+  }
+  offControllerReset(handler) {
+    this._eventManager.removeListener(&quot;onControllerReset&quot;, handler)
+  }
+  fireControllerReset() {
+    this._eventManager.fire(&quot;onControllerReset&quot;)
+  }
+}</code></pre><p>聊完了 View 层，我们接着聊 Controller 层。我们也把每个 Controller 怎么用 Model 和 View 列了个表，如下。</p>
+<ul>
+<li>Menu, PropSelectors, MousePosTracker： <a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/accel/menu.js" target="_blank" rel="noopener">accel/menu.js</a></li>
+<li>ShapeSelector：<a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/accel/select.js" target="_blank" rel="noopener">accel/select.js</a></li>
+<li>Create Path：<a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/creator/path.js" target="_blank" rel="noopener">creator/path.js</a></li>
+<li>Create FreePath：<a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/creator/freepath.js" target="_blank" rel="noopener">creator/freepath.js</a></li>
+<li>Create Line, Rect, Ellipse, Circle： <a href="https://github.com/qiniu/qpaint/blob/v27/paintweb/www/creator/rect.js" target="_blank" rel="noopener">creator/rect.js</a></li>
+</ul>
+<p><img src="https://static001.geekbang.org/resource/image/5e/95/5e3f87dc0a0695028362bc0fe28ea895.png" alt></p>
+<p>内容有点多。为了更清楚地看到差异，我们做了 ChangeNotes 表格，如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/6e/e9/6e97b0ccb1268fdcc2cea62dccd7e4e9.png" alt></p>
+<p>首先，Menu、QPathCreator、QFreePathCreator、QRectCreator 的变更，主要因为引入了新的交互范式导致，我们为此引入了 onControllerReset 事件。还有一个变化是 QLineStyle 变 QShapeStyle，这一点前面已经详细讨论，不提。</p>
+<p>所以 Controller 层的变化其实主要是两个。</p>
+<p>其一，PropSelectors。这个 Controller 要比上一版本的复杂很多：之前只是修改 View 的 properties (现在是 style) 属性，以便于创建图形时引用。现在是改变它时还会作用于 selection (被选中的图形)，改变它的样式；而且，在 selection 改变时，会自动更新界面以反映被选图形的样式。</p>
+<p>其二，QShapSelector。这是新增加的 Controller，支持选择图形，支持删除、移动被选择的图形。</p>
+<p>通过这次的需求迭代我们可以看出，目前 Model、View、Controller 的分工，可以使需求的分解非常正交。</p>
+<p>Model 只需要考虑需求导致的数据结构演进，并抽象出足够自然的业务接口。View 层非常稳定，主要起到各类角色之间的桥接作用。Controller 层每个 Controller 各司其职，彼此之间不会受到对方需求的干扰。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们结合“画图” 程序重新梳理了一遍 MVC 架构。并且我们更进一步，通过对画图程序进行一次需求演进，来观察 MVC 架构各个角色对需求变更的敏感性。需要再次强调的是，虽然我们基于 Web 开发，但是我们当前给出的画图程序本质上还是单机版的。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将继续实战一个联网版本的画图程序。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:57.879Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    23 minutes read (About 3377 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/26 | 实战（一）：怎么设计一个“画图”程序？/">26 | 实战（一）：怎么设计一个“画图”程序？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>到上一讲为止，桌面程序架构设计的基本结构就讲完了。直到现在为止，我们没有讨论任何与具体的应用业务逻辑本身相关的内容。这是因为探讨的内容是普适有效的设计理念，整个讨论会显得很抽象。</p>
+<p>今天我们结合一个实际的应用案例，来回顾一下前面我们介绍的内容。</p>
+<p>我们选择了做一个 “画图” 程序。选它主要的原因是画图程序比较常见，需求上不需要花费过多的时间来陈述。</p>
+<p>我们前面说过，一个 B/S 结构的 Web 程序，基本上分下面几块内容。</p>
+<ul>
+<li>Model 层：一个多用户（Multi-User）的 Model 层，和单租户的 Session-based Model。从服务端来说，Session-based Model 是一个很简单的转译层。但是从浏览器端来说，Session-based Model 是一个完整的单租户 DOM 模型。</li>
+<li>View 层：实际是 ViewModel 层，真正的 View 层被浏览器实现了。ViewModel 只有 View 层的数据和可被委托的事件。</li>
+<li>Controller 层：由多个相互解耦的 Controller 构成。切记不要让 Controller 之间相互知道对方，更不要让 View 知道某个具体的 Controller 存在。</li>
+</ul>
+<p>画图程序的源代码可以在 Github 上下载，地址如下：</p>
+<ul>
+<li><a href="https://github.com/qiniu/qpaint" target="_blank" rel="noopener">https://github.com/qiniu/qpaint</a></li>
+</ul>
+<p>今天我们讨论浏览器端的 Model，View 和 Controller。</p>
+<h2 id="Model-层"><a href="#Model-层" class="headerlink" title="Model 层"></a>Model 层</h2><p>我们先看 Model 层。浏览器端的 Model 层，代码就是一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/dom.js" target="_blank" rel="noopener">dom.js</a> 文件。它是一棵 DOM 树，根节点为 QPaintDoc 类。整个 DOM 树的规格如下：</p>
+<pre><code>class QLineStyle {
+properties:
+  width: number
+  color: string
+methods:
+  constructor(width: number, color: string)
+}
+
+class QLine {
+properties:
+  pt1, pt2: Points
+  lineStyle: QLineStyle
+methods:
+  constructor(pt1, pt2: Point, lineStyle: QLineStyle)
+  onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+class QRect {
+properties:
+  x, y, width, height: number
+  lineStyle: QLineStyle
+methods:
+   constructor(r: Rect, lineStyle: QLineStyle)
+   onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+class QEllipse {
+properties:
+  x, y, radiusX, radiusY: number
+  lineStyle: QLineStyle
+methods:
+   constructor(x, y, radiusX, radiusY: number, lineStyle: QLineStyle)
+   onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+class QPath {
+properties:
+  points: []Point
+  close: bool
+  lineStyle: QLineStyle
+methods:
+   constructor(points: []Point, close: bool, lineStyle: QLineStyle)
+   onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+interface Shape {
+  onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+class QPaintDoc {
+methods:
+  addShape(shape: Shape): void
+  onpaint(ctx: CanvasRenderingContext2D): void
+}</code></pre><p>目前这个 DOM 还是单机版本的，没有和服务端的 Session-based Model 连起来。关于怎么连，我们下一讲再讨论。</p>
+<p>这个 Model 层的使用是非常容易理解的，也非常直观体现了业务。主要支持的能力有以下两个方面。</p>
+<p>其一，添加图形（Shape），可以是 QLine，QRect，QEllipse，QPath 等等。</p>
+<p>其二，绘制（onpaint）。前面我们介绍 MVC 的时候，我曾提到为了 View 层能够绘制，需要让 DOM 层把自己的数据暴露给 View 层。</p>
+<p>但是从简洁的方式来说，是让 Model 层自己来绘制，这样就避免暴露 DOM 层的实现细节。虽然这样让 Model 层变得有那么一点点不纯粹，因为和 GDI 耦合了。但是我个人认为耦合 GDI 比暴露 DOM 的数据细节要好，因为 GDI 的接口通常来说更稳定。</p>
+<p>依赖选择是考虑耦合的一个关键因素。在依赖选择上，我们会更倾向于依赖接口更为稳定的组件，因为这意味着我们的接口也更稳定。</p>
+<h2 id="ViewModel-层"><a href="#ViewModel-层" class="headerlink" title="ViewModel 层"></a>ViewModel 层</h2><p>我们再看 ViewModel 层。它的代码主要是一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/index.htm" target="_blank" rel="noopener">index.htm</a> 文件和一个 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/view.js" target="_blank" rel="noopener">view.js</a> 文件。index.htm 是总控文件，主要包含两个东西：</p>
+<ul>
+<li>界面布局（Layout）；</li>
+<li>应用初始化（InitApplication），比如加载哪些 Controllers。</li>
+</ul>
+<p>而 <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/view.js" target="_blank" rel="noopener">view.js</a> 是我们 ViewModel 层的核心，实现了 QPaintView 类。它的规格如下：</p>
+<pre><code>interface Controller {
+  stop(): void
+  onpaint(ctx: CanvasRenderingContext2D): void
+}
+
+class QPaintView {
+properties:
+  doc: QPaintDoc
+  properties: {
+    lineWidth: number
+    lineColor: string
+  }
+  drawing: DOMElement
+  controllers: map[string]Controller
+methods:
+  get currentKey: string
+  get lineStyle: QLineStyle
+  onpaint(ctx: CanvasRenderingContext2D): void
+  invalidateRect(rect: Rect): void
+  registerController(name: string, controller: Controller): void
+  invokeController(name: string): void
+  stopController(): void
+  getMousePos(event: DOMEvent): Point
+events:
+  onmousedown: (event: DOMEvent):void
+  onmousemove: (event: DOMEvent):void
+  onmouseup: (event: DOMEvent):void
+  ondblclick: (event: DOMEvent):void
+  onkeydown: (event: DOMEvent):void
+}
+
+var qview = new QPaintView()</code></pre><p>看起来 QPaintView 的内容有点多，我们归类一下：</p>
+<p><strong>和 Model 层相关的，就只有 doc: QPaintDoc 这个成员。有了它就可以操作 Model 层了。</strong></p>
+<p><strong>属于 ViewModel 层自身的，数据上只有 properties 和 drawing。</strong>其中 properties 是典型的 ViewModel 数据，用来表示当前用户选择的 lineWidth 和 lineColor 等。drawing 则是浏览器对 HTML 元素的抽象，通过它以及 JavaScript 全局的 document 对象就可以操作 HTML DOM 了。</p>
+<p>当然 ViewModel 层一个很重要的责任是绘制。onpaint 和 invalidRect 都是绘制相关。invalidRect 是让界面的某个区域重新绘制。当前为了实现简单，我们总是整个 View 全部重新绘制。</p>
+<p>前面我说过， Web 开发一个很重要的优势是不用自己处理局部更新问题，为什么这里我们却又要自己处理呢？原因是我们没有用浏览器的 Virtual View，整个 DOM 的数据组织完全自己管理，这样我们面临的问题就和传统桌面开发完全一致。</p>
+<p>剩下来的就是 Controller 相关的了。主要功能有：</p>
+<ul>
+<li>registerController（登记一个 Controller），invokeController（激活一个 Controller 成为当前 Controller），stopController（停止当前 Controller），View 层并不关心具体的 Controller 都有些什么，但是会对它们的行为规则进行定义；</li>
+<li>事件委托（delegate），允许 Controller 选择自己感兴趣的事件进行响应；</li>
+<li>getMousePos 只是一个辅助方法，用来获取鼠标事件中的鼠标位置。</li>
+</ul>
+<p>View 层在 MVC 里面是承上启下的桥梁作用。所以 View 层的边界设定非常关键。</p>
+<p>如果我们把实际绘制（onpaint）的工作交给 Model 层，那么 View 基本上就只是胶水层了。但是就算如此，View 层仍然承担了一些极其重要的责任。</p>
+<ul>
+<li>屏蔽平台的差异。Model 层很容易做到平台无关，除了 GDI 会略微费劲一点；Controller 层除了有少量的界面需要处理平台差异外，大部分代码都是响应事件处理业务逻辑，只要 View 对事件的抽象得当，也是跨平台的。</li>
+<li>定义界面布局。不同尺寸的设备，界面交互也会不太一样，在 View 层来控制不同设备的整体界面布局比较妥当。</li>
+</ul>
+<h2 id="Controller-层"><a href="#Controller-层" class="headerlink" title="Controller 层"></a>Controller 层</h2><p>最后我们看下 Controller 层。Controller 层的文件有很多，这还是一些 Controller 因为实现相近被合并到一个文件。详细信息如下。</p>
+<ul>
+<li>Menu, PropSelectors, MousePosTracker： <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/accel/menu.js" target="_blank" rel="noopener">accel/menu.js</a></li>
+<li>Create Path：<a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/path.js" target="_blank" rel="noopener">creator/path.js</a></li>
+<li>Create FreePath：<a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/freepath.js" target="_blank" rel="noopener">creator/freepath.js</a></li>
+<li>Create Line, Rect, Ellipse, Circle： <a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/creator/rect.js" target="_blank" rel="noopener">creator/rect.js</a></li>
+</ul>
+<p>其中，<a href="https://github.com/qiniu/qpaint/blob/v26/paintweb/www/accel/menu.js" target="_blank" rel="noopener">menu.js</a> 主要涉及各种命令菜单和状态显示用途的界面元素。用于创建各类图形（Shape），选择当前 lineWidth、lineColor，以及显示鼠标当前位置。</p>
+<p>在创建图形这些菜单项上，有两点需要注意。</p>
+<p>其一，菜单并不直接和各类创建图形的 Controller 打交道，而是调用 qview.invokeController 来激活对应的 Controller，这就避免了两类 Controller 相互耦合。</p>
+<p>其二，虽然前面 Model 层支持的图形只有 QLine、QRect、QEllipse、QPath 等四种，但是界面表现有六种：Line、Rect、Ellipse、Circle、Path、FreePath 等等。这是非常正常的现象。同一个 DOM API 在 Controller 层往往会有多条实现路径。</p>
+<p>选择当前 lineWidth、lineColor 操作的对象是 ViewModel 的数据，不是 Model。这一点前面几讲我们也有过交代。我们当时举的例子是 Selection。其实你把当前 lineWith、lineColor 看作是某种意义上的 Selection ，也是完全正确的认知。</p>
+<p>鼠标位置跟踪（MousePosTracker）是一个极其简单，但也是一个很特殊的 Controller，它并不操作任何正统意义的数据（Model 或 ViewModel），而是操作输入的事件。</p>
+<p>剩下来的几个 JavaScript 文件都是创建某种图形。它们的工作机理非常相似，我们可以随意选一个看一下。比如 QRectCreator 类，它的规格如下：</p>
+<pre><code>class QRectCreator {
+methods:
+  constructor(shapeType: string)
+  stop(): void
+  onpaint(ctx: CanvasRenderingContext2D): void
+  onmousedown: (event: DOMEvent):void
+  onmousemove: (event: DOMEvent):void
+  onmouseup: (event: DOMEvent):void
+  onkeydown: (event: DOMEvent):void
+}</code></pre><p>在初始化（构造）时，QRectCreator 要求传入一个 shapeType。这是因为 QRectCreator 实际上并不只是用于创建 Rect 图形，还支持 Line、Ellipse、Circle。只要通过选择两个 points 来构建的图形，都可以用 QRectCreator 这个 Controlller 来做。</p>
+<p>QRectCreator 接管了 View 委托的 mousedown、mousemove、mouseup、keydown 事件。</p>
+<p>其中，mousedown 事件记录下第一个 point，并由此开启了图形所需数据的收集过程，mouseup 收集第二个 point，随后后创建相应的 Shape 并加入到 DOM 中。keydown 做什么？它用来支持按 ESC 放弃创建图形的过程。</p>
+<h2 id="架构思维上我们学习到什么？"><a href="#架构思维上我们学习到什么？" class="headerlink" title="架构思维上我们学习到什么？"></a>架构思维上我们学习到什么？</h2><p>通过分析这个 “画图” 程序，你对此最大的收获是什么？欢迎留言就此问题进行交流。这里我也说说我自己想强调的点。</p>
+<p>首先，这个程序没有依赖任何第三方库，是裸写的 JavaScript 代码。关于这一点，我想强调的是：</p>
+<p>第一，这并不是去鼓励裸写 JavaScript 代码，这只是为了消除不同人的喜好差异，避免因为不熟悉某个库而导致难以理解代码的逻辑；</p>
+<p>第二，大家写代码的时候，不要被框架绑架，框架不应该增加代码的耦合，否则这样的框架就应该丢了；更真实的情况是，你很可能是在用一个好框架，但是是不是真用好了，还是取决于你自己的思维。</p>
+<p>从架构设计角度来说，在完成需求分析之后，我们就进入了架构的第二步：概要设计（或者也可以叫系统设计）。这个阶段的核心话题是分解子系统，我们关心的问题是下面这些。</p>
+<ul>
+<li>每个子系统负责什么事情？</li>
+<li>它依赖哪些子系统？它能够少知道一些子系统的存在么？</li>
+<li>它们是通过什么接口耦合的？这个接口是否自然体现了两者的业务关系？它们之间的接口是否足够稳定？</li>
+</ul>
+<p>MVC 是一个分解子系统的基本框架，它对于桌面程序尤为适用。通过今天对 “画图” 程序的解剖，我们基本能够建立桌面程序框架上非常一致的套路：</p>
+<ul>
+<li>Model 层接口要自然体现业务逻辑；</li>
+<li>View 层连接 Model 与 Controller，它提供事件委托（delegate）方便 Controller 接收感兴趣的事件，但它不应该知道任何具体的 Controller；</li>
+<li>Controller 层中，每个 Controller 都彼此独立，一个 Controller 的职责基本上就是响应事件，然后调用 Model 或 ViewModel 的接口修改数据。</li>
+</ul>
+<p>当然，这里没有讨论特定应用领域本身相关的架构问题。对于桌面程序而言，这件事通常发生在 Model 层。但对于我们今天的例子 “画图” 程序而言，Model 层比较简单，基本上还不太需要讨论。在后面，我们也可能会尝试把这个 “画图” 程序需求变复杂，看架构上应该怎么进行应对。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们结合一个大家非常熟悉的例子 “画图” 程序来介绍 MVC 架构。虽然我们基于 Web 开发，但是我们当前给出的画图程序本质上还是单机版的。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将继续实战一个联网版本的画图程序。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:55.926Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    21 minutes read (About 3176 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/25 | 桌面开发的未来/">25 | 桌面开发的未来</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>今天，我原本想结合一个实战例子，来回顾一下 “桌面软件开发” 一章到今天为止的内容，但是由于要准备的内容比较多，会延后一下。</p>
+<p>所以，今天我还是会按原来大纲的内容，谈谈我个人对桌面开发未来趋势的判断。</p>
+<h2 id="桌面平台的演进与未来"><a href="#桌面平台的演进与未来" class="headerlink" title="桌面平台的演进与未来"></a>桌面平台的演进与未来</h2><p>谈未来，我们要先看过去。</p>
+<p>在 PC 时期，本地桌面操作系统主流的有 Windows、MacOS、Linux。为了消除不同平台的差异，于是就出现了 QT、wxWidgets 这样的跨平台解决方案。</p>
+<p>但是它们都败了，败给了一个它们并没有意想得到的对手：<strong>PC 浏览器</strong>。</p>
+<p>浏览器并不是为跨平台而来，但是除了干成了软件服务化外，也干成了跨平台这件事情。</p>
+<p>虽然浏览器厂商很多，但是它们遵循相同的规范。<strong>这意味着支持了浏览器，就支持了所有的 PC 用户。</strong></p>
+<p>这太诱人了。</p>
+<p>于是在软件服务化和跨平台开发的双重优势下，软件厂商们趋之若鹜，QT、wxWidgets 这些方案就变成小众需求。</p>
+<p>QT 有机会反抗么？其实是有的。关于这一点我们后面再说。</p>
+<p>然后，移动大潮来了。我记得 2006 年有一次我和雷军雷总吃饭，聊起对移动操作系统未来趋势的判断，我们俩各持己见。</p>
+<p>雷总认为 WinCE 会赢，因为 Windows 已经培育了最大的开发者群体。而我认为 Symbian 会赢，因为它占据了最大的终端用户群。</p>
+<p><strong>结局大家已经知道了，最后赢的是谁都没有预料到的玩家：Android 和 iOS。</strong></p>
+<p>如果我们从事后看，实际上这个事情并不是完全没有迹象可循。iOS（诞生于2007年）固然当时还没有诞生，但是 Android 诞生于 2003 年，并于 2005 年被 Google 收购。作为搜索引擎厂商，Google 收购一个手机操作系统，显然不是随意为之的，而是公司发展战略上的考量。</p>
+<p>Android 和 iOS 的诞生，一下子让操作系统的生态变得更为复杂。</p>
+<p>操作系统不同，输入方式不同（鼠标 vs 触摸屏），屏幕大小不同，想要一套代码横跨 PC 和移动多个平台？太难。</p>
+<p>这还不算。虽然还不像手机那么普遍，但是今天手表、电视机、汽车，以及各式各样的 IoT 传感设备，都需要操作系统的支持。</p>
+<p><strong>从操作系统发展来说，我个人会倾向于按交互方式来分。</strong>未来桌面操作系统和服务端操作系统会渐行渐远，差异越来越大。<strong>从交互来说，服务端会维持简约，经典的命令行交互会长期占据主流。</strong></p>
+<p><strong>而桌面操作系统，笔记本市场，鼠标+键盘仍然会占据主流</strong>。虽然鼠标形态已经变了，变成了触控板，但是鼠标指针这种基于精确位置交互的方式会得到保留。多点触摸的交互，也会得到部分机型的支持。</p>
+<p><strong>移动市场，多点触摸+键盘</strong>会占据主流。但是语音助手也会得到一定程度的渗透。</p>
+<p><strong>IoT 市场，语音助手会占据交互的主流。</strong>但也会有一些设备引入多点触摸这种交互方式来补充。在这个市场，目前看技术上的 Amazon 和 Google 占据了领先地位。虽然苹果入场较早，但是 Siri 的表现还是和前两者有较大的差距。</p>
+<p>IoT 设备会两极分化。<strong>一类 IoT 设备是专用设备，它的应用场景非常固定，它对操作系统最大诉求是裁剪能力：最好不要给我太多的东西，匹配场景就好。</strong>能不能提供AppStore？不是重点，有也只有很少的一些应用，其实直接找合作伙伴就好。</p>
+<p><strong>一类 IoT 设备则有较大的通用性。</strong>但受限于语音助手技术的限制，IoT 操作系统的开放性要比移动系统差很多。所以在有任何可能的时候，这些设备就会带上触摸屏变成一台由移动系统支持的设备。</p>
+<p>长远来说，要看智能语音技术的发展。关于这一点，我个人抱谨慎乐观的态度。但显然，在很长一段时间里，我们面对的还是移动操作系统。</p>
+<p>这么多操作系统怎么搞呢？</p>
+<p>于是 React-Native 出现了。理论上，React-Native 可以横跨 PC 和移动。因为 React 本身基于 Web 技术，可以支持 PC 浏览器，而 React-Native 又支持 iOS 和 Android，从而做到 “Learn once，write anywhere”。</p>
+<p>平台差异不能完全消除，只能尽可能地减少。</p>
+<p>手机操作系统这场仗刚有了眉目，移动浏览器之争又起来了。</p>
+<p>国内涌现了大量的小程序厂商，国外 Google 也在推 PWA。还有 Facebook 意见不明，不知道会去支持 PWA，还是基于自己的 React-Native 技术搞一套新的移动浏览器标准。</p>
+<p>这下好了，统一的 Web 分裂成多个技术阵营。</p>
+<p>移动浏览器，国内外不统一已经是既成事实。海外巨头们除了 Facebook，已经用明确的行动支持 PWA。小程序在海外要想有市场，要看头条腾讯阿里们的海外市场占有率。</p>
+<p>移动 WebApp 技术的分裂是否会最终得到纠正？这仍然是未知之数。</p>
+<p>但由此观之，终端操作系统的多元化已经是既成现实。这对开发者生态将产生重要的影响。</p>
+<p>我们可能有人留意到，QT 今天基本上支持了所有的桌面操作系统，不管是 PC 还是移动。但是这还不太够，因为还差 Web、小程序和 PWA。</p>
+<p>今天的跨平台，重点是要跨 Android、iOS、Web、小程序和 PWA。如果精力顾不上，PC 桌面操作系统的优先级反而可以缓一缓，毕竟 Web 也能够顶一下。</p>
+<p>QT 的机会在这里。但是很明显它并没有意识到兼容 Web 开发对于一个跨平台工具的重要性。</p>
+<p>就算在 PC 时期，一个同时支持 Web 和本地操作系统的跨平台工具也能够受到欢迎。今天随着桌面平台的多元化，跨平台工具的需求达到了历史最高点。</p>
+<p>当然还有一种跨平台的思路，是垂直发展，比如专做游戏开发的跨平台。不过单就游戏开发这个领域而言，已经有强大的玩家，比如 Unity 在里面。</p>
+<p><strong>那么，通用的跨平台怎么做到？</strong></p>
+<p><strong>Google Flutter 给了一条路，它把对操作系统的要求最小化，整个界面系统完全自己在用户态构建。</strong></p>
+<p>这个思路和 Go 语言有点像。Go 语言其实是在用户态完全重写了操作系统的进程管理和 IO 子系统。</p>
+<p>那么 Flutter 会像 Go 语言一样成功么？</p>
+<p>我个人持谨慎态度。不同操作系统的用户是有自己独特的交互范式的。比如 Android 和 iOS 用户的习惯就有一定的差异。而这可能恰恰是跨平台更难的一点。</p>
+<p>另一个是软件体积问题。Android 是 Google 自己的，可以通过让 Android 预装基础库来减少体积。但是更多的系统有可能需要一个体积不小的跨平台层。</p>
+<p>这会制约 Flutter 的发展。客户端软件的尺寸，对新用户的转化率有着至关重要的影响。何况像微信小程序这样的平台，还限制了小程序的尺寸，最早限制为 4M，后来放宽到 8M。</p>
+<p>这和 Go 语言面临的环境不太一样。Go 语言因为面向的是服务端，用户对软件的尺寸不敏感，反倒是部署的便捷性更敏感。</p>
+<p>我个人更倾向于尺寸更轻盈的跨平台工具。</p>
+<p>其次是编程手法上的问题。大趋势是要用 Web 这种声明式的界面描述方式。至于是否需要在语法上进行一次重新梳理，我个人觉得是有必要的。React-Native 在这个方向的探索是个不错的尝试。</p>
+<p>在这一点上，苹果的 SwiftUI 或许更值得关注。苹果以极简体验著称，SwiftUI 某种程度上来说代表了关于跨平台开发的可能方向。</p>
+<h2 id="儿童编程教育"><a href="#儿童编程教育" class="headerlink" title="儿童编程教育"></a>儿童编程教育</h2><p>在我们谈论桌面开发的时候，我认为其实还有一个重要但又很容易被忽视的趋势，是儿童编程教育的走向。</p>
+<p>说到儿童编程教育，我们大多数人可能都知道 Scratch 语言。但是要说儿童编程的鼻祖，毫无疑问应该算 Logo 语言，海龟作图。</p>
+<p>Scratch 语言由美国麻省理工大学（MIT）于 2007 年发布，到现在已经发展到了 3.0 版本，项目正变得越来越活跃。</p>
+<p>在 Scratch 之后，Google 也曾经发布了 Blockly 语言进军儿童编程教育。但是由于缺乏社区基础，Blockly 语言一直不温不火。</p>
+<p>但有两件有趣的事情。</p>
+<p><strong>其一，Scratch 3.0 是基于 Blockly 的源代码改造而成的，为此据说 Google 也投入了大量的技术人员进行协助，双方协同开发。</strong></p>
+<p><strong>其二，Google 基于 Blockly 语言搞出了一个 App Inventor，用于教育儿童学习 Android 开发。</strong></p>
+<p>无独有偶的是，苹果推出的 Swift 语言启蒙教程也是针对儿童的，在 AppStore 上可以下载到，叫 “Swift Playgrounds”。</p>
+<p>这意味着，我们原本以为两件风马牛不相及的事情，其实是密切相关的。</p>
+<p>桌面开发的未来是什么？</p>
+<p>从终局的视角来看，桌面开发的终极目标，是让儿童可以轻松编写出生产级的应用。</p>
+<p>这不是痴人说梦。</p>
+<p>在 iOS 出来之前，如果有人说他要开发一个让三岁小孩都会使用的电脑，可能会有很多人觉得绝无可能。</p>
+<p>但是苹果的确做到了。虽然可能还不能完全识别电脑上常见的文字，但是一个三岁的儿童使用起 iPhone 或者 iPad 却毫不困难。</p>
+<p>那么，让一个八岁刚刚上学没多久的小学生去做生产级的应用，这事也不是遥不可及的梦想。</p>
+<p>桌面开发技术的演进，和儿童编程教育相向而行，有一天必然汇聚于一点上。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们结合桌面开发和儿童编程教育，聊了个人对桌面的未来演进趋势的判断。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将结合一个实际的案例，来讲解一下桌面开发（含单机软件和 Web）到底是什么样的。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。<br><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:53.975Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    17 minutes read (About 2488 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/24 | 跨平台与 Web 开发的建议/">24 | 跨平台与 Web 开发的建议</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>上一讲我们聊了浏览器，以及移动浏览器之争：小程序与 PWA。</p>
+<p>当我们思考浏览器从技术上带来了什么的时候，我们可以把它分为两点。</p>
+<ul>
+<li>跨平台桌面程序开发；</li>
+<li>Web 开发（B/S 架构的新型应用）。</li>
+</ul>
+<p>今天我们分别就跨平台桌面程序和 Web 开发展开来聊一聊。</p>
+<h2 id="跨平台桌面程序开发"><a href="#跨平台桌面程序开发" class="headerlink" title="跨平台桌面程序开发"></a>跨平台桌面程序开发</h2><p>跨平台的桌面程序开发是一个超级难题。无数人前仆后继，各种方案层出不穷，但至今为止，仍然没有称得上真正深入人心的解决方案。</p>
+<p>原因很简单，因为桌面程序本身的范畴在变。有两个关键的因素会导致桌面开发产生巨大的差异性。</p>
+<p>一个因素自然是操作系统。不同的操作系统抽象的界面程序框架并不一致。这些不一致必然导致开发工作量的增加。</p>
+<p>放弃某个操作系统，就意味着放弃某个流量入口，也就意味着放弃这些用户。所以虽然很麻烦，我们还是不得不支持着每一个主流的操作系统。</p>
+<p>另一个因素是屏幕尺寸。就算相同的操作系统，在不同尺寸的屏幕上，交互的范式也会存在很大的差异性，这也会导致不低的跨平台工作量。</p>
+<p>首先我们看下操作系统。</p>
+<ul>
+<li>PC 本地：Windows，macOS，Linux 等等；</li>
+<li>PC Web：Chrome，Safari，FireFox 等等；</li>
+<li>Mobile 本地：Android，iOS 等等；</li>
+<li>Mobile Web：小程序，PWA 等等。</li>
+</ul>
+<p>我们再看下屏幕尺寸。</p>
+<ul>
+<li>大屏：PC、笔记本，Pad 等等；</li>
+<li>中屏：手机；</li>
+<li>小屏：手表。</li>
+</ul>
+<p>如此繁复多样的终端类型，无怪跨平台如此之难。我们来总结一下当前都有哪些跨平台的解决方案。</p>
+<p><img src="https://static001.geekbang.org/resource/image/da/c7/daf115d3a745c302026b914ee760ccc7.jpg" alt></p>
+<p>这个列表只是沧海一粟。之所以没有列那么多，也是因为大部分的跨平台框架都已经不怎么活跃，已经无疾而终了。</p>
+<p>目前来说，还很难说哪个方案会胜出。</p>
+<p>关于跨平台开发，我觉得有一句话特别深刻：“每一次统一的努力，都最终变成新的分裂”。当然，这样的事情在很多领域都会发生，只是跨平台开发更加如此。</p>
+<p>但是无论如何，跨平台的梦还会继续。</p>
+<h2 id="Web-开发"><a href="#Web-开发" class="headerlink" title="Web 开发"></a>Web 开发</h2><p>聊完了跨平台，我们来聊聊浏览器带来的另一面：Web 开发。</p>
+<p>Web 的 B/S 架构意味着编写软件有了更高的复杂性。这主要表现在以下几个方面。</p>
+<p><strong>其一，多用户。</strong>有了 Server 端，意味着用户的数据不再是保存在 Client（Browser）端，而是存储在 Server 端。</p>
+<p><strong>其二，更高的数据可靠性要求。</strong>数据在 Client 端，客户自己对数据的可靠性负责。硬盘坏了，数据丢了，用户会后悔没有对数据进行备份。</p>
+<p>但是一旦数据在 Server 端，数据可靠性的责任方就到了软件厂商这边。如果厂商不小心把数据搞丢了，用户就会跳起来。</p>
+<p><strong>其三，更多可能的分工安排。</strong>详细来说，Web 应用从流派来说，分为两大类：胖前端与胖后端。</p>
+<p>所谓胖前端，是指把尽可能多的业务逻辑放在前端。极端情况下，整个网站就是一个单页的应用。胖前端无论开发体验还是用户体验，都更接近于本地应用（Native App）。</p>
+<p>所谓胖后端，是指主要逻辑都在后端，包括界面交互的事件响应，也通过网络调用交给了后端来实现。</p>
+<p>我们先看客户端（Client），也就是浏览器端（Browser）。上一讲我们提到，浏览器的界面框架并没有窗口系统，它通过 HTML+CSS 来描述界面。</p>
+<p>HTML+CSS 与其理解为 View 层，不如理解为 ViewModel 层，因为 HTML DOM 从数据角度完整描述了界面的样子。而 View 层已经被浏览器自己实现了。</p>
+<p>这极大简化了界面开发的复杂性，因为界面的局部更新是一个复杂的话题，今天浏览器通过引入 HTML+CSS 这样的 ViewModel 层把它解决了。</p>
+<p>这个时候我们重新看 MVC 框架在浏览器下的样子，你会发现它变成了 MVMP 模式，全称为 “Model-ViewModel-Presenter”。</p>
+<p><img src="https://static001.geekbang.org/resource/image/94/7f/94475e49c61f8dfbadb2448c7bc72b7f.png" alt></p>
+<p><strong>首先，我们看事件响应过程。</strong>浏览器的 View 收到了用户的交互事件，它把这些事件委托（delegate）给了 ViewModel 层，并且通过 HTML DOM 暴露出来。通过修改 HTML 元素的事件响应属性，一般名字叫 onXXX（比如 onclick），可以获得事件的响应机会。</p>
+<p><strong>然后我们看 Model 层的数据变化（DataChanged）事件。</strong>在标准的 MVC 模式中，Model 层的数据变化是通知到 View 层，但是在浏览器下 View 是由浏览器实现的，要想让它接受 DataChanged 事件并且去处理是不太可能了。</p>
+<p>所以解决思路自然是让 Controlller 层来做，这样就变成了 MVP 模式。 但是我们又不是标准的 MVP，因为 Presenter 层更新界面（Update View）并不是操作 View，而是 ViewModel。</p>
+<p><strong>综上，浏览器下的 MVC，最终实际上是 MVMP（Model-ViewModel-Presenter）。</strong></p>
+<p>聊完了浏览器端，我们在来看下服务端（Server）。虽然这一章我们的重点不是聊服务端，但是为了有个完整的认识，我们还是要概要地梳理一下 Server 端的架构。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7d/c2/7d4754709350d95b8afe0aa35e6e6dc2.jpg" alt></p>
+<p>前面我们在 “<a href="https://time.geekbang.org/column/article/105356" target="_blank" rel="noopener">22 | 桌面程序的架构建议</a>” 中，曾提到桌面软件除了要支持用户交互外，另一个很重要的需求是提供应用程序的二次开发接口（API）。</p>
+<p>到了 Web 开发，我们同样需要二次开发接口，只不过这个二次开发接口不再是在 Client 端完成的，而是在 Server 端完成。Server 端支持直接的 API 调用，以支持自动化（Automation）方面的需求。</p>
+<p>所以，对 Server 端来说，最底层的是一个多租户的 Model 层（Multi-User Model），它实现了自动化（Automation）所需的 API。</p>
+<p>在 Multi-User Model 层之上，有一个 Web 层。Web 层和 Model 层的假设不同，Web 层是基于会话的（Session-based），因为它负责用户的接入，每个用户登录后，会形成一个个会话（Session）。</p>
+<p>如果我们对Web 层细究的话，又分为 Model 层和 ViewModel 层。为了区分，Web 这边的 Model 层我们叫它 Session-based Model。相应地，ViewModel 层我们叫它 Session-based ViewModel。</p>
+<p>在服务端，Session-based Model 和 Session-based ViewModel 并不发生直接关联，它们通过自己网络遥控浏览器这一侧的 Model 和 ViewModel，从而响应用户的交互。</p>
+<p>Session-based Model 是什么样的呢？它其实是 Multi-User Model 层的转译。把多租户的 API 转译成单租户的场景。所以这一层并不需要太多的代码，甚至理论上自动实现也是有可能的。</p>
+<p>Session-based ViewModel 是一些 HTML+JavaScript+CSS 文件。它是真正的 Web 业务入口。它通过互联网把自己的数据返回给浏览器，浏览器基于 ViewModel 渲染出 View，这样整个系统就运转起来了。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们聊了 Web 带来的两个重要改变。一个是跨平台，一个是 Web 开发，即 B/S 架构下的新型应用到底应该怎么实现。</p>
+<p>从跨平台来说，这个话题是桌面程序员（也叫“大前端”）永远的痛。计划赶不上变化，用来形容大前端程序员面临的窘境是一点都不过分的。一个玩意还没搞熟悉了，另一个东西又出来了，变化太快，要跟上实属不易。</p>
+<p>从 Web 开发来说，MVC 变成了 MVMP（Model-ViewModel-Presenter）。我们和单机的桌面软件一样的建议，认真对待 Model 层，认真思考它的使用接口是什么样的，把 Model 层做厚。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将结合一个实际的案例，来讲解一下桌面开发（含单机软件和 Web）到底是什么样的。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:52.084Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    26 minutes read (About 3957 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/23 | Web开发：浏览器、小程序与PWA/">23 | Web开发：浏览器、小程序与PWA</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>前面几讲我们聊到桌面软件开发，是从原生应用（Native App）角度来讲的，我们的讨论范围还只是单机软件，没有涉及网络相关的部分。</p>
+<p>虽然介绍 Model 层的时候，我拿基于数据库实现 Model 层来谈常见的两个误区，但这只是因为这种问题经常能够见到，比较典型。实际纯单机软件很少会基于数据库来做，通常是自己设计的内存中的数据结构。</p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>今天开始我们聊聊浏览器。从商业价值看，浏览器带来的最为重大的进步是如下这三点。</p>
+<p><strong>其一，软件服务化。</strong>当产品交付从单机软件转向云服务后，社会分工就发生了巨大变化。</p>
+<p>互联网让 “24 小时不间断服务”成为可能。任何一个环节的力量都得到百倍乃至千倍的放大，都有可能成长出一个超级节点，进而吞噬上下游，让服务链条更短。</p>
+<p><strong>其二，随时发布。</strong>这极大改进了软件迭代的效率。人们快速试验自己的想法，不必过度因为顾虑软件质量召回而束手束脚。</p>
+<p><strong>其三，跨平台。</strong>浏览器消除了不同操作系统平台的差异性，让一份代码到处运行成为可能。</p>
+<p>不过我们今天把重心放到界面开发这个视角。<strong>从作为界面开发框架的角度看，浏览器带来的最重大变化又是哪些？</strong></p>
+<p><img src="https://static001.geekbang.org/resource/image/b8/c5/b8063e7ac32e854676b640c86d4628c5.png" alt></p>
+<p><strong>其一，操作系统的窗口系统被颠覆。</strong>一个网页只是一个窗口，不再有父子窗口。所有网页中的界面元素，都是一个虚拟视图（Virtual View），无论是大家耳熟能详的通用控件（比如 input，image，div 等等），还是自绘窗口（canvas）都一样。</p>
+<p>这一点非常关键。哪些元素是子 View，哪些元素是图形（Shape） 已经完全淡化了，更多的是通过一种统一机制来完成事件分派（Event Dispatch）。</p>
+<p><strong>其二，窗口的绘制机制变了。</strong>之前是调用操作系统的 GDI 生成界面，现在换成了 HTML+CSS。当然如果我们非要把 HTML+CSS 看作是另一种 GDI 语言，某种程度来看好像也可以。</p>
+<p>但是实际上 GDI 与 HTML+CSS 有非常本质的差别。它们一个是在绘制界面，一个是在声明界面。这两者的本质差别，在视图更新（Update View）的时候一下子就显现出来。</p>
+<p>上一讲我们在介绍 View 层的时候，介绍过 View 层的一大难点是做局部更新的优化。在 View 局部优化比较复杂的时候，我们甚至会引入 ViewModel 层来做视图局部更新的支持。</p>
+<p>站在这个角度看 HTML+CSS，其实我们不能把它理解为 View 层，它其实是 ViewModel 层。View 层由谁干掉了？浏览器。在我们修改 HTML DOM 时，浏览器自动就更新了 View。怎么做到局部更新优化的？你不必关心，浏览器已经干完这件事情了。</p>
+<p>这事的真正价值超过你的想象。它大幅提升了桌面应用开发的效率。</p>
+<p><strong>其三，语言限制。</strong>浏览器的确大幅改善了界面开发的效率，但是从语言支持的角度，大部分操作系统都支持各种语言作为开发工具，而浏览器长期以来只支持 JavaScript 一门语言。</p>
+<p>这当然是一个不小的制约。所以有很多人在试图突破这个限制。Google 曾经想要把 Dart 语言打造为下一代的 JavaScript，但最终以失败告终。</p>
+<p>今天主流的方案还是以代码转换器为主。也就是说，我可以用自己期望的语言（比如 Go 语言）来做开发。但是在发布前通过代码转换器转为 JavaScript。</p>
+<p>今天还有一个重要的尝试是 WebAssembly。它的目标是打通各类语言与 Web 之间的桥梁。</p>
+<p><strong>其四，B/S 架构。</strong>无论是 B/S 还是 C/S，本质上还是软件服务化。这对软件架构产生了巨大影响。</p>
+<p>一方面，从 Server 端的逻辑看，系统从单用户变成了多用户。另一方面，从 Browser 端（或 Client 端）看，仍然是单用户，但是没有了数据，数据都在 Server 端。这对应用架构提出了新的挑战。</p>
+<p>应该怎么设计 Web 程序的架构？我们在下一讲中接着聊这个话题。</p>
+<h2 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h2><p>2016年9月，微信小程序（最初叫“应用号”）开始内测。下面是当天七牛云团队的一番内部对话。</p>
+<hr>
+<blockquote>
+<p><strong>许式伟</strong>：看下这篇，<a href="https://mp.weixin.qq.com/s/OxgWEOlLPcB_3DMVw_GSFA" target="_blank" rel="noopener">微信应用号来了</a>。</p>
+<p><strong>Gina</strong>：这个理念应该不是去构建一个Store，它的理念是用完即走，是场景通过扫码或者搜索触发的，并且应该打的是实体或者服务售卖群体，不会针对微信内消费，是订阅号的升级展现方式。</p>
+<p><strong>许式伟</strong>：<a href="https://mp.weixin.qq.com/s/x94SDqUV1REfNQ67ihgYfw" target="_blank" rel="noopener">关于微信小程序（应用号），我能透露的几个细节</a>，这一篇更详细一些。</p>
+<p>微信没有必要在微信App内放Appstore，可以只有Web版本的Appstore，App不需要安装，甚至可能以消息的方式发给别人，以服务号的形式存在，这是迭代式开发。</p>
+<p>以后终极形态还可以变，当前重心应该在runtime的稳定。通过上面的介绍，微信实际上升级了浏览器内核的标准，符合我之前说的新一代浏览器的定义。</p>
+<p><strong>Gina</strong>：小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者搜一下即可打开应用。也体现了“用完即走”的理念，用户不用关心是否安装太多应用的问题。应用将无处不在，随时可用，但又无需安装卸载。</p>
+<p><strong>徐倒立</strong>：WebApp 这个技术和 idea最早来自 Google 浏览器 ，微信是商业化的最佳实践。Google浏览器在支持开发者开发App时就提出Intents，并且和Android是可以互动的。</p>
+<p><strong>Gina</strong>：没有好的土壤有好的功能也是没意义的。</p>
+<p><strong>许式伟</strong>：是，微信小程序在别的App不是做不到，是做了意义太小。苹果和腾讯不约而同在IM里面做App是有道理的。</p>
+<p><strong>Gina</strong>：IM比搜索和浏览器的封闭性更强。用户不容易跳转出去。封闭性强的土壤才能构建App生态。</p>
+<p><strong>许式伟</strong>：所以移动时代最佳的浏览器是IM，不再是以前传统浏览器。</p>
+<p><strong>杜江华</strong>：我们应该多讨论to B巨头们怎么玩、怎么思考的，对我们现阶段才更有意义，支付宝、微信等都是to C的。</p>
+<p><strong>许式伟</strong>：不是这样的。to C 的生态变化，会影响 to B。to C 是根源，我们是帮用户做App的，如果不知道以后App是怎么玩的，怎么可能做好。</p>
+<p><strong>杜江华</strong>：理解了，那应该是客户群之一互联网部分，还有不少大B 需要有其他不同的思考方式。</p>
+<p><strong>Gina</strong>：大B的趋势我挺想听的。这周聚会，阿杜能否把最近大项目和大传统客户的一些动作详细聊一下。你这边离业务最近。</p>
+<p><strong>许式伟</strong>：其实比你想象得还要恐怖，不管你是什么大B，你都得拥抱微信，只有微信和QQ让整个7亿中国网民在里面安家了，这就是一个虚拟的国家。所以我的判断是没有大B不开发微信小程序，这只是个眼光和时间问题。</p>
+<p><strong>吕桂华</strong>：这个微信应用号我们是应该关注的，相当于市场上多了一个操作系统。</p>
+<p><strong>许式伟</strong>：微信应用号不只是一个新OS，而且是下一代OS，苹果和谷歌不会坐视不理。当然还有一个痛点是跨平台。</p>
+<p><strong>Gina</strong>：这个东西可能对营销生态有大的影响。我们也要开发些营销工具。</p>
+</blockquote>
+<hr>
+<p>在这段对话之后的一个月内，我们做出了七牛的第一笔对外投资：“<a href="http://m.jisuapp.cn" target="_blank" rel="noopener">即速应用</a>”，它致力于帮助企业开始快速构建自己的小程序。</p>
+<p><strong>为什么微信小程序必然会成功？</strong></p>
+<p>因为，有 7 亿人同时使用的操作系统，很少。如果我们把不同 Android 厂商归为不同的主体的话，微信小程序是当时世界上最大的单一来源的操作系统。</p>
+<p>随后，支付宝发布了支付宝小程序，国内手机厂商联合发布了 “快应用”，今日头条也发布了自己的小程序。</p>
+<p>一下子，小程序变成了一支巨大的新兴力量，成为真正意义上的国产操作系统，对抗着 Android 和 iOS 两大移动操作系统生态。</p>
+<p>但是，目前来说，小程序生态仍然存在有诸多问题。</p>
+<p>最为关键的，是标准不统一。虽然都叫小程序，但是它们的接口各自都在快速迭代，很难去建立统一的标准，更谈不上让开发者一次开发，到处可用。</p>
+<p>这和 Android 不同。虽然 Android 厂商很多，但是不同 Android 的开发接口是一致的，开发工具链是一致的。</p>
+<p>小程序的厂商们会好好坐下来谈一谈标准一致的事情吗？应该做，但可能他们现在没空管开发者们的体验，他们的关注点是怎么快速抢地盘。</p>
+<p>聊了那么多，我们话题回到技术本身。小程序和传统的 Web 开发有何不同？</p>
+<p>其实有很大不同。小程序更像是 Native 程序在线化，而不是 PC Web 移动化。</p>
+<p>为什么我们这么说？因为小程序是一个应用，而不是由一个个 Web 页面构成。</p>
+<p>我们需要提交应用给微信或支付宝，他们也会像苹果审核 AppStore 上的应用一样，掌控着 App 的生杀大权。</p>
+<p>而且理论上可以比苹果更牛的是，他们可以下线一个已经有千万甚至上亿级别用户的 App，让他们一无所有。苹果可以掐掉一个 App 的新增，他们可以掐掉一个 App 的全部。</p>
+<p>这会带来新的社会问题：操作系统厂商的权限边界究竟在哪里。这不是一个简单的技术问题，而是一个伦理与法律的问题。</p>
+<p>正因为这个风险如此之高，所以所有的厂商在拥抱微信的同时，必然时时刻刻想着如何逃离微信。</p>
+<p><strong>刀刃，永远是两面的。</strong></p>
+<p>这也是我个人非常佩服Facebook扎克伯格的地方。他看到了终局，所以在发布 Libra 的时候，他选择的是让一步，放弃 Control。</p>
+<p>我还是那句话，他会成功。</p>
+<p>让一步，其实就是进一百步。</p>
+<h2 id="PWA"><a href="#PWA" class="headerlink" title="PWA"></a>PWA</h2><p>国内大厂们纷纷布局小程序的时候，Google 也在发力自己的移动浏览器方案，叫 PWA，全称 “Progressive Web App”。</p>
+<p>其实 Google 想要让浏览器获得 Native 应用同等体验之心是路人皆知的事实。</p>
+<p>在 PC 时期，Google 就搞了 Google Native Client (NaCl)，后来转向了 WebAssembly。移动应用的在线化，Google 也同样在探索。</p>
+<p>PWA 开始于 2015 年，比微信小程序早很多，并得到了苹果和微软的支持。从这个角度来说，PWA 的潜力不容小觑。</p>
+<p>怎么理解 PWA？你可以理解为海外版的小程序。</p>
+<p>那么它和小程序的差别在哪？</p>
+<p>其一，演进思路不同。PWA 基本上以兼容并对 Web 进行逐步改造升级为导向。而小程序和 Web 还是有较大程度的差异。</p>
+<p>其二，关注焦点不同。PWA 更技术化，它很大的精力重心放在如何让 PWA 在断网情况下和本地应用有更一致的体验。而小程序关注点在如何撬动这么庞大的用户市场，小程序之后专门出现小游戏，更加能够证明这一点。</p>
+<p>其三，PWA 并没有中心化的 AppStore，它更像是一项技术标准，而不是一个封闭的操作系统。支持 PWA 的厂商们不用担心被人掐脖子，怎么更新你的应用自己说了算。</p>
+<p>虽然技术上相似，但是如果以操作系统角度看，两者有代差。PWA 如果我们看作操作系统的话，相比小程序来说太传统。</p>
+<p>为什么这么讲？因为小程序符合我前面介绍现代操作系统的 “账号(Account)-支付(Pay)-应用市场(AppStore)” 的商业闭环，但是 PWA 并没有账号，也没有支付。</p>
+<p>怎么看待 PWA 的未来？</p>
+<p>最终把 PWA 发扬光大的，很可能是 Facebook（当然 Facebook 也非常大概率选择放弃包袱，和小程序一样重新出发）。加上 Libra，秒杀微信小程序。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>今天我们聊了浏览器，结合浏览器的发展趋势，谈了现在仍然在高速迭代中的移动浏览器之争。有中国特色的小程序，和海外版小程序 PWA。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将聊聊 “跨平台与 Web 开发的建议”。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:50.176Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    24 minutes read (About 3559 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/22 | 桌面程序的架构建议/">22 | 桌面程序的架构建议</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>上一讲我们介绍了图形界面程序的框架。站在操作系统交互子系统的角度来看，我们桌面应用程序的结构是下面这样的。</p>
+<p><img src="https://static001.geekbang.org/resource/image/ea/af/ea2f8918fd742bba48ba2897267c1daf.png" alt></p>
+<p>今天我们换一个角度，站在应用架构的角度，来聊聊如何设计一个桌面应用程序。</p>
+<h2 id="从-MVC-说起"><a href="#从-MVC-说起" class="headerlink" title="从 MVC 说起"></a>从 MVC 说起</h2><p>关于桌面程序，我想你听得最多的莫过于 MVC 这个架构范式。MVC 全称是 “模型(Model)-视图(View)-控制器(Controller)”。</p>
+<p><img src="https://static001.geekbang.org/resource/image/32/cb/32c7df68c3f5d11a0a32f80d7c3a42cb.png" alt></p>
+<p>怎么理解 MVC 呢？一种理解是，Model 是 Input，View 是 Output，Controller 是 Process，认为 MVC 与计算机的 Input-Process-Ouput 这个基础模型暗合。</p>
+<p>但更准确的解释是：Model 是数据，View 是数据的显示结果，同时也接受用户的交互动作，也就是事件。从这个意义来说，说 Model 是 Input 并不严谨，View 接受的用户交互，也是 Input 的一部分。</p>
+<p>Controller 负责 Process（处理），它接受 “Model + 由 View 转发的事件” 作为 Input，处理的结果（Output）仍然是 Model，它更新了 Model 的数据。</p>
+<p>View 之所以被理解为 Output，是因为 Model 的数据更新后，会发送 DataChanged（数据更新）事件，View 会在监听并收到 DataChanged 事件后，更新 View。所以把 View 理解为 Output 也并不算错，它从数据角度看其实是 Model 的镜像。</p>
+<p>对 MVC 模式做些细微的调整，就会产生一些变种。比如，Model 的数据更新发出 DataChanged 事件后，由 Controller 负责监听并 Update View，这样就变成了 MVP 架构。MVP 全称是 “模型(Model)-视图(View)-表现(Presenter)”。</p>
+<p><img src="https://static001.geekbang.org/resource/image/01/b3/017f2f7974febde6f4ddd917481ba1b3.png" alt></p>
+<p>那么，我们究竟应该选择哪一种架构范式比较好？</p>
+<p>要想判断我们写的程序架构是否优良，那么我们心中就要有架构优劣的评判标准。比较知名且重要的一些基本原则如下。</p>
+<ul>
+<li>最低耦合原则：不同子系统（或模块）之间有最少的交互频率，最简洁且自然的接口。</li>
+<li>单一职责原则：不要让一个子系统（或模块）干多件事情，也不要让它不干事情。</li>
+</ul>
+<p>如果在我们心中以遵循架构法则为导向，回过头再来看 MVC，又会有不同的理解。</p>
+<h2 id="理解-Model-层"><a href="#理解-Model-层" class="headerlink" title="理解 Model 层"></a>理解 Model 层</h2><p>我们先看 Model。如果你真正理解 Model 层的价值，那么可以认为你的架构水平已经达到了较高层次的水准。因为 Model 层太重要了。</p>
+<p>我上面说 Model 层是数据，这其实还不是太准确。更准确来说，Model 层是承载业务逻辑的 DOM，即 “文档对象模型（Document Object Model）”。直白理解，DOM 是 “面向对象” 意义上的数据。它不只是有数据结构，也有访问接口。</p>
+<p>为了便于理解，假设我们基于数据库来实现 Model 层。<strong>这种情况下会有两种常见的架构误区。</strong></p>
+<p>一种是直接让 Controller 层直接操作数据库，也就是拿数据库的读写接口作为 Model 层的接口。</p>
+<p>另一种看起来高级一些，用所谓的 ORM 技术来实现 Model 层，让 Controller 直接操作 ORM。</p>
+<p>为什么我们说这两种做法都有问题呢？原因就在于对 Model 层的价值不明。Model 层的使用接口最重要的是要自然体现业务的需求。</p>
+<p>只有这样，Model 层的边界才是稳定的，与你基于的技术无关。是用了 MySQL，还是用了 NoSQL？是直接裸写 SQL 语句，还是基于 ORM？这都没关系，未来喜欢了还可以改。</p>
+<p>另外，从界面编程角度看，Model 层越厚越好。为什么这么说？因为这是和操作系统的界面程序框架最为无关的部分，是最容易测试的部分，也同时是跨平台最容易的部分。</p>
+<p>我们把逻辑更多向 Model 层倾斜，那么 Controller 层就简洁很多，这对跨平台开发将极其有利。</p>
+<p>这样来看，直接让 Controller 层直接操作数据库，或者基于 ORM 操作数据库，都是让 Model 层啥事不干，这非常非常浪费，同样也违背了 “单一职责原则”。</p>
+<p>我们需要强调，单一职责不只是要求不要让一个子系统（或模块）干多件事情，同时也要求不要让它不干事情。</p>
+<p>如果我们用一句话来描述 Model 层的职责，那么应该是 “负责业务需求的内核逻辑”，我们以前经常叫它 “DataCore”。</p>
+<p>那么 Model 层为何要发出 DataChanged 事件？</p>
+<p>这是从 Model 层的独立性考虑。Model 层作为架构的最底层，它不需要知道其他层的存在，不需要知道到底是 MVC 还是 MVP，或者是其他的架构范式。</p>
+<p>有了 DataChanged 事件，上层就能够感知到 Model 层的变化，从而作出自己的反应。</p>
+<p>如果还记得第一章我们反复强调的稳定点与变化点，那么显然，DataChanged 事件就是 Model 层面对需求变化点的对策。大部分 Model 层的接口会自然体现业务需求，这是核心价值点，是稳定的。</p>
+<p>但是业务的用户交互可能会变化多端，与 PC 还是手机，与屏幕尺寸，甚至可能与地区人文都有关系，是多变的。</p>
+<p>用事件回调来解决需求的变化点，这一点 CPU 干过，操作系统也干过，今天你做业务架构也这么干，这就很赞。</p>
+<h2 id="理解-View-层"><a href="#理解-View-层" class="headerlink" title="理解 View 层"></a>理解 View 层</h2><p>View 层首要的责任，是负责界面呈现。界面呈现只有两个选择，要么自己直接调用 GDI 接口自己画，要么创建子 View 让别人画。</p>
+<p>View 层另一个责任是被自然带来的，那就是：它是响应用户交互事件的入口，这是操作系统的界面编程框架决定的。比较理想的情况下，View 应该把自己所有的事件都委托（delegate）出去，不要自己干。</p>
+<p>但在 View 的设计细节中，也有很多问题需要考虑。</p>
+<p><strong>其一，View 层不一定会负责生成所有用户看到的 View。</strong>有的 View 是 Controller 在做某个逻辑的过程中临时生成的，那么这样的 View 就应该是 Controller 的一部分，而不应该是 MVC 里面的 View 层的一部分。</p>
+<p><strong>其二，View 层可能需要非常友好的委托（delegate）机制的支持。</strong>例如，支持一组界面元素的交互事件共同做委托（delegate）。</p>
+<p><strong>其三，负责界面呈现，意味着 View 层和 Model 层的关系非常紧密，紧密到需要知道数据结构的细节，这可能会导致 Model 层要为 View 层提供一些专享的只读访问接口。</strong>这合乎情理，只是要确保这些访问接口不要扩散使用。</p>
+<p><strong>其四，负责界面呈现，看似只是根据数据绘制界面，似乎很简单，但实则不简单。</strong>原因在于：为了效率，我们往往需要做局部更新的优化。如果我们收到 onPaint 消息，永远是不管三七二十一，直接重新绘制，那么事情就很好办。但是在大部分情况下，只要业务稍微复杂一点，这样的做法都会遇到性能挑战。</p>
+<p>在局部更新这个优化足够复杂时，我们往往不得不在 Model 和 View 之间，再额外引入一层 ViewModel 层来做这个事情。</p>
+<p>ViewModel 层顾名思义，是为 View 的界面呈现而设计的 Model 层，它的数据组织更接近于 View 的表达，和 View 自身的数据呈一一对应关系（Bidi-data-binding）。<br><img src="https://static001.geekbang.org/resource/image/37/43/37c573bc05f071fe7e4ac3a2c986c843.png" alt></p>
+<p>一个极端但又很典型的例子是 Word。它是数据流式的文档，但是界面显示人们用得最多的却是页面视图，内容是分页显示的。</p>
+<p>这种情况下就需要有一个 ViewModel 层是按分页显示的结构来组织数据。其中负责维持 Model 与 ViewModel 层的数据一致性的模块，我们叫排版引擎。</p>
+<p>从理解上来讲，我个人会倾向于认为 ViewModel 是 View 层的一部分，只不过是 View 层太复杂而进行了再次拆分的结果。也就是说，我并不倾向于认为存在所谓的 “Model-View-ViewModel” 这样的模式。</p>
+<h2 id="理解-Controller-层"><a href="#理解-Controller-层" class="headerlink" title="理解 Controller 层"></a>理解 Controller 层</h2><p>Controller 层是负责用户交互的。可以有很多个 Controller，分别负责不同的用户交互需求。</p>
+<p>这和 Model 层、View 层不太一样。我们会倾向于认为 Model 层是一个整体。虽然这一个层会有很多类，但是它们共同构成了一个完整的逻辑：DOM。而 View 层也是如此，它是 DOM 的界面呈现，是 DOM 的镜像，同样是一个整体。</p>
+<p>但负责用户交互的 Controller 层，是可以被正交分解的，而且应该作正交分解，彼此完全没有耦合关系。</p>
+<p>一个 Controller 模块，可能包含一些属于自己的辅助 View，也会接受 View 层委托的一些事件，由事件驱动自己状态，并最终通过调用 Model 层的使用接口来完成一项业务。</p>
+<p>Controller 模块的辅助 View 可能是持续可见的，比如菜单和工具条；也可能是一些临时性的，比如 Office 软件中旋转图形的控制点。</p>
+<p>对于后者，如果存在 ViewModel 层的话，也有可能会被归到 ViewModel + View 来解决，因为 ViewModel 层可以有 Selection 这样的东西来表示 View 里面被选中的对象。</p>
+<p>Controller 层最应该思考的问题是代码的内聚性。哪些代码是相关的，是应该放在一起的，需要一一理清。这也是我上面说的正交分解的含义。</p>
+<p>如果我们做得恰当，Controller 之间应该是完全无关的。而且要干掉某一个交互特别容易，都不需要删除该 Controller 本身相关的代码，只需要把创建该 Controller 的一行代码注释掉就可以了。</p>
+<p>从分层角度，我们会倾向于认为 <strong>Model 层在最底层；View 层在中间，</strong>它持有 Model 层的 DOM 指针；<strong>Controller 层在最上方</strong>，它知道 Model 和 View 层，它通过 DOM 接口操作 Model 层，但它并不操作 View 去改变数据，而只是监听自己感兴趣的事件。</p>
+<p>如果 View 层提供了抽象得当的事件绑定接口，你会发现，其实 Controller 层大部分的逻辑都与操作系统提供的界面编程框架无关（除了少量辅助 View），是跨平台的。</p>
+<p><strong>谁负责把 MVC 各个模块串起来呢？当然是应用程序（Application）了。</strong>在应用开始的时候，它就把 Model 层、View 层，我们感兴趣的若干 Controller 模块都创建好，建立了彼此的关联，一切就如我们期望的那样工作起来了。</p>
+<h2 id="兼顾-API-与交互"><a href="#兼顾-API-与交互" class="headerlink" title="兼顾 API 与交互"></a>兼顾 API 与交互</h2><p>MVC 是很好的模型来支持用户交互。但这不是桌面程序面临的全部。另一个很重要的需求是提供应用程序的二次开发接口（API，全称为 Application Programming Interface）。</p>
+<p>提供了 API 的应用程序，意味着它身处一个应用生态之中，可以与其他应用程序完美协作。</p>
+<p>通过哪一层提供  API 接口？我个人会倾向于认为最佳的选择是在 ViewModel 层。Model 层也很容易提供 API，但是它可能会缺少一些重要的东西，比如 Selection。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这一讲我们探讨了一个桌面应用程序的业务架构设计。我们探讨了大家耳熟能详的 MVC 架构范式。一千个人眼中有一千个哈姆雷特，虽然都在谈 MVC，但是大家眼中的 MVC 各有不同。</p>
+<p>我们站在什么样的架构是好架构的角度，剖析了 MVC 的每一层应该怎样去正确理解与设计，有哪些切实的问题需要去面对。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将聊聊基于浏览器的开发。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:48.232Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    18 minutes read (About 2751 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/21 | 图形界面程序的框架/">21 | 图形界面程序的框架</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。</p>
+<p>上一讲我们回顾了交互的演化历程。今天，我们将关注点收敛到现在仍然占主流地位的图形界面程序。它的结构如下图所示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b8/c5/b8063e7ac32e854676b640c86d4628c5.png" alt></p>
+<p>实现一个图形界面程序，最大的复杂性在于不同操作系统的使用接口完全不同，差异非常巨大。这给开发一个跨平台的图形界面程序带来巨大挑战。</p>
+<p>好在，尽管操作系统的使用接口有异，但基本的大逻辑差不多。今天我们从统一的视角来看待，谈谈图形界面程序的框架。</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>无论是什么桌面操作系统，每个进程都有一个全局的事件队列（Event Queue）。当我们在键盘上按了一个键、移动或者点击鼠标、触摸屏幕等等，都会产生一个事件（Event），并由操作系统负责将它扔到进程的事件队列。整个过程大体如下。</p>
+<ul>
+<li>键盘、鼠标、触摸屏等硬件产生了一个硬件中断；</li>
+<li>操作系统的硬件中断处理程序收到对应的事件（Event）；</li>
+<li>确定该事件的目标进程；</li>
+<li>将事件放入目标进程的事件队列（Event Queue）。</li>
+</ul>
+<h2 id="窗口与事件响应"><a href="#窗口与事件响应" class="headerlink" title="窗口与事件响应"></a>窗口与事件响应</h2><p>窗口（Window），也有人会把它叫视图（View），是一个独立可复用的界面元素（UI Element）。一个窗口响应发送给它的事件（Event），修改内部的状态，然后调用 GDI 绘制子系统更新界面显示。</p>
+<p><strong>响应事件的常见机制有两种。</strong></p>
+<p><strong>一种是事件处理类</strong>（EventHandler，在 iOS 中叫 Responder）。通常，我们自定义的窗口类会直接或间接从事件处理类继承。Windows 平台有些特殊，为了让窗口类可复用，且与语言无关，它将事件处理做成了回调函数，术语叫窗口过程（WindowProc）。这只是形式上的不同，并无本质差异。</p>
+<p><strong>另一种是用委托</strong>（delegate）。顾名思义，用委托的意思是事件处理不是收到事件的人自己来做，而是把它委托给了别人。这只是一种编程的手法。比如，在 Web 编程中我们给一个界面元素（UI Element）实现 onclick 方法，这可以理解为是一种委托（delegate）。</p>
+<p>有一个事件比较特殊，它往往被叫做 onPaint 或 onDraw。为什么会有这样的事件？我们想象一下，当一个窗口在另一个窗口的上面，并且我们移动其中一个窗口时，部分被遮挡的窗口内容会显露出来。</p>
+<p>这个过程我们可能觉得很自然，但实际上，操作系统并不会帮我们保存被遮挡的窗口内容，而是发送 onPaint 事件给对应的窗口让它重新绘制。</p>
+<p>另外，不只是窗口可以响应事件，应用程序（Application）也可以。因为有一些事件并不是发送给窗口的，而是发给应用程序的，比如：本进程即将被杀死、手机低电量告警等等。</p>
+<p>当然如果我们约定一定存在一个主窗口（Main Window），那么把应用程序级别的事件理解为是发给主窗口的也可以。</p>
+<h2 id="事件分派"><a href="#事件分派" class="headerlink" title="事件分派"></a>事件分派</h2><p>事件是怎么从全局的事件队列（Event Queue）到窗口的呢？</p>
+<p>这就是事件分派（Event Dispatch）过程，它通常由一个事件分派循环（Event Dispatch Loop）来完成。一些平台把这个过程隐藏起来，直接提供一个类似 RunLoop 这样的函数。也有一些平台则让你自己实现。</p>
+<p>例如，对于 Windows 平台，它把事件叫消息（Message），事件分派循环的代码看起来是这样的：</p>
+<pre><code>func RunLoop() {
+  for {
+    msg, ok := winapi.GetMessage() // 从事件队列中取出一个消息
+    if !ok {
+      break
+    }
+    winapi.TranslateMessage(msg)
+    winapi.DispatchMessage(msg)
+  }
+}</code></pre><p>大体来说，就是一个简单的取消息（GetMessage）然后对消息进行分派（DispatchMessage）的过程。其中 TranslateMessage 函数你可能比较陌生，它负责的是将键盘按键事件（onKeyDown、onKeyUp）转化为字符事件（onChar）。</p>
+<p>窗口有了父子和兄弟关系，就有了窗口系统。一旦界面涉及复杂的窗口系统，交互变得更为复杂。事件分派过程怎么知道应该由哪个窗口响应事件呢？</p>
+<p>这就是事件处理链（EventHandler Chain）。</p>
+<p>不同事件的分派过程并不一样。</p>
+<p>对于鼠标或者触摸屏的触摸事件，事件的响应方理应是事件发生处所在的窗口。但也会有一些例外的场景，比如拖放。为了支持拖放，Windows 系统引入了鼠标捕获（Mouse Capture）的概念，一旦鼠标被某个窗口捕获，哪怕鼠标已经移出该窗口，事件仍然会继续发往该窗口。</p>
+<p>对于键盘事件（onKeyDown/onKeyUp/onChar），则通常焦点窗口先响应，如果它不感兴趣再逐层上升，直到最顶层的窗口。</p>
+<p><strong>键盘从功能上来说，有两个不同的能力：其一是输入文本，其二是触发命令。</strong>从输入文本的角度来说，要有一个输入光标（在Windows里面叫Caret）来指示输入的目的窗口。目的窗口也必然是焦点窗口，否则就会显得很不自然。</p>
+<p>但是从触发命令的角度来说，命令的响应并不一定是在焦点窗口，甚至不一定在活跃窗口。比如Windows下就有热键（HotKey）的概念，能够让非活跃窗口（Inactive Window）也获得响应键盘命令的机会。一个常见的例子是截屏软件，它往往需要一个热键来触发截屏。</p>
+<p>到了移动时代，键盘不再是交互主体，但是，键盘作为输入文本的能力很难被替代（虽然有语音输入法），于是它便自然而然地保留下来。</p>
+<p>不过在移动设备里，不太会有人会基于键盘来触发命令，只有常见的热键需求比如截屏、调大/调小音量、拍照等等，被设计为系统功能（对应的，这些功能的热键也被设计为系统按键）保留下来。</p>
+<h2 id="窗口内容绘制"><a href="#窗口内容绘制" class="headerlink" title="窗口内容绘制"></a>窗口内容绘制</h2><p>在收到 onPaint 或 onDraw 消息时，我们就要绘制我们的窗口内容了，这时就需要操作系统的 GDI 子系统。</p>
+<p>从大分类来说，我们首先要确定要绘制的内容是 2D 还是 3D 的。对于 2D 内容，操作系统 GDI 子系统往往有较好的支持，但是不同平台终究还是会有较大的差异。而对于 3D 内容来说，OpenGL 这样的跨平台方案占据了今天的主流市场，而 Vulkan 号称是 NextGL（下一代的 OpenGL），其潜力同样不容小觑。</p>
+<p>从跨平台的难易程度来说，不同平台的 GDI 子系统往往概念上大同小异，相比整个桌面应用程序框架而言，更加容易抽象出跨平台的编程接口。</p>
+<p>从另一个角度来说，GDI 是操作系统性能要求最高、最耗电的子系统。所以 GDI 优化往往通过硬件加速来完成，真正的关键角色是在硬件厂商这里。由此观之，由硬件厂商来推跨平台的 GDI 硬件加速方案可能会成为趋势。</p>
+<h2 id="通用控件"><a href="#通用控件" class="headerlink" title="通用控件"></a>通用控件</h2><p>有了以上这些内容，窗口系统本身已经完备，我们就可以实现一个任意复杂的桌面应用程序了。</p>
+<p>但是，为了进一步简化开发过程，操作系统往往还提供了一些通用的界面元素，通常我们称之为控件(Control)。常见的控件有如下这些：</p>
+<ul>
+<li>静态文本 (Label)；</li>
+<li>按钮 (Button)；</li>
+<li>单选框 (RadioBox)；</li>
+<li>复选框 (CheckBox)；</li>
+<li>输入框 (Input，也叫EditBox/EditText)；</li>
+<li>进度条 (ProgressBar)；</li>
+<li>等等。</li>
+</ul>
+<p>不同操作系统提供的基础控件大同小异。不过一些处理细节上的差异往往会成为跨平台开发的坑，如果你希望一份代码多平台使用，在这方面就需要谨慎处理。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>总结来说，桌面应用程序通常由用户交互所驱动。我们身处在由操作系统约定的编程框架中，这是桌面编程的特点。</p>
+<p>在操作系统的所有子系统中，交互相关的子系统是毫无疑问的差异性最大的子系统。我们这里列了一个简单的对比表格：</p>
+<p><img src="https://static001.geekbang.org/resource/image/12/fd/124a93704283b082ecda38c1f0c3c9fd.jpg" alt></p>
+<p>这还不是差异的全部。要做一个跨平台的桌面应用程序并不容易。我们需要面对的平台太多，简单罗列，如下所示。</p>
+<ul>
+<li>PC：Windows、MacOS、Linux 等；</li>
+<li>PC 浏览器：Chrome、Safri、Firefox 等；</li>
+<li>手机/平板/手表：Android（不同手机厂商也会有细节差异）、iOS 等；</li>
+<li>小程序：微信、支付宝、快应用等。</li>
+</ul>
+<p>怎么安排不同平台的优先级？怎么规划未来版本的迭代计划？选择什么样的跨平台方案？这些问题在业务架构之外，但极其考验架构师的决策能力。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将聊聊 “桌面程序的架构建议”。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:07:46.340Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    18 minutes read (About 2736 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/许世伟的架构课/20 | 桌面开发的宏观视角/">20 | 桌面开发的宏观视角</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是七牛云许式伟。今天开始，我们进入第二章，谈谈桌面软件开发。</p>
+<p>从架构的角度，无论你在什么样的终端设备（比如：PC、手机、手表、手机等等），也无论你在做 Native 应用，还是基于 Web 和小程序，我们都可以统一称之为桌面程序。</p>
+<p>如前文所述，一个桌面程序完整的架构体系如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/3a/c7/3af7a4830566a5b3e1058f409422b7c7.png" alt></p>
+<p>对于桌面程序，最核心的话题是交互。为了把关注点收敛到交互上，我们下面重点讨论操作系统对交互范式的设计。</p>
+<p>从需求角度看，桌面程序的交互方式并不稳定，它的交互范式经历了很多次的迭代。</p>
+<h2 id="命令行交互"><a href="#命令行交互" class="headerlink" title="命令行交互"></a>命令行交互</h2><p>最早出现的交互范式是命令行交互程序。使用的交互设备为<strong>键盘+显示器</strong>。</p>
+<p>输入被抽象为一段以回车（Enter键）为结束的文本（通常是单行文本，要输入多行文本，需要在行末输入“ \ ”对回车进行转义）。</p>
+<p><strong>输入方式有二：一是命令行，二是标准输入（stdin）。</strong>输出也是文本，但输出目标可能是标准输出（stdout），也可能是标准错误（stderr）。</p>
+<p>正常情况下，标准输出（stdout）和标准错误（stderr）都是向屏幕输出。这种情况下，肉眼并不能区分输出的内容是标准输出，还是标准错误。</p>
+<p>命令行交互程序的输入输出可以被重定向。一个程序的输出，可以被重定向写入到文件（标准输出和标准错误可以输出到不同的文件以进行区分），也可以通过管道功能重定向为另一个程序的输入。</p>
+<p>总结一下，命令行交互程序的结构可示意如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/ca/06/ca658cf1f5801f9b70c966eac71acf06.png" alt></p>
+<p>但命令行程序的限制过大了，人们很容易发现，在很多需求场景下这是非常反人类的，最典型的就是编辑器。稍微想象一下，你就会为怎么做好交互设计而头疼不已。</p>
+<h2 id="字符界面"><a href="#字符界面" class="headerlink" title="字符界面"></a>字符界面</h2><p>于是，字符界面程序出现了。使用的交互设备仍然是<strong>键盘+显示器</strong>，但是输入不再是一段文本，而是<strong>键盘按键事件</strong>（KeyDown 和 KeyUp）。</p>
+<p>输出也不是一段文本，而是可以修改屏幕任何位置显示的字符（屏幕被分割成M*N的格子，每个格子可以显示一个字符）。</p>
+<p>这个时候，键盘的功用在需求上分化为两个：一是输入文本，二是输入命令（通常通过扩展键比如方向键，或者组合键比如Ctrl-A、Alt-X）。从输入文本的角度，需要有当前输入的光标（Caret）位置。</p>
+<p>字符界面程序保留命令行输入的方式，但一般不太使用标准输入。其结构示意如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/4d/4a/4d6ef7de18f1dc46f770e2155184204a.png" alt></p>
+<p>上图的 TDI 含义是字符设备接口（Text Device Interface），它指的是一组向屏幕绘制文本的方法集合。大体看起来是这样的：</p>
+<pre><code>func ClearScreen()
+func DrawText(x, y int, text string)
+...</code></pre><p>但是，字符界面程序也有很大的局限。最典型的需求场景是游戏。一些简单的游戏比如俄罗斯方块是可以基于字符界面做出来的，但大部分情况下，字符界面对于游戏类场景能够做的事情非常有限。</p>
+<h2 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h2><p>于是，图形界面程序出现了。使用的交互设备是<strong>键盘+鼠标+显示器+音箱</strong>。从交互演进角度，这是一个划时代的变化。</p>
+<p>与字符界面时期相比，图形界面时代变化的根源是输出的变化：从字符变成像素。屏幕被分割为精度更高的M * N的格子，每个格子显示的是一个很小很小的像素，每个像素可以有不同的颜色。</p>
+<p><strong>为什么会出现鼠标？</strong>因为屏幕精度太高，用键盘的方向键改变当前位置不只是看起来非常笨拙，而且操作上也很不自然。</p>
+<p><strong>为什么出现音箱</strong>的原因则比较平凡，它只不过是声音设备演进的自然结果。事实上在字符交互时期声音设备就已经有了，计算机主板上有内置的喇叭。</p>
+<p>这个喇叭最大的用途是出现重大错误（比如计算机启动失败）的时候会响几声给予提示。</p>
+<p>开发人员可以通过向标准输出（stdout）或标准错误（stderr）输出一个特殊的字符让喇叭响一声。</p>
+<p>前面我们说过，输出到标准输出和标准错误对肉眼来说不可区分，所以如果我们向标准错误输出文本前让喇叭响一声，也是一个不错的一种交互范式。</p>
+<p>与字符界面程序相比，图形界面程序还有一个重大变化，是多窗口（当然，部分复杂的字符界面程序也是多窗口的，比如 Turbo C++ 3.0，它用的是 Turbo Vision 这个知名的字符界面库）。</p>
+<p>窗口（Window），也有人会把它叫视图（View），是一个独立可复用的界面元素。复杂的窗口可以切分出多个逻辑独立的子窗口，以降低单个窗口的程序复杂性。</p>
+<p>窗口有了父子和兄弟关系，就有了窗口系统。一旦界面涉及复杂的窗口系统，交互变得更为复杂。例如，键盘和鼠标事件的目标窗口的确定，需要一系列复杂的逻辑。</p>
+<p>为了降低编程的负担，窗口系统往往接管了桌面程序的主逻辑，提供了一套基于事件驱动的编程框架，业务代码由窗口系统提供的界面框架所驱动。整个程序的结构如下所示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b8/c5/b8063e7ac32e854676b640c86d4628c5.png" alt></p>
+<p>上图的 GDI 含义是图形设备接口（Graphic Device Interface），它指的是一组向指定窗口（注意不是屏幕）绘制图形的方法集合。绘制的对象包括有几何图形、图像、文本等。</p>
+<p>此后，到了移动时代，手机成了最主流的计算机。使用的交互设备发生了变化，变成了<strong>触摸屏+麦克风+内置扬声器</strong>。</p>
+<p>鼠标交互方式被淘汰，变成了多点触摸。<strong>键盘+鼠标+显示器</strong>的能力被融合到触摸屏上。</p>
+<p>音箱也被内置到手机中，变成内置扬声器。这些变化都因移动设备便携性的述求引起。从架构的角度，它们并没有引起实质性的变化，只是鼠标事件变成了触摸事件。</p>
+<h2 id="智能交互"><a href="#智能交互" class="headerlink" title="智能交互"></a>智能交互</h2><p><strong>麦克风让计算机多了一个输入：语音。</strong>有三种典型的用法。</p>
+<p>一是在应用内把语音录下来，直接作为类似照片视频的媒体消息，或者识别为文本去应用（比如语音搜索）。</p>
+<p>二是作为语音输入法输入文本（逻辑上可以认为是第一种情况的特例，只不过输入法在操作系统中往往有其特殊的地位）。</p>
+<p>三是基于类似 Siri 语音助手来交互。</p>
+<p>语音助手是被寄予厚望的新的交互范式。它可能开启了新的交互时代，我们不妨把它叫智能交互时代。但当前它与图形界面程序结构并不相容，而是完全自成体系，如下：</p>
+<p><img src="https://static001.geekbang.org/resource/image/d2/78/d2fcb17480e88fcc398b6f702f7ea578.jpg" alt></p>
+<p>为什么语音交互和图形界面交互没法很好地融合在一起？我认为有两个原因。</p>
+<p><strong>一是语音交互有很强的上下文，所以语音交互程序通常其业务代码也由语音交互系统提供的框架所驱动。</strong>框架的特点是侵入性强，框架与框架之间很难融合。</p>
+<p><strong>二是语音交互还不成熟，所以独立发展更简单，如果有一天成熟了，完全可以重写框架，把语音和触摸屏结合起来，形成全新的交互范式。</strong></p>
+<p>未来交互会怎样？智能交互很可能不会止步于语音，而是视频（同是兼顾视觉和听觉），且与触摸屏完美融合。使用的交互设备有<strong>触摸屏+摄像头+麦克风+内置扬声器</strong>。整个程序的结构如下所示。</p>
+<p><img src="https://static001.geekbang.org/resource/image/b9/ff/b9ad3b924ecbe054325da1d4243b39ff.png" alt></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>通过以上对交互演化历程的回顾，我们看到交互范式的演进是非常剧烈的。交互体验越来越自然，但从编程的角度来说，如果没有操作系统支持，实现难度也将越来越高。</p>
+<p>这也说明了一点，桌面操作系统和服务端操作系统的演进方向非常不一样。桌面操作系统的演进方向主要是交互范式的迭代，在向着越来越自然、越来越智能的交互前进。</p>
+<p>如果你对今天的内容有什么思考与解读，欢迎给我留言，我们一起讨论。下一讲我们将介绍：“图形界面程序的框架”。</p>
+<p>如果你觉得有所收获，也欢迎把文章分享给你的朋友。感谢你的收听，我们下期再见。</p>
+<p><img src="https://static001.geekbang.org/resource/image/43/00/43231f3789095eb4cdb38e67ff3d7900.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/许世伟的架构课/">Previous</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/许世伟的架构课/page/3/">Next</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/categories/许世伟的架构课/page/2/">2</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/page/3/">3</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/page/4/">4</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/categories/许世伟的架构课/page/5/">5</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/avatar.png" alt="xcool">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        xcool
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        enchanter
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>http://www.enchanter.tech</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        99
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhangxiongxin/blog" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/zhangxiongxin">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/许世伟的架构课/">
+            <span class="level-start">
+                <span class="level-item">许世伟的架构课</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">42</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/重学前端/">
+            <span class="level-start">
+                <span class="level-item">重学前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">57</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Enchanter" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 xcool&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

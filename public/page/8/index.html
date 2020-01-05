@@ -1,0 +1,2400 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Enchanter</title>
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Enchanter">
+<meta property="og:url" content="http://193.112.81.28:3002/page/8/index.html">
+<meta property="og:site_name" content="Enchanter">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://193.112.81.28:3002/images/og_image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Enchanter">
+<meta name="twitter:image" content="http://193.112.81.28:3002/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Enchanter" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:41.248Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    18 minutes read (About 2741 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript执行（三）：你知道现在有多少种函数吗？/">JavaScript执行（三）：你知道现在有多少种函数吗？</a>
+            
+        </h1>
+        <div class="content">
+            <p>在前一篇文章中，我们大致了解了执行上下文是什么，也知道了任何语句的执行都会依赖特定的上下文。</p>
+<p>一旦上下文被切换，整个语句的效果可能都会发生改变。那么，切换上下文的时机就显得非常重要了。</p>
+<p>在JavaScript，切换上下文最主要的场景是函数调用。在这一课，我们就来讲讲函数调用切换上下文的事情。我们在讲函数调用之前，首先来认识一下函数家族。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>在ES2018中，函数已经是一个很复杂的体系了，我在这里整理了一下。</p>
+<p><strong>第一种，普通函数：用function关键字定义的函数。</strong></p>
+<p>示例：</p>
+<pre><code>function foo(){
+    // code
+}</code></pre><p><strong>第二种，箭头函数：用 =&gt; 运算符定义的函数。</strong></p>
+<p>示例:</p>
+<pre><code>const foo = () =&gt; {
+    // code
+}</code></pre><p><strong>第三种，方法：在class中定义的函数。</strong></p>
+<p>示例：</p>
+<pre><code>class C {
+    foo(){
+        //code
+    }
+}</code></pre><p><strong>第四种，生成器函数：用function * 定义的函数。</strong></p>
+<p>示例：</p>
+<pre><code>function* foo(){
+    // code
+}</code></pre><p><strong>第五种，类：用class定义的类，实际上也是函数。</strong></p>
+<p>示例：</p>
+<pre><code>class Foo {
+    constructor(){
+        //code
+    }
+}</code></pre><p><strong>第六/七/八种，异步函数：普通函数、箭头函数和生成器函数加上async关键字。</strong></p>
+<p>示例：</p>
+<pre><code>async function foo(){
+    // code
+}
+const foo = async () =&gt; {
+    // code
+}
+async function foo*(){
+    // code
+}</code></pre><p>ES6以来，大量加入的新语法极大地方便了我们编程的同时，也增加了很多我们理解的心智负担。要想认识这些函数的执行上下文切换，我们必须要对它们行为上的区别有所了解。</p>
+<p>对普通变量而言，这些函数并没有本质区别，都是遵循了“继承定义时环境”的规则，它们的一个行为差异在于this关键字。</p>
+<p>那么，this关键字是什么呢，我们一起来看一看。</p>
+<h2 id="this关键字的行为"><a href="#this关键字的行为" class="headerlink" title="this关键字的行为"></a>this关键字的行为</h2><p>this是JavaScript中的一个关键字，它的使用方法类似于一个变量（但是this跟变量的行为有很多不同，上一节课我们讲了一些普通变量的行为和机制，也就是var声明和赋值、let的内容）。</p>
+<p><strong>this是执行上下文中很重要的一个组成部分。同一个函数调用方式不同，得到的this值也不同</strong>，我们看一个例子：</p>
+<pre><code>function showThis(){
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // global
+o.showThis(); // o</code></pre><p>在这个例子中，我们定义了函数showThis，我们把它赋值给一个对象o的属性，然后尝试分别使用两个引用来调用同一个函数，结果得到了不同的this值。</p>
+<p>普通函数的this值由“调用它所使用的引用”决定，其中奥秘就在于：我们获取函数的表达式，它实际上返回的并非函数本身，而是一个Reference类型（记得我们在类型一章讲过七种标准类型吗，正是其中之一）。</p>
+<p>Reference类型由两部分组成：一个对象和一个属性值。不难理解 o.showThis 产生的Reference类型，即由对象o和属性“showThis”构成。</p>
+<p>当做一些算术运算（或者其他运算时），Reference类型会被解引用，即获取真正的值（被引用的内容）来参与运算，而类似函数调用、delete等操作，都需要用到Reference类型中的对象。</p>
+<p>在这个例子中，Reference类型中的对象被当作this值，传入了执行函数时的上下文当中。</p>
+<p>至此，我们对this的解释已经非常清晰了：<strong>调用函数时使用的引用，决定了函数执行时刻的this值。</strong></p>
+<p>实际上从运行时的角度来看，this跟面向对象毫无关联，它是与函数调用时使用的表达式相关。</p>
+<p>这个设计来自JavaScript早年，通过这样的方式，巧妙地模仿了Java的语法，但是仍然保持了纯粹的“无类”运行时设施。</p>
+<p>如果，我们把这个例子稍作修改，换成箭头函数，结果就不一样了：</p>
+<pre><code>const showThis = () =&gt; {
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // global
+o.showThis(); // global</code></pre><p><strong>我们看到，改为箭头函数后，不论用什么引用来调用它，都不影响它的this值。</strong></p>
+<p>接下来我们看看“方法”，它的行为又不一样了：</p>
+<pre><code>class C {
+    showThis() {
+        console.log(this);
+    }
+}
+var o = new C();
+var showThis = o.showThis;
+
+showThis(); // undefined
+o.showThis(); // o</code></pre><p>这里我们创建了一个类C，并且实例化出对象o，再把o的方法赋值给了变量showThis。</p>
+<p>这时候，我们使用showThis这个引用去调用方法时，得到了undefined。</p>
+<p>所以，在方法中，我们看到this的行为也不太一样，它得到了undefined的结果。</p>
+<p>按照我们上面的方法，不难验证出：生成器函数、异步生成器函数和异步普通函数跟普通函数行为是一致的，异步箭头函数与箭头函数行为是一致的。</p>
+<h2 id="this关键字的机制"><a href="#this关键字的机制" class="headerlink" title="this关键字的机制"></a>this关键字的机制</h2><p>说完了this行为，我们再来简单谈谈在JavaScript内部，实现this这些行为的机制，让你对这部分知识有一个大概的认知。</p>
+<p>函数能够引用定义时的变量，如上文分析，函数也能记住定义时的this，因此，函数内部必定有一个机制来保存这些信息。</p>
+<p>在JavaScript标准中，为函数规定了用来保存定义时上下文的私有属性[[Environment]]。</p>
+<p>当一个函数执行时，会创建一条新的执行环境记录，记录的外层词法环境（outer lexical environment）会被设置成函数的[[Environment]]。</p>
+<p>这个动作就是<strong>切换上下文</strong>了，我们假设有这样的代码：</p>
+<pre><code>var a = 1;
+foo();
+
+在别处定义了foo：
+
+var b = 2;
+function foo(){
+    console.log(b); // 2
+    console.log(a); // error
+}</code></pre><p>这里的foo能够访问b（定义时词法环境），却不能访问a（执行时的词法环境），这就是执行上下文的切换机制了。</p>
+<p>JavaScript用一个栈来管理执行上下文，这个栈中的每一项又包含一个链表。如下图所示：</p>
+<p><img src="https://static001.geekbang.org/resource/image/e8/31/e8d8e96c983a832eb646d6c17ff3df31.jpg" alt></p>
+<p>当函数调用时，会入栈一个新的执行上下文，函数调用结束时，执行上下文被出栈。</p>
+<p>而this则是一个更为复杂的机制，JavaScript标准定义了 [[thisMode]] 私有属性。</p>
+<p>[[thisMode]] 私有属性有三个取值。</p>
+<ul>
+<li>lexical：表示从上下文中找this，这对应了箭头函数。</li>
+<li>global：表示当this为undefined时，取全局对象，对应了普通函数。</li>
+<li>strict：当严格模式时使用，this严格按照调用时传入的值，可能为null或者undefined。</li>
+</ul>
+<p>非常有意思的是，方法的行为跟普通函数有差异，恰恰是因为class设计成了默认按strict模式执行。</p>
+<p>我们可以用strict达成与上一节中方法的例子一样的效果:</p>
+<pre><code>&quot;use strict&quot;
+function showThis(){
+    console.log(this);
+}
+
+var o = {
+    showThis: showThis
+}
+
+showThis(); // undefined
+o.showThis(); // o</code></pre><p>函数创建新的执行上下文中的词法环境记录时，会根据[[thisMode]]来标记新纪录的[[ThisBindingStatus]]私有属性。</p>
+<p>代码执行遇到this时，会逐层检查当前词法环境记录中的[[ThisBindingStatus]]，当找到有this的环境记录时获取this的值。</p>
+<p>这样的规则的实际效果是，嵌套的箭头函数中的代码都指向外层this，例如：</p>
+<pre><code>var o = {}
+o.foo = function foo(){
+    console.log(this);
+    return () =&gt; {
+        console.log(this);
+        return () =&gt; console.log(this);
+    }
+}
+
+o.foo()()(); // o, o, o</code></pre><p>这个例子中，我们定义了三层嵌套的函数，最外层为普通函数，两层都是箭头函数。</p>
+<p>这里调用三个函数，获得的this值是一致的，都是对象o。</p>
+<p>JavaScript还提供了一系列函数的内置方法来操纵this值，下面我们来了解一下。</p>
+<h2 id="操作this的内置函数"><a href="#操作this的内置函数" class="headerlink" title="操作this的内置函数"></a>操作this的内置函数</h2><p>Function.prototype.call 和 Function.prototype.apply 可以指定函数调用时传入的this值，示例如下：</p>
+<pre><code>function foo(a, b, c){
+    console.log(this);
+    console.log(a, b, c);
+}
+foo.call({}, 1, 2, 3);
+foo.apply({}, [1, 2, 3]);</code></pre><p>这里call和apply作用是一样的，只是传参方式有区别。</p>
+<p>此外，还有 Function.prototype.bind 它可以生成一个绑定过的函数，这个函数的this值固定了参数：</p>
+<pre><code>function foo(a, b, c){
+    console.log(this);
+    console.log(a, b, c);
+}
+foo.bind({}, 1, 2, 3)();</code></pre><p>有趣的是，call、bind和apply用于不接受this的函数类型如箭头、class都不会报错。</p>
+<p>这时候，它们无法实现改变this的能力，但是可以实现传参。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在这一节课程中，我们认识了ES2018中规定的各种函数，我一共简单介绍了8种函数。</p>
+<p>我们围绕this这个中心，介绍了函数的执行上下文切换机制。同时我们还讲解了this中的一些相关知识。包括了操作this的内置函数。</p>
+<p>最后，留给你一个问题，你在日常开发中用过哪些函数类型呢？欢迎给我留言，我们一起讨论。</p>
+<hr>
+<h2 id="补充阅读：new与this"><a href="#补充阅读：new与this" class="headerlink" title="补充阅读：new与this"></a>补充阅读：new与this</h2><p>我们在之前的对象部分已经讲过new的执行过程，我们再来看一下：</p>
+<ul>
+<li>以构造器的 prototype 属性（注意与私有字段[[prototype]]的区分）为原型，创建新对象；</li>
+<li>将 this 和调用参数传给构造器，执行；</li>
+<li>如果构造器返回的是对象，则返回，否则返回第一步创建的对象。</li>
+</ul>
+<p>显然，通过new调用函数，跟直接调用的this取值有明显区别。那么我们今天讲的这些函数跟new搭配又会产生什么效果呢？</p>
+<p>这里我整理了一张表：</p>
+<p><img src="https://static001.geekbang.org/resource/image/6a/da/6a9f0525b713a903c6c94f52afaea3da.png" alt></p>
+<p>我们可以看到，仅普通函数和类能够跟new搭配使用，这倒是给我们省去了不少麻烦。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:39.394Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    23 minutes read (About 3458 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript执行（二）：闭包和执行上下文到底是怎么回事？/">JavaScript执行（二）：闭包和执行上下文到底是怎么回事？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>在上一课，我们了解了JavaScript执行中最粗粒度的任务：传给引擎执行的代码段。并且，我们还根据“由JavaScript引擎发起”还是“由宿主发起”，分成了宏观任务和微观任务，接下来我们继续去看一看更细的执行粒度。</p>
+<p>一段JavaScript代码可能会包含函数调用的相关内容，从今天开始，我们就用两节课的时间来了解一下函数的执行。</p>
+<p>我们今天要讲的知识在网上有不同的名字，比较常见的可能有：</p>
+<ul>
+<li>闭包；</li>
+<li>作用域链；</li>
+<li>执行上下文；</li>
+<li>this值。</li>
+</ul>
+<p>实际上，尽管它们是表示不同的意思的术语，所指向的几乎是同一部分知识，那就是函数执行过程相关的知识。我们可以简单看一下图。</p>
+<p><img src="https://static001.geekbang.org/resource/image/68/52/68f50c00d475a7d6d8c7eef6a91b2152.png" alt></p>
+<p>看着也许会有点晕，别着急，我会和你共同理一下它们之间的关系。</p>
+<p>当然，除了让你理解函数执行过程的知识，理清这些概念也非常重要。所以我们先来讲讲这个有点复杂的概念：闭包。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包翻译自英文单词closure，这是个不太好翻译的词，在计算机领域，它就有三个完全不相同的意义：编译原理中，它是处理语法产生式的一个步骤；计算几何中，它表示包裹平面点集的凸多边形（翻译作凸包）；而在编程语言领域，它表示一种函数。</p>
+<p>闭包这个概念第一次出现在1964年的《The Computer Journal》上，由P. J. Landin在《The mechanical evaluation of expressions》一文中提出了applicative expression和closure的概念。</p>
+<p><img src="https://static001.geekbang.org/resource/image/9b/0c/9b6c6693afe654b4cfdbf16852b82a0c.png" alt></p>
+<p>在上世纪60年代，主流的编程语言是基于lambda演算的函数式编程语言，所以这个最初的闭包定义，使用了大量的函数式术语。一个不太精确的描述是“带有一系列信息的λ表达式”。对函数式语言而言，λ表达式其实就是函数。</p>
+<p>我们可以这样简单理解一下，闭包其实只是一个绑定了执行环境的函数，这个函数并不是印在书本里的一条简单的表达式，闭包与普通函数的区别是，它携带了执行的环境，就像人在外星中需要自带吸氧的装备一样，这个函数也带有在程序中生存的环境。</p>
+<p>这个古典的闭包定义中，闭包包含两个部分。</p>
+<ul>
+<li><p>环境部分</p>
+</li>
+<li><p>环境</p>
+</li>
+<li><p>标识符列表</p>
+</li>
+<li><p>表达式部分</p>
+</li>
+</ul>
+<p>当我们把视角放在JavaScript的标准中，我们发现，标准中并没有出现过closure这个术语，但是，我们却不难根据古典定义，在JavaScript中找到对应的闭包组成部分。</p>
+<ul>
+<li><p>环境部分</p>
+</li>
+<li><p>环境：函数的词法环境（执行上下文的一部分）</p>
+</li>
+<li><p>标识符列表：函数中用到的未声明的变量</p>
+</li>
+<li><p>表达式部分：函数体</p>
+</li>
+</ul>
+<p>至此，我们可以认为，JavaScript中的函数完全符合闭包的定义。它的环境部分是函数词法环境部分组成，它的标识符列表是函数中用到的未声明变量，它的表达式部分就是函数体。</p>
+<p>这里我们容易产生一个常见的概念误区，有些人会把JavaScript执行上下文，或者作用域（Scope，ES3中规定的执行上下文的一部分）这个概念当作闭包。</p>
+<p>实际上JavaScript中跟闭包对应的概念就是“函数”，可能是这个概念太过于普通，跟闭包看起来又没什么联系，所以大家才不自觉地把这个概念对应到了看起来更特别的“作用域”吧（其实我早年也是这么理解闭包，直到后来被朋友纠正，查了资料才改正过来）。</p>
+<h3 id="执行上下文：执行的基础设施"><a href="#执行上下文：执行的基础设施" class="headerlink" title="执行上下文：执行的基础设施"></a>执行上下文：执行的基础设施</h3><p>相比普通函数，JavaScript函数的主要复杂性来自于它携带的“环境部分”。当然，发展到今天的JavaScript，它所定义的环境部分，已经比当初经典的定义复杂了很多。</p>
+<p>JavaScript中与闭包“环境部分”相对应的术语是“词法环境”，但是JavaScript函数比λ函数要复杂得多，我们还要处理this、变量声明、with等等一系列的复杂语法，λ函数中可没有这些东西，所以，在JavaScript的设计中，词法环境只是JavaScript执行上下文的一部分。</p>
+<p>JavaScript标准把一段代码（包括函数），执行所需的所有信息定义为：“执行上下文”。</p>
+<p>因为这部分术语经历了比较多的版本和社区的演绎，所以定义比较混乱，这里我们先来理一下JavaScript中的概念。</p>
+<p><strong>执行上下文在ES3中</strong>，包含三个部分。</p>
+<ul>
+<li>scope：作用域，也常常被叫做作用域链。</li>
+<li>variable object：变量对象，用于存储变量的对象。</li>
+<li>this value：this值。</li>
+</ul>
+<p><strong>在ES5中</strong>，我们改进了命名方式，把执行上下文最初的三个部分改为下面这个样子。</p>
+<ul>
+<li>lexical environment：词法环境，当获取变量时使用。</li>
+<li>variable environment：变量环境，当声明变量时使用。</li>
+<li>this value：this值。</li>
+</ul>
+<p><strong>在ES2018中</strong>，执行上下文又变成了这个样子，this值被归入lexical environment，但是增加了不少内容。</p>
+<ul>
+<li>lexical environment：词法环境，当获取变量或者this值时使用。</li>
+<li>variable environment：变量环境，当声明变量时使用。</li>
+<li>code evaluation state：用于恢复代码执行位置。</li>
+<li>Function：执行的任务是函数时使用，表示正在被执行的函数。</li>
+<li>ScriptOrModule：执行的任务是脚本或者模块时使用，表示正在被执行的代码。</li>
+<li>Realm：使用的基础库和内置对象实例。</li>
+<li>Generator：仅生成器上下文有这个属性，表示当前生成器。</li>
+</ul>
+<p>我们在这里介绍执行上下文的各个版本定义，是考虑到你可能会从各种网上的文章中接触这些概念，如果不把它们理清楚，我们就很难分辨对错。如果是我们自己使用，我建议统一使用最新的ES2018中规定的术语定义。</p>
+<p>尽管我们介绍了这些定义，但我并不打算按照JavaScript标准的思路，从实现的角度去介绍函数的执行过程，这是不容易被理解的。</p>
+<p>我想试着从代码实例出发，跟你一起推导函数执行过程中需要哪些信息，它们又对应着执行上下文中的哪些部分。</p>
+<p>比如，我们看以下的这段JavaScript代码：</p>
+<pre><code>var b = {}
+let c = 1
+this.a = 2;</code></pre><p>要想正确执行它，我们需要知道以下信息：</p>
+<ol>
+<li>var 把 b 声明到哪里；</li>
+<li>b 表示哪个变量；</li>
+<li>b 的原型是哪个对象；</li>
+<li>let 把 c 声明到哪里；</li>
+<li>this 指向哪个对象。</li>
+</ol>
+<p>这些信息就需要执行上下文来给出了，这段代码出现在不同的位置，甚至在每次执行中，会关联到不同的执行上下文，所以，同样的代码会产生不一样的行为。</p>
+<p>在这两篇文章中，我会基本覆盖执行上下文的组成部分，本篇我们先讲var声明与赋值，let，realm三个特性来分析上下文提供的信息，分析执行上下文中提供的信息。</p>
+<h3 id="var-声明与赋值"><a href="#var-声明与赋值" class="headerlink" title="var 声明与赋值"></a>var 声明与赋值</h3><p>我们来分析一段代码：</p>
+<pre><code>var b = 1</code></pre><p>通常我们认为它声明了b，并且为它赋值为1，var声明作用域函数执行的作用域。也就是说，var会穿透for 、if等语句。</p>
+<p>在只有var，没有let的旧JavaScript时代，诞生了一个技巧，叫做：立即执行的函数表达式（IIFE），通过创建一个函数，并且立即执行，来构造一个新的域，从而控制var的范围。</p>
+<p>由于语法规定了function关键字开头是函数声明，所以要想让函数变成函数表达式，我们必须得加点东西，最常见的做法是加括号。</p>
+<pre><code>(function(){
+    var a;
+    //code
+}());
+
+
+(function(){
+    var a;
+    //code
+})();</code></pre><p>但是，括号有个缺点，那就是如果上一行代码不写分号，括号会被解释为上一行代码最末的函数调用，产生完全不符合预期，并且难以调试的行为，加号等运算符也有类似的问题。所以一些推荐不加分号的代码风格规范，会要求在括号前面加上分号。</p>
+<pre><code>;(function(){
+    var a;
+    //code
+}())
+
+
+;(function(){
+    var a;
+    //code
+})()</code></pre><p>我比较推荐的写法是使用void关键字。也就是下面的这种形式。</p>
+<pre><code>void function(){
+    var a;
+    //code
+}();</code></pre><p>这有效避免了语法问题，同时，语义上void运算表示忽略后面表达式的值，变成undefined，我们确实不关心IIFE的返回值，所以语义也更为合理。</p>
+<p>值得特别注意的是，有时候var的特性会导致声明的变量和被赋值的变量是两个b，JavaScript中有特例，那就是使用with的时候：</p>
+<pre><code>var b;
+void function(){
+    var env = {b:1};
+    b = 2;
+    console.log(&quot;In function b:&quot;, b);
+    with(env) {
+        var b = 3;
+        console.log(&quot;In with b:&quot;, b);
+    }
+}();
+console.log(&quot;Global b:&quot;, b);</code></pre><p>在这个例子中，我们利用立即执行的函数表达式（IIFE）构造了一个函数的执行环境，并且在里面使用了我们一开头的代码。</p>
+<p>可以看到，在Global function with三个环境中，b的值都不一样，而在function环境中，并没有出现var b，这说明with内的var b作用到了function这个环境当中。</p>
+<p>var b = {} 这样一句对两个域产生了作用，从语言的角度是个非常糟糕的设计，这也是一些人坚定地反对在任何场景下使用with的原因之一。</p>
+<h3 id="let"><a href="#let" class="headerlink" title="let"></a>let</h3><p>let是 ES6开始引入的新的变量声明模式，比起var的诸多弊病，let做了非常明确的梳理和规定。</p>
+<p>为了实现let，JavaScript在运行时引入了块级作用域。也就是说，在let出现之前，JavaScript的 if for 等语句皆不产生作用域。</p>
+<p>我简单统计了下，以下语句会产生let使用的作用域：</p>
+<ul>
+<li>for；</li>
+<li>if；</li>
+<li>switch；</li>
+<li>try/catch/finally。</li>
+</ul>
+<h3 id="Realm"><a href="#Realm" class="headerlink" title="Realm"></a>Realm</h3><p>在最新的标准（9.0）中，JavaScript引入了一个新概念Realm，它的中文意思是“国度”“领域”“范围”。这个英文的用法就有点比喻的意思，几个翻译都不太适合JavaScript语境，所以这里就不翻译啦。</p>
+<p>我们继续来看这段代码：</p>
+<pre><code>var b = {}</code></pre><p>在 ES2016 之前的版本中，标准中甚少提及{}的原型问题。但在实际的前端开发中，通过iframe等方式创建多window环境并非罕见的操作，所以，这才促成了新概念Realm的引入。</p>
+<p>Realm中包含一组完整的内置对象，而且是复制关系。</p>
+<p>对不同Realm中的对象操作，会有一些需要格外注意的问题，比如 instanceOf 几乎是失效的。</p>
+<p>以下代码展示了在浏览器环境中获取来自两个Realm的对象，它们跟本土的Object做instanceOf时会产生差异：</p>
+<pre><code>var iframe = document.createElement(&apos;iframe&apos;)
+document.documentElement.appendChild(iframe)
+iframe.src=&quot;javascript:var b = {};&quot;
+
+var b1 = iframe.contentWindow.b;
+var b2 = {};
+
+console.log(typeof b1, typeof b2); //object object
+
+console.log(b1 instanceof Object, b2 instanceof Object); //false true</code></pre><p>可以看到，由于b1、 b2由同样的代码“ {} ”在不同的Realm中执行，所以表现出了不同的行为。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在今天的课程中，我帮你梳理了一些概念：有编程语言的概念闭包，也有各个版本中的JavaScript标准中的概念：执行上下文、作用域、this值等等。</p>
+<p>之后我们又从代码的角度，分析了一些执行上下文中所需要的信息，并从<code>var</code>、<code>let</code>、对象字面量等语法中，推导出了词法作用域、变量作用域、Realm的设计。</p>
+<p>最后留给你一个问题：你喜欢使用let还是var？听过今天的课程，你的想法是否有改变呢？为什么？</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:37.441Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    17 minutes read (About 2569 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/JavaScript执行（一）：Promise里的代码为什么比setTimeout先执行？/">JavaScript执行（一）：Promise里的代码为什么比setTimeout先执行？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。这一部分我们来讲一讲JavaScript的执行。</p>
+<p>首先我们考虑一下，如果我们是浏览器或者Node的开发者，我们该如何使用JavaScript引擎。</p>
+<p>当拿到一段JavaScript代码时，浏览器或者Node环境首先要做的就是；传递给JavaScript引擎，并且要求它去执行。</p>
+<p>然而，执行JavaScript并非一锤子买卖，宿主环境当遇到一些事件时，会继续把一段代码传递给JavaScript引擎去执行，此外，我们可能还会提供API给JavaScript引擎，比如setTimeout这样的API，它会允许JavaScript在特定的时机执行。</p>
+<p>所以，我们首先应该形成一个感性的认知：一个JavaScript引擎会常驻于内存中，它等待着我们（宿主）把JavaScript代码或者函数传递给它执行。</p>
+<p>在ES3和更早的版本中，JavaScript本身还没有异步执行代码的能力，这也就意味着，宿主环境传递给JavaScript引擎一段代码，引擎就把代码直接顺次执行了，这个任务也就是宿主发起的任务。</p>
+<p>但是，在ES5之后，JavaScript引入了Promise，这样，不需要浏览器的安排，JavaScript引擎本身也可以发起任务了。</p>
+<p>由于我们这里主要讲JavaScript语言，那么采纳JSC引擎的术语，我们把宿主发起的任务称为宏观任务，把JavaScript引擎发起的任务称为微观任务。</p>
+<h2 id="宏观和微观任务"><a href="#宏观和微观任务" class="headerlink" title="宏观和微观任务"></a>宏观和微观任务</h2><p>JavaScript引擎等待宿主环境分配宏观任务，在操作系统中，通常等待的行为都是一个事件循环，所以在Node术语中，也会把这个部分称为事件循环。</p>
+<p>不过，术语本身并非我们需要重点讨论的内容，我们在这里把重点放在事件循环的原理上。在底层的C/C++代码中，这个事件循环是一个跑在独立线程中的循环，我们用伪代码来表示，大概是这样的：</p>
+<pre><code>while(TRUE) {
+    r = wait();
+    execute(r);
+}</code></pre><p>我们可以看到，整个循环做的事情基本上就是反复“等待-执行”。当然，实际的代码中并没有这么简单，还有要判断循环是否结束、宏观任务队列等逻辑，这里为了方便你理解，我就把这些都省略掉了。</p>
+<p>这里每次的执行过程，其实都是一个宏观任务。我们可以大概理解：宏观任务的队列就相当于事件循环。</p>
+<p>在宏观任务中，JavaScript的Promise还会产生异步代码，JavaScript必须保证这些异步代码在一个宏观任务中完成，因此，每个宏观任务中又包含了一个微观任务队列：</p>
+<p><img src="https://static001.geekbang.org/resource/image/16/65/16f70a9a51a65d5302166b0d78414d65.jpg" alt></p>
+<p>有了宏观任务和微观任务机制，我们就可以实现JavaScript引擎级和宿主级的任务了，例如：Promise永远在队列尾部添加微观任务。setTimeout等宿主API，则会添加宏观任务。</p>
+<p>接下来，我们来详细介绍一下Promise。</p>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>Promise是JavaScript语言提供的一种标准化的异步管理方式，它的总体思想是，需要进行io、等待或者其它异步操作的函数，不返回真实结果，而返回一个“承诺”，函数的调用方可以在合适的时机，选择等待这个承诺兑现（通过Promise的then方法的回调）。</p>
+<p>Promise的基本用法示例如下：</p>
+<pre><code>function sleep(duration) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(resolve,duration);
+    })
+}
+sleep(1000).then( ()=&gt; console.log(&quot;finished&quot;));</code></pre><p>这段代码定义了一个函数sleep，它的作用是等候传入参数指定的时长。</p>
+<p>Promise的then回调是一个异步的执行过程，下面我们就来研究一下Promise函数中的执行顺序，我们来看一段代码示例：</p>
+<pre><code>var r = new Promise(function(resolve, reject){
+    console.log(&quot;a&quot;);
+    resolve()
+});
+r.then(() =&gt; console.log(&quot;c&quot;));
+console.log(&quot;b&quot;)</code></pre><p>我们执行这段代码后，注意输出的顺序是 a b c。在进入console.log(“b”) 之前，毫无疑问 r 已经得到了resolve，但是Promise的resolve始终是异步操作，所以c无法出现在b之前。</p>
+<p>接下来我们试试跟setTimeout混用的Promise。</p>
+<p>在这段代码中，我设置了两段互不相干的异步操作：通过setTimeout执行console.log(“d”)，通过Promise执行console.log(“c”)。</p>
+<pre><code>var r = new Promise(function(resolve, reject){
+    console.log(&quot;a&quot;);
+    resolve()
+});
+setTimeout(()=&gt;console.log(&quot;d&quot;), 0)
+r.then(() =&gt; console.log(&quot;c&quot;));
+console.log(&quot;b&quot;)</code></pre><p>我们发现，不论代码顺序如何，d必定发生在c之后，因为Promise产生的是JavaScript引擎内部的微任务，而setTimeout是浏览器API，它产生宏任务。</p>
+<p>为了理解微任务始终先于宏任务，我们设计一个实验：执行一个耗时1秒的Promise。</p>
+<pre><code>setTimeout(()=&gt;console.log(&quot;d&quot;), 0)
+var r = new Promise(function(resolve, reject){
+    resolve()
+});
+r.then(() =&gt; { 
+    var begin = Date.now();
+    while(Date.now() - begin &lt; 1000);
+    console.log(&quot;c1&quot;) 
+    new Promise(function(resolve, reject){
+        resolve()
+    }).then(() =&gt; console.log(&quot;c2&quot;))
+});</code></pre><p>这里我们强制了1秒的执行耗时，这样，我们可以确保任务c2是在d之后被添加到任务队列。</p>
+<p>我们可以看到，即使耗时一秒的c1执行完毕，再enque的c2，仍然先于d执行了，这很好地解释了微任务优先的原理。</p>
+<p>通过一系列的实验，我们可以总结一下如何分析异步执行的顺序：</p>
+<ul>
+<li>首先我们分析有多少个宏任务；</li>
+<li>在每个宏任务中，分析有多少个微任务；</li>
+<li>根据调用次序，确定宏任务中的微任务执行次序；</li>
+<li>根据宏任务的触发规则和调用次序，确定宏任务的执行次序；</li>
+<li>确定整个顺序。</li>
+</ul>
+<p>我们再来看一个稍微复杂的例子：</p>
+<pre><code>function sleep(duration) {
+    return new Promise(function(resolve, reject) {
+        console.log(&quot;b&quot;);
+        setTimeout(resolve,duration);
+    })
+}
+console.log(&quot;a&quot;);
+sleep(5000).then(()=&gt;console.log(&quot;c&quot;));</code></pre><p>这是一段非常常用的封装方法，利用Promise把setTimeout封装成可以用于异步的函数。</p>
+<p>我们首先来看，setTimeout把整个代码分割成了2个宏观任务，这里不论是5秒还是0秒，都是一样的。</p>
+<p>第一个宏观任务中，包含了先后同步执行的 console.log(“a”); 和 console.log(“b”);。</p>
+<p>setTimeout后，第二个宏观任务执行调用了resolve，然后then中的代码异步得到执行，所以调用了console.log(“c”)，最终输出的顺序才是： a b c。</p>
+<p>Promise是JavaScript中的一个定义，但是实际编写代码时，我们可以发现，它似乎并不比回调的方式书写更简单，但是从ES6开始，我们有了async/await，这个语法改进跟Promise配合，能够有效地改善代码结构。</p>
+<h2 id="新特性：async-await"><a href="#新特性：async-await" class="headerlink" title="新特性：async/await"></a>新特性：async/await</h2><p>async/await是ES2016新加入的特性，它提供了用for、if等代码结构来编写异步的方式。它的运行时基础是Promise，面对这种比较新的特性，我们先来看一下基本用法。</p>
+<p>async函数必定返回Promise，我们把所有返回Promise的函数都可以认为是异步函数。</p>
+<p>async函数是一种特殊语法，特征是在function关键字之前加上async关键字，这样，就定义了一个async函数，我们可以在其中使用await来等待一个Promise。</p>
+<pre><code>function sleep(duration) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(resolve,duration);
+    })
+}
+async function foo(){
+    console.log(&quot;a&quot;)
+    await sleep(2000)
+    console.log(&quot;b&quot;)
+}</code></pre><p>这段代码利用了我们之前定义的sleep函数。在异步函数foo中，我们调用sleep。</p>
+<p>async函数强大之处在于，它是可以嵌套的。我们在定义了一批原子操作的情况下，可以利用async函数组合出新的async函数。</p>
+<pre><code>function sleep(duration) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(resolve,duration);
+    })
+}
+async function foo(name){
+    await sleep(2000)
+    console.log(name)
+}
+async function foo2(){
+    await foo(&quot;a&quot;);
+    await foo(&quot;b&quot;);
+}</code></pre><p>这里foo2用await调用了两次异步函数foo，可以看到，如果我们把sleep这样的异步操作放入某一个框架或者库中，使用者几乎不需要了解Promise的概念即可进行异步编程了。</p>
+<p>此外，generator/iterator也常常被跟异步一起来讲，我们必须说明 generator/iterator 并非异步代码，只是在缺少async/await的时候，一些框架（最著名的要数co）使用这样的特性来模拟async/await。</p>
+<p>但是generator并非被设计成实现异步，所以有了async/await之后，generator/iterator来模拟异步的方法应该被废弃。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在今天的文章里，我们学习了JavaScript执行部分的知识，首先我们学习了JavaScript的宏观任务和微观任务相关的知识。我们把宿主发起的任务称为宏观任务，把JavaScript引擎发起的任务称为微观任务。许多的微观任务的队列组成了宏观任务。</p>
+<p>除此之外，我们还展开介绍了用Promise来添加微观任务的方式，并且介绍了async/await这个语法的改进。</p>
+<p>最后，留给你一个小练习：我们现在要实现一个红绿灯，把一个圆形div按照绿色3秒，黄色1秒，红色2秒循环改变背景色，你会怎样编写这个代码呢？欢迎你留言讨论。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:35.531Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    16 minutes read (About 2437 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/HTML元信息类标签：你知道head里一共能写哪几种标签吗？/">HTML元信息类标签：你知道head里一共能写哪几种标签吗？</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>我们在前面的HTML部分的课程中，已经学习了语义标签。这些标签涵盖了我们日常开发用到的多数标签，也是我们编写代码时最常用的一批标签。</p>
+<p>但是我们今天要讲的标签，重要性丝毫不弱于语义类标签，这就是页面元信息类标签。</p>
+<p>我们可以先来了解一下什么是元信息类标签。所谓元信息，是指描述自身的信息，元信息类标签，就是HTML用于描述文档自身的一类标签，它们通常出现在head标签中，一般都不会在页面被显示出来（与此相对，其它标签，如语义类标签，描述的是业务）。</p>
+<p>元信息多数情况下是给浏览器、搜索引擎等机器阅读的，有时候这些信息会在页面之外显示给用户，有时候则不会。</p>
+<p>元信息类标签数量不多，我在这里就逐一为你介绍一下。</p>
+<h2 id="head标签"><a href="#head标签" class="headerlink" title="head标签"></a>head标签</h2><p>首先我们先来了解一下head标签，head标签本身并不携带任何信息，它主要是作为盛放其它语义类标签的容器使用。</p>
+<p>head标签规定了自身必须是html标签中的第一个标签，它的内容必须包含一个title，并且最多只能包含一个base。如果文档作为iframe，或者有其他方式指定了文档标题时，可以允许不包含title标签。</p>
+<h2 id="title标签"><a href="#title标签" class="headerlink" title="title标签"></a>title标签</h2><p>title标签表示文档的标题，从字面上就非常容易理解。这里我就讲讲需要注意的地方。</p>
+<p>你还记得吗，我们的语义类标签中也有一组表示标题的标签：h1-h6。</p>
+<p>heading 和 title 两个英文单词意义区分十分微妙，在中文中更是找不到对应的词汇来区分。但是实际使用中，两者确实有一定区别。</p>
+<p>在HTML标准中，特意讨论了这个问题。我们思考一下，假设有一个介绍蜜蜂跳舞求偶仪式的科普页面，我们试着把以下两个文字分别对应到title和h1。</p>
+<ul>
+<li>蜜蜂求偶仪式舞蹈</li>
+<li>舞蹈</li>
+</ul>
+<p>在听/看正确答案前，你不妨先想想，自己的答案是什么呢？为什么？</p>
+<p>好了，思考之后，我们来看看正确答案。正确答案是“蜜蜂求偶仪式舞蹈”放入title，“舞蹈”放入h1。</p>
+<p>我来讲一讲为什么要这样放呢？这主要是考虑到title作为元信息，可能会被用在浏览器收藏夹、微信推送卡片、微博等各种场景，这时侯往往是上下文缺失的，所以title应该是完整地概括整个网页内容的。</p>
+<p>而h1则仅仅用于页面展示，它可以默认具有上下文，并且有链接辅助，所以可以简写，即便无法概括全文，也不会有很大的影响。</p>
+<h2 id="base标签"><a href="#base标签" class="headerlink" title="base标签"></a>base标签</h2><p>base标签实际上是个历史遗留标签。它的作用是给页面上所有的URL相对地址提供一个基础。</p>
+<p>base标签最多只有一个，它改变全局的链接地址，它是一个非常危险的标签，容易造成跟JavaScript的配合问题，所以在实际开发中，我比较建议你使用JavaScript来代替base标签。</p>
+<h2 id="meta标签"><a href="#meta标签" class="headerlink" title="meta标签"></a>meta标签</h2><p>meta标签是一组键值对，它是一种通用的元信息表示标签。</p>
+<p>在head中可以出现任意多个meta标签。一般的meta标签由name和content两个属性来定义。name表示元信息的名，content则用于表示元信息的值。</p>
+<p>它基本用法是下面这样的，你也可以自己动手尝试一下：</p>
+<pre><code>&lt;meta name=application-name content=&quot;lsForums&quot;&gt;</code></pre><p>这个标签表示页面所在的web-application，名为IsForums。</p>
+<p>这里的name是一种比较自由的约定，HTTP标准规定了一些name作为大家使用的共识，也鼓励大家发明自己的name来使用。</p>
+<p>除了基本用法，meta标签还有一些变体，主要用于简化书写方式或者声明自动化行为。下面我就挑几种重点的内容来分别讲解一下。</p>
+<h3 id="具有charset属性的meta"><a href="#具有charset属性的meta" class="headerlink" title="具有charset属性的meta"></a>具有charset属性的meta</h3><p>从HTML5开始，为了简化写法，meta标签新增了charset属性。添加了charset属性的meta标签无需再有name和content。</p>
+<pre><code>&lt;meta charset=&quot;UTF-8&quot; &gt;</code></pre><p>charset型meta标签非常关键，它描述了HTML文档自身的编码形式。因此，我建议这个标签放在head的第一个。</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+……</code></pre><p>这样，浏览器读到这个标签之前，处理的所有字符都是ASCII字符，众所周知，ASCII字符是UTF-8和绝大多数字符编码的子集，所以，在读到meta之前，浏览器把文档理解多数编码格式都不会出错，这样可以最大限度地保证不出现乱码。</p>
+<p>一般情况下，HTTP服务端会通过http头来指定正确的编码方式，但是有些特殊的情况如使用file协议打开一个HTML文件，则没有http头，这种时候，charset meta就非常重要了。</p>
+<h2 id="具有http-equiv属性的meta"><a href="#具有http-equiv属性的meta" class="headerlink" title="具有http-equiv属性的meta"></a>具有http-equiv属性的meta</h2><p>具有http-equiv属性的meta标签，表示执行一个命令，这样的meta标签可以不需要name属性了。</p>
+<p>例如，下面一段代码，相当于添加了content-type这个http头，并且指定了http编码方式。</p>
+<pre><code>&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;</code></pre><p>除了content-type，还有以下几种命令：</p>
+<ul>
+<li>content-language 指定内容的语言；</li>
+<li>default-style 指定默认样式表；</li>
+<li>refresh 刷新；</li>
+<li>set-cookie 模拟http头set-cookie，设置cookie；</li>
+<li>x-ua-compatible 模拟http头x-ua-compatible，声明ua兼容性；</li>
+<li>content-security-policy 模拟http头content-security-policy，声明内容安全策略。</li>
+</ul>
+<h3 id="name为viewport的meta"><a href="#name为viewport的meta" class="headerlink" title="name为viewport的meta"></a>name为viewport的meta</h3><p>实际上，meta标签可以被自由定义，只要写入和读取的双方约定好name和content的格式就可以了。</p>
+<p>我们来介绍一个meta类型，它没有在HTML标准中定义，却是移动端开发的事实标准：它就是name为viewport的meta。</p>
+<p>这类meta的name属性为viewport，它的content是一个复杂结构，是用逗号分隔的键值对，键值对的格式是key=value。</p>
+<p>例如：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=500, initial-scale=1&quot;&gt;</code></pre><p>这里只指定了两个属性，宽度和缩放，实际上viewport能控制的更多，它能表示的全部属性如下：</p>
+<ul>
+<li>width：页面宽度，可以取值具体的数字，也可以是device-width，表示跟设备宽度相等。</li>
+<li>height：页面高度，可以取值具体的数字，也可以是device-height，表示跟设备高度相等。</li>
+<li>initial-scale：初始缩放比例。</li>
+<li>minimum-scale：最小缩放比例。</li>
+<li>maximum-scale：最大缩放比例。</li>
+<li>user-scalable：是否允许用户缩放。</li>
+</ul>
+<p>对于已经做好了移动端适配的网页，应该把用户缩放功能禁止掉，宽度设为设备宽度，一个标准的meta如下：</p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</code></pre><h2 id="其它预定义的meta"><a href="#其它预定义的meta" class="headerlink" title="其它预定义的meta"></a>其它预定义的meta</h2><p>在HTML标准中，还定义了一批meta标签的name，可以视为一种有约定的meta，我在这里列出来，你可以简单了解一下。</p>
+<p>application-name：如果页面是Web application，用这个标签表示应用名称。</p>
+<ul>
+<li>author: 页面作者。</li>
+<li>description：页面描述，这个属性可能被用于搜索引擎或者其它场合。</li>
+<li>generator: 生成页面所使用的工具，主要用于可视化编辑器，如果是手写HTML的网页，不需要加这个meta。</li>
+<li>keywords: 页面关键字，对于SEO场景非常关键。</li>
+<li>referrer: 跳转策略，是一种安全考量。</li>
+<li>theme-color: 页面风格颜色，实际并不会影响页面，但是浏览器可能据此调整页面之外的UI（如窗口边框或者tab的颜色）。</li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在本课，我们又学习了一批标签，它们是文档用于描述自身的元信息类标签。一些元信息标签可以产生实际的行为，掌握它们对于我们编写代码是必须的。</p>
+<p>另一些元信息仅仅是对页面的描述，掌握它们可以使我们编写的页面跟各种浏览器、搜索引擎等结合地更好。</p>
+<p>主要包括下面这些内容。</p>
+<ul>
+<li>head：元信息的容器。</li>
+<li>title：文档标题。</li>
+<li>base：页面的基准URL。</li>
+<li>meta: 元信息通用标签。</li>
+</ul>
+<p>我们还展开介绍了几种重要的meta标签，charset表示页面编码，http-equiv表示命令，还介绍了一些有约定的meta名称。</p>
+<p>最后，给你留一个问题，你还见过哪些meta标签的用法？欢迎留言告诉我。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:33.654Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    22 minutes read (About 3271 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/浏览器：一个浏览器是如何工作的？（阶段五）/">浏览器：一个浏览器是如何工作的？（阶段五）</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。我们的浏览器系列已经进行到最后一篇。</p>
+<p>在之前的几篇文章中，我们已经经历了把URL变成字符流，把字符流变成词（token）流，把词（token）流构造成DOM树，把不含样式信息的DOM树应用CSS规则，变成包含样式信息的DOM树，并且根据样式信息，计算了每个元素的位置和大小。</p>
+<p>那么，我们最后的步骤，就是根据这些样式信息和大小信息，为每个元素在内存中渲染它的图形，并且把它绘制到对应的位置。</p>
+<h2 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h2><p>首先我们来谈谈渲染这个词，渲染也是个外来词，它是英文词render的翻译，render这个词在英文里面，有“导致”“变成”的意思，也有“粉刷墙壁”的意思。</p>
+<p>在计算机图形学领域里，英文render这个词是一个简写，它是特指把模型变成位图的过程。我们把render翻译成“渲染”，是个非常有意思的翻译，中文里“渲染”这个词是一种绘画技法，是指沾清水把墨涂开的意思。</p>
+<p>所以，render翻译成“渲染”，我认为是非常高明的，对render这个过程，用国画的渲染手法来概括，是颇有神似的。</p>
+<p>我们现在的一些框架，也会把“从数据变成HTML代码的过程”称为render，其实我觉得这是非常具有误导性的，我个人是非常不喜欢这种命名方式，当然了，所谓“文无第一”，在自然语言的范围里，我们很难彻底否定这种用法的合理性。</p>
+<p>不过，在本篇文章中，我们可以约定一下，本文中出现的“渲染”一词，统一指的是它在图形学的意义，也就是把模型变成位图的过程。</p>
+<p>这里的位图就是在内存里建立一张二维表格，把一张图片的每个像素对应的颜色保存进去（位图信息也是DOM树中占据浏览器内存最多的信息，我们在做内存占用优化时，主要就是考虑这一部分）。</p>
+<p>浏览器中渲染这个过程，就是把每一个元素对应的盒变成位图。这里的元素包括HTML元素和伪元素，一个元素可能对应多个盒（比如inline元素，可能会分成多行）。每一个盒对应着一张位图。</p>
+<p>这个渲染过程是非常复杂的，但是总体来说，可以分成两个大类：图形和文字。</p>
+<p>盒的背景、边框、SVG元素、阴影等特性，都是需要绘制的图形类。这就像我们实现HTTP协议必须要基于TCP库一样，这一部分，我们需要一个底层库来支持。</p>
+<p>一般的操作系统会提供一个底层库，比如在Android中，有大名鼎鼎的Skia，而Windows平台则有GDI，一般的浏览器会做一个兼容层来处理掉平台差异。</p>
+<p>这些盒的特性如何绘制，每一个都有对应的标准规定，而每一个的实现都可以作为一个独立的课题来研究，当年圆角+虚线边框，可是难倒了各个浏览器的工程师。考虑到这些知识互相都比较独立，对前端工程师来说也不是特别重要的细节，我们这里就不详细探究了。</p>
+<p>盒中的文字，也需要用底层库来支持，叫做字体库。字体库提供读取字体文件的基本能力，它能根据字符的码点抽取出字形。</p>
+<p>字形分为像素字形和矢量字形两种。通常的字体，会在6px 8px等小尺寸提供像素字形，比较大的尺寸则提供矢量字形。矢量字形本身就需要经过渲染才能继续渲染到元素的位图上去。目前最常用的字体库是Freetype，这是一个C++编写的开源的字体库。</p>
+<p>在最普遍的情况下，渲染过程生成的位图尺寸跟它在上一步排版时占据的尺寸相同。</p>
+<p>但是理想和现实是有差距的，很多属性会影响渲染位图的大小，比如阴影，它可能非常巨大，或者渲染到非常遥远的位置，所以为了优化，浏览器实际的实现中会把阴影作为一个独立的盒来处理。</p>
+<p>注意，我们这里讲的渲染过程，是不会把子元素绘制到渲染的位图上的，这样，当父子元素的相对位置发生变化时，可以保证渲染的结果能够最大程度被缓存，减少重新渲染。</p>
+<h2 id="合成"><a href="#合成" class="headerlink" title="合成"></a>合成</h2><p>合成是英文术语compositing的翻译，这个过程实际上是一个性能考量，它并非实现浏览器的必要一环。</p>
+<p>我们上一小节中讲到，渲染过程不会把子元素渲染到位图上面，合成的过程，就是为一些元素创建一个“合成后的位图”（我们把它称为合成层），把一部分子元素渲染到合成的位图上面。</p>
+<p>看到这句话，我想你一定会问问题，到底是为哪些元素创建合成后的位图，把哪些子元素渲染到合成的位图上面呢？</p>
+<p>这就是我们要讲的合成的策略。我们前面讲了，合成是一个性能考量，那么合成的目标就是提高性能，根据这个目标，我们建立的原则就是最大限度减少绘制次数原则。</p>
+<p>我们举一个极端的例子。如果我们把所有元素都进行合成，比如我们为根元素HTML创建一个合成后的位图，把所有子元素都进行合成，那么会发生什么呢？</p>
+<p>那就是，一旦我们用JavaScript或者别的什么方式，改变了任何一个CSS属性，这份合成后的位图就失效了，我们需要重新绘制所有的元素。</p>
+<p>那么如果我们所有的元素都不合成，会怎样呢？结果就是，相当于每次我们都必须要重新绘制所有的元素，这也不是对性能友好的选择。</p>
+<p>那么好的合成策略是什么呢，好的合成策略是“猜测”可能变化的元素，把它排除到合成之外。</p>
+<p>我们来举个例子：</p>
+<pre><code>&lt;div id=&quot;a&quot;&gt;
+    &lt;div id=&quot;b&quot;&gt;...&lt;/div&gt;
+    &lt;div id=&quot;c&quot; style=&quot;transform:translate(0,0)&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre><p>假设我们的合成策略能够把a、b两个div合成，而不把c合成，那么，当我执行以下代码时：</p>
+<pre><code>document.getElementById(&quot;c&quot;).style.transform = &quot;translate(100px, 0)&quot;;</code></pre><p>我们绘制的时候，就可以只需要绘制a和b合成好的位图和c，从而减少了绘制次数。这里需要注意的是，在实际场景中，我们的b可能有很多复杂的子元素，所以当合成命中时，性能提升收益非常之高。</p>
+<p>目前，主流浏览器一般根据position、transform等属性来决定合成策略，来“猜测”这些元素未来可能发生变化。</p>
+<p>但是，这样的猜测准确性有限，所以新的CSS标准中，规定了will-change属性，可以由业务代码来提示浏览器的合成策略，灵活运用这样的特性，可以大大提升合成策略的效果。</p>
+<h2 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h2><p>绘制是把“位图最终绘制到屏幕上，变成肉眼可见的图像”的过程，不过，一般来说，浏览器并不需要用代码来处理这个过程，浏览器只需要把最终要显示的位图交给操作系统即可。</p>
+<p>一般最终位图位于显存中，也有一些情况下，浏览器只需要把内存中的一张位图提交给操作系统或者驱动就可以了，这取决于浏览器运行的环境。不过无论如何，我们把任何位图合成到这个“最终位图”的操作称为绘制。</p>
+<p>这个过程听上去非常简单，这是因为在前面两个小节中，我们已经得到了每个元素的位图，并且对它们部分进行了合成，那么绘制过程，实际上就是按照z-index把它们依次绘制到屏幕上。</p>
+<p>然而如果在实际中这样做，会带来极其糟糕的性能。</p>
+<p>有一个一度非常流行于前端群体的说法，讲做CSS性能优化，应该尽量避免“重排”和“重绘”，前者讲的是我们上一课的排版行为，后者模糊地指向了我们本课程三小节讲的三个步骤，而实际上，这个说法大体不能算错，却不够准确。</p>
+<p>因为，实际上，“绘制”发生的频率比我们想象中要高得多。我们考虑一个情况：鼠标划过浏览器显示区域。这个过程中，鼠标的每次移动，都造成了重新绘制，如果我们不重新绘制，就会产生大量的鼠标残影。</p>
+<p>这个时候，限制绘制的面积就很重要了。如果鼠标某次位置恰巧遮盖了某个较小的元素，我们完全可以重新绘制这个元素来完成我们的目标，当然，简单想想就知道，这种事情不可能总是发生的。</p>
+<p>计算机图形学中，我们使用的方案就是“脏矩形”算法，也就是把屏幕均匀地分成若干矩形区域。</p>
+<p>当鼠标移动、元素移动或者其它导致需要重绘的场景发生时，我们只重新绘制它所影响到的几个矩形区域就够了。比矩形区域更小的影响最多只会涉及4个矩形，大型元素则覆盖多个矩形。</p>
+<p>设置合适的矩形区域大小，可以很好地控制绘制时的消耗。设置过大的矩形会造成绘制面积增大，而设置过小的矩形则会造成计算复杂。</p>
+<p>我们重新绘制脏矩形区域时，把所有与矩形区域有交集的合成层（位图）的交集部分绘制即可。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在这一节课程中，我们讲解了浏览器中的位图操作部分，这包括了渲染、合成和绘制三个部分。渲染过程把元素变成位图，合成把一部分位图变成合成层，最终的绘制过程把合成层显示到屏幕上。</p>
+<p>当绘制完成时，就完成了浏览器的最终任务，把一个URL最后变成了一个可以看的网页图像。当然了，我们对每一个部分的讲解，都省略了大量的细节，比如我们今天讲到的绘制，就有意地无视了滚动区域。</p>
+<p>尽管如此，对浏览器工作原理的感性认识，仍然可以帮助我们理解很多前端技术的设计和应用技巧，浏览器的工作原理和性能部分非常强相关，我们在实践部分的性能优化部分，会再次跟你做一些探讨。</p>
+<p>实际上，如果你认真阅读浏览器系列的课程，是可以用JavaScript实现一个玩具浏览器的，我非常希望学习课程的同学中能有人这样做，一旦你做到了，收益会非常大。这就是我今天留给你的课外作业，你可以尝试一下。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:31.781Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    16 minutes read (About 2471 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/浏览器：一个浏览器是如何工作的？（阶段四）/">浏览器：一个浏览器是如何工作的？（阶段四）</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>我们书接上文。浏览器进行到这一步，我们已经给DOM元素添加了用于展现的CSS属性，接下来，浏览器的工作就是确定每一个元素的位置了。我们的基本原则仍然不变，就是尽可能流式地处理上一步骤的输出。</p>
+<p>在构建DOM树和计算CSS属性这两个步骤，我们的产出都是一个一个的元素，但是在排版这个步骤中，有些情况下，我们就没法做到这样了。</p>
+<p>尤其是表格相关排版、Flex排版和Grid排版，它们有一个显著的特点，那就是子元素之间具有关联性。</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>首先我们先来介绍一些基本概念，使你可以感性地认识一下我们平常说的各种术语。</p>
+<p><strong>“排版”</strong>这个概念最初来自活字印刷，是指我们把一个一个的铅字根据文章顺序，放入板框当中的步骤，排版的意思是确定每一个字的位置。</p>
+<p>在现代浏览器中，仍然借用了这个概念，但是排版的内容更加复杂，包括文字、图片、图形、表格等等，我们把浏览器确定它们位置的过程，叫作排版。</p>
+<p>浏览器最基本的排版方案是<strong>正常流排版</strong>，它包含了顺次排布和折行等规则，这是一个跟我们提到的印刷排版类似的排版方案，也跟我们平时书写文字的方式一致，所以我们把它叫做正常流。</p>
+<p>浏览器的文字排版遵循公认的文字排版规范，文字排版是一个复杂的系统，它规定了行模型和文字在行模型中的排布。行模型规定了行顶、行底、文字区域、基线等对齐方式。（你还记得小时候写英语的英语本吗？英语本上的四条线就是一个简单的行模型。）</p>
+<p>此外，浏览器支持不同语言，因为不同语言的书写顺序不一致，所以浏览器的文本排版还支持双向文字系统。</p>
+<p>浏览器又可以支持元素和文字的混排，元素被定义为占据长方形的区域，还允许边框、边距和留白，这个就是所谓的<strong>盒模型</strong>。</p>
+<p>在正常流的基础上，浏览器还支持两类元素：绝对定位元素和浮动元素。</p>
+<ul>
+<li><p>绝对定位元素把自身从正常流抽出，直接由top和left等属性确定自身的位置，不参加排版计算，也不影响其它元素。绝对定位元素由position属性控制。</p>
+</li>
+<li><p>浮动元素则是使得自己在正常流的位置向左或者向右移动到边界，并且占据一块排版空间。浮动元素由float属性控制。</p>
+</li>
+</ul>
+<p>除了正常流，浏览器还支持其它排版方式，比如现在非常常用的Flex排版，这些排版方式由外部元素的display属性来控制（注意，display同时还控制元素在正常流中属于inline等级还是block等级）。</p>
+<h2 id="正常流文字排版"><a href="#正常流文字排版" class="headerlink" title="正常流文字排版"></a>正常流文字排版</h2><p>我们会在CSS部分详细介绍正常流排版的行为，我们这里主要介绍浏览器中的正常流。正常流是唯一一个文字和盒混排的排版方式，我们先从文字来讲起。</p>
+<p>要想理解正常流，我们首先要回忆一下自己如何在纸上写文章。</p>
+<p>首先，纸是有固定宽度的，虽然纸有固定高度，但是我们可以通过下一页纸的方式来接续，因此我们不存在写不下的场景。</p>
+<p>我们书写文字的时候，是从左到右依次书写，每一个字跟上一个字都不重叠，文字之间有一定间距，当写满一行时，我们换到下一行去继续写。</p>
+<p>书写中文时，文字的上、下、中轴线都对齐，书写英文时，不同字母的高度不同，但是有一条基线对齐。</p>
+<p>实际上浏览器环境也很类似。但是因为浏览器支持改变排版方向，不一定是从左到右从上到下，所以我们把文字依次书写的延伸方向称为主轴或者主方向，换行延伸的方向，跟主轴垂直交叉，称为交叉轴或者交叉方向。</p>
+<p>我们一般会从某个字体文件中获取某个特定文字的相关信息。我们获取到的信息大概类似下面：</p>
+<p><img src="https://static001.geekbang.org/resource/image/06/01/0619d38f00d539f7b6773e541ce6fa01.png" alt></p>
+<p>纵向版本：</p>
+<p><img src="https://static001.geekbang.org/resource/image/c3/96/c361c7ff3a11216c139ed462b9d5f196.png" alt></p>
+<p>这两张图片来自著名开源字体解析库freetype，实际上，各个库对字体的理解大同小异，我们注意一下，advance代表每一个文字排布后在主轴上的前进距离，它跟文字的宽/高不相等，是字体中最重要的属性。</p>
+<p>除了字体提供的字形本身包含的信息，文字排版还受到一些CSS属性影响，如line-height、letter-spacing、word-spacing等。</p>
+<p>在正常流的文字排版中，多数元素被当作长方形盒来排版，而只有display为inline的元素，是被拆成文本来排版的（还有一种run-in元素，它有时作为盒，有时作为文字，不太常用，这里不详细讲了）。</p>
+<p>display值为inline的元素中的文字排版时会被直接排入文字流中，inline元素主轴方向的margin属性和border属性（例如主轴为横向时的margin-left和margin-right）也会被计算进排版前进距离当中。</p>
+<p>注意，当没有强制指定文字书写方向时，在左到右文字中插入右到左向文字，会形成一个双向文字盒，反之亦然。</p>
+<p>这样，即使没有元素包裹，混合书写方向的文字也可以形成一个盒结构，我们在排版时，遇到这样的双向文字盒，会先排完盒内再排盒外。</p>
+<h2 id="正常流中的盒"><a href="#正常流中的盒" class="headerlink" title="正常流中的盒"></a>正常流中的盒</h2><p>在正常流中，display不为inline的元素或者伪元素，会以盒的形式跟文字一起排版。多数display属性都可以分成两部分：内部的排版和是否inline，带有inline-前缀的盒，被称作行内级盒。</p>
+<p>根据盒模型，一个盒具有margin、border、padding、width/height等属性，它在主轴方向占据的空间是由对应方向的这几个属性之和决定的，而vertical-align属性决定了盒在交叉轴方向的位置，同时也会影响实际行高。</p>
+<p>所以，浏览器对行的排版，一般是先行内布局，再确定行的位置，根据行的位置计算出行内盒和文字的排版位置。</p>
+<p>块级盒比较简单，它总是单独占据一整行，计算出交叉轴方向的高度即可。</p>
+<h2 id="绝对定位元素"><a href="#绝对定位元素" class="headerlink" title="绝对定位元素"></a>绝对定位元素</h2><p>position属性为absolute的元素，我们需要根据它的包含块来确定位置，这是完全跟正常流无关的一种独立排版模式，逐层找到其父级的position非static元素即可。</p>
+<h2 id="浮动元素排版"><a href="#浮动元素排版" class="headerlink" title="浮动元素排版"></a>浮动元素排版</h2><p>float元素非常特别，浏览器对float的处理是先排入正常流，再移动到排版宽度的最左/最右（这里实际上是主轴的最前和最后）。</p>
+<p>移动之后，float元素占据了一块排版的空间，因此，在数行之内，主轴方向的排版距离发生了变化，直到交叉轴方向的尺寸超过了浮动元素的交叉轴尺寸范围，主轴排版尺寸才会恢复。float元素排布完成后，float元素所在的行需要重新确定位置。</p>
+<h2 id="其它的排版"><a href="#其它的排版" class="headerlink" title="其它的排版"></a>其它的排版</h2><p>CSS的每一种排版都有一个很复杂的规定，实际实现形式也各不相同。比如如Flex排版，支持了flex属性，flex属性将每一行排版后的剩余空间平均分配给主轴方向的width/height属性。浏览器支持的每一种排版方式，都是按照对应的标准来实现的。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这一部分，我们以正常流为主，介绍了浏览器的排版基本概念及一些算法。这里，我主要介绍了正常流中的文字排版、正常流中的盒、绝对定位元素、浮动元素排版这几种情况。最后，我还简单介绍了一下Flex排版。这属于进阶版的排版方式了，你可以了解一下。</p>
+<p>你平时喜欢使用方式排版呢，欢迎留言告诉我。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:29.876Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    15 minutes read (About 2185 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/浏览器：一个浏览器是如何工作的（阶段三）/">浏览器：一个浏览器是如何工作的（阶段三）</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>在上一节课中，我已经讲了浏览器的DOM构建过程，但是这个构建的DOM，实际上信息是不全的，它只有节点和属性，不包含任何的样式信息。</p>
+<p>我们这一节课就来讲讲：浏览器是如何把CSS规则应用到节点上，并给这棵朴素的DOM树添加上CSS属性的。</p>
+<h2 id="整体过程"><a href="#整体过程" class="headerlink" title="整体过程"></a>整体过程</h2><p>首先我们还是要感性地理解一下这个过程。</p>
+<p>首先CSS选择器这个名称，可能会给你带来一定的误解，觉得好像CSS规则是DOM树构建好了以后，再进行选择并给它添加样式的。实际上，这个过程并不是这样的。</p>
+<p>我们回忆一下我们在浏览器第一节课讲的内容，浏览器会尽量流式处理整个过程。我们上一节课构建DOM的过程是：从父到子，从先到后，一个一个节点构造，并且挂载到DOM树上的，那么这个过程中，我们是否能同步把CSS属性计算出来呢？</p>
+<p>答案是肯定的。</p>
+<p>在这个过程中，我们依次拿到上一步构造好的元素，去检查它匹配到了哪些规则，再根据规则的优先级，做覆盖和调整。所以，从这个角度看，所谓的选择器，应该被理解成“匹配器”才更合适。</p>
+<p>我在CSS语法部分，已经总结了选择器的各种符号，这里再把它列出来，我们回顾一下。</p>
+<ul>
+<li>空格: 后代，选中它的子节点和所有子节点的后代节点。</li>
+<li><blockquote>
+<p>: 子代，选中它的子节点。</p>
+</blockquote>
+</li>
+<li>+：直接后继选择器，选中它的下一个相邻节点。</li>
+<li>~：后继，选中它之后所有的相邻节点。</li>
+<li>||：列，选中表格中的一列。</li>
+</ul>
+<p>关于选择器的知识，我会在CSS的部分继续讲解。这里我们主要介绍浏览器是如何实现这些规则的。</p>
+<p>不知道你有没有发现，这里的选择器有个特点，那就是选择器的出现顺序，必定跟构建DOM树的顺序一致。这是一个CSS设计的原则，即保证选择器在DOM树构建到当前节点时，已经可以准确判断是否匹配，不需要后续节点信息。</p>
+<p>也就是说，未来也不可能会出现“父元素选择器”这种东西，因为父元素选择器要求根据当前节点的子节点，来判断当前节点是否被选中，而父节点会先于子节点构建。</p>
+<p>理解了CSS构建的大概过程，我们下面来看看具体的操作。</p>
+<p>首先，我们必须把CSS规则做一下处理。作为一门语言，CSS需要先经过词法分析和语法分析，变成计算机能够理解的结构。</p>
+<p>这部分具体的做法属于编译原理的内容，这里就不做赘述了。我们这里假设CSS已经被解析成了一棵可用的抽象语法树。</p>
+<p>我们在之前的CSS课程中已经介绍过 compound-selector 的概念，一个 compound-selector 是检查一个元素的规则，而一个复合型选择器，则是由数个 compound-selector 通过前面讲的符号连接起来的。</p>
+<h2 id="后代选择器-“空格”"><a href="#后代选择器-“空格”" class="headerlink" title="后代选择器 “空格”"></a>后代选择器 “空格”</h2><p>我们先来分析一下后代选择器，我们来一起看一个例子：</p>
+<pre><code>a#b .cls {
+    width: 100px;
+}</code></pre><p>可以把一个CSS选择器按照 compound-selector 来拆成数段，每当满足一段条件的时候，就前进一段。</p>
+<p>比如，在上面的例子中，当我们找到了匹配a#b的元素时，我们才会开始检查它所有的子代是否匹配 .cls。</p>
+<p>除了前进一段的情况，我们还需要处理后退的情况，比如，我们这样一段代码：</p>
+<pre><code>&lt;a id=b&gt;
+    &lt;span&gt;1&lt;span&gt;
+    &lt;span class=cls&gt;2&lt;span&gt;
+&lt;/a&gt;
+&lt;span class=cls&gt;3&lt;span&gt;</code></pre><p>当遇到 时，必须使得规则 a#b .cls 回退一步，这样第三个 span 才不会被选中。后代选择器的作用范围是父节点的所有子节点，因此规则是在匹配到本标签的结束标签时回退。</p>
+<h2 id="后继选择器“-”"><a href="#后继选择器“-”" class="headerlink" title="后继选择器“ ~ ”"></a>后继选择器“ ~ ”</h2><p>接下来我们看下后继选择器，跟后代选择器不同的地方是，后继选择器只作用于一层，我们来看一个例子：</p>
+<pre><code>.cls~* {
+    border:solid 1px green;
+}
+&lt;div&gt;
+&lt;span&gt;1&lt;span&gt;
+&lt;span class=cls&gt;2&lt;span&gt;
+&lt;span&gt;
+    3
+    &lt;span&gt;4&lt;/span&gt;
+&lt;span&gt;
+&lt;span&gt;5&lt;/span&gt;
+&lt;/div&gt;</code></pre><p>这里 .cls 选中了 span 2 然后 span 3 是它的后继，但是span 3的子节点 span 4 并不应该被选中，而span 5也是它的后继，因此应该被选中。</p>
+<p>按照DOM树的构造顺序，4在3和5中间，我们就没有办法像前面讲的后代选择器一样通过激活或者关闭规则来实现匹配。</p>
+<p>但是这里有个非常方便的思路，就是给选择器的激活，带上一个条件：父元素。</p>
+<p>注意，这里后继选择器，当前半段的 .cls 匹配成功时，后续 * 所匹配的所有元素的父元素都已经确定了（后继节点和当前节点父元素相同是充分必要条件）。在我们的例子中，那个div就是后继节点的父元素。</p>
+<h2 id="子代选择器“-gt-”"><a href="#子代选择器“-gt-”" class="headerlink" title="子代选择器“ &gt;”"></a>子代选择器“ &gt;”</h2><p>我们继续看，子代选择器是如何实现的。</p>
+<p>实际上，有了前面讲的父元素这个约束思路，我们很容易实现子代选择器。区别仅仅是拿当前节点作为父元素，还是拿当前节点的父元素作为父元素。</p>
+<pre><code>div&gt;.cls {
+    border:solid 1px green;
+}
+&lt;div&gt;
+&lt;span&gt;1&lt;span&gt;
+&lt;span class=cls&gt;2&lt;span&gt;
+&lt;span&gt;
+    3
+    &lt;span&gt;4&lt;/span&gt;
+&lt;span&gt;
+&lt;span&gt;5&lt;/span&gt;
+&lt;/div&gt;</code></pre><p>我们看这段代码，当DOM树构造到div时，匹配了CSS规则的第一段，因为是子代选择器，我们激活后面的 .cls选择条件，并且指定父元素必须是当前div。于是后续的构建DOM树构建过程中，span 2 就被选中了。</p>
+<h2 id="直接后继选择器“-”"><a href="#直接后继选择器“-”" class="headerlink" title="直接后继选择器“ +”"></a>直接后继选择器“ +”</h2><p>直接后继选择器的实现是上述中最为简单的了，因为它只对唯一一个元素生效，所以不需要像前面几种一样反复激活和关闭规则。</p>
+<p>一个最简单的思路是，我们可以把它当作检查元素自身的选择器来处理。即我们把#id+.cls都当做检查某一个元素的选择器。</p>
+<p>另外的一种思路是：给后继选择器加上一个flag，使它匹配一次后失效。你可以尝试一下，告诉我结果。</p>
+<h2 id="列选择器“-”"><a href="#列选择器“-”" class="headerlink" title="列选择器“ || ”"></a>列选择器“ || ”</h2><p>列选择器比较特别，它是专门针对表格的选择器，跟表格的模型建立相关，我们这里不详细讲了。</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>我们不要忘记，CSS选择器还支持逗号分隔，表示“或”的关系。这里最简单的实现是把逗号视为两条规则的一种简易写法。</p>
+<p>比如：</p>
+<pre><code>a#b, .cls {
+
+}</code></pre><p>我们当作两条规则来处理：</p>
+<pre><code>a#b {
+
+}
+
+
+.cls {
+
+}</code></pre><p>还有一个情况，就是选择器可能有重合，这样，我们可以使用树形结构来进行一些合并，来提高效率：</p>
+<pre><code>#a .cls {
+
+}
+
+#a span {
+
+}
+#a&gt;span {
+
+}</code></pre><p>这里实际上可以把选择器构造成一棵树：</p>
+<ul>
+<li><p>#a</p>
+</li>
+<li><p>&lt;空格&gt;.cls</p>
+</li>
+<li><p>&lt;空格&gt;span</p>
+</li>
+<li><blockquote>
+<p>span</p>
+</blockquote>
+</li>
+</ul>
+<p>需要注意的是，这里的树，必须要带上连接符。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这一节我们讲解了CSS计算的过程。CSS计算是把CSS规则应用到DOM树上，为DOM结构添加显示相关属性的过程。在这一节中，我们主要介绍了选择器的几种复合结构应该如何实现。</p>
+<p>在这一步骤之后，我们得到了一棵带有CSS属性的树，为我们后续打下了基础。</p>
+<p>最后留一个问题，你认为CSS语法解析成什么结构，最适合我们进行CSS计算。</p>
+<p><img src="https://static001.geekbang.org/resource/image/a1/9d/a1fa9a462fb96ae3a70ff4751203d79d.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:27.998Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    21 minutes read (About 3087 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/浏览器：一个浏览器是如何工作的？（阶段二）/">浏览器：一个浏览器是如何工作的？（阶段二）</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter，今天我们继续来看浏览器的相关内容。</p>
+<p>我在上一篇文章中，简要介绍了浏览器的工作大致可以分为6个阶段，我们昨天讲完了第一个阶段，也就是通讯的部分：浏览器使用HTTP协议或者HTTPS协议，向服务端请求页面的过程。</p>
+<p>今天我们主要来看两个过程：如何解析请求回来的HTML代码，DOM树又是如何构建的。<br><img src="https://static001.geekbang.org/resource/image/34/5a/34231687752c11173b7776ba5f4a0e5a.png" alt></p>
+<h2 id="解析代码"><a href="#解析代码" class="headerlink" title="解析代码"></a>解析代码</h2><p>我们在前面讲到了HTTP的构成，但是我们有一部分没有详细讲解，那就是Response的body部分，这正是因为HTTP的Response的body，就要交给我们今天学习的内容去处理了。</p>
+<p>HTML的结构不算太复杂，我们日常开发需要的90%的“词”（指编译原理的术语token，表示最小的有意义的单元），种类大约只有标签开始、属性、标签结束、注释、CDATA节点几种。</p>
+<p>实际上有点麻烦的是，由于HTML跟SGML的千丝万缕的联系，我们需要做不少容错处理。“&lt;?”和“&lt;%”什么的也是必须要支持好的，报了错也不能吭声。</p>
+<h3 id="1-词（token）是如何被拆分的"><a href="#1-词（token）是如何被拆分的" class="headerlink" title="1.词（token）是如何被拆分的"></a>1.词（token）是如何被拆分的</h3><p>首先我们来看看一个非常标准的标签，会被如何拆分：</p>
+<pre><code>&lt;p class=&quot;a&quot;&gt;text text text&lt;/p&gt;</code></pre><p>如果我们从最小有意义单元的定义来拆分，第一个词（token）是什么呢？显然，作为一个词（token），整个p标签肯定是过大了（它甚至可以嵌套）。</p>
+<p>那么，只用p标签的开头是不是合适吗？我们考虑到起始标签也是会包含属性的，最小的意义单元其实是“&lt;p” ，所以“ &lt;p” 就是我们的第一个词（token）。</p>
+<p>我们继续拆分，可以把这段代码依次拆成词（token）：</p>
+<ul>
+<li>&lt;p“标签开始”的开始；</li>
+<li>class=“a” 属性；</li>
+<li><blockquote>
+<p> “标签开始”的结束；</p>
+</blockquote>
+</li>
+<li>text text text 文本；</li>
+<li><p></p>标签结束。
+
+</li>
+</ul>
+<p>这是一段最简单的例子，类似的还有什么呢？现在我们可以来来看看这些词（token）长成啥样子：</p>
+<p><img src="https://static001.geekbang.org/resource/image/f9/84/f98444aa3ea7471d2414dd7d0f5e3a84.png" alt></p>
+<p>根据这样的分析，现在我们讲讲浏览器是如何用代码实现，我们设想，代码开始从HTTP协议收到的字符流读取字符。</p>
+<p>在接受第一个字符之前，我们完全无法判断这是哪一个词（token），不过，随着我们接受的字符越来越多，拼出其他的内容可能性就越来越少。</p>
+<p>比如，假设我们接受了一个字符“ &lt; ” 我们一下子就知道这不是一个文本节点啦。</p>
+<p>之后我们再读一个字符，比如就是 x，那么我们一下子就知道这不是注释和CDATA了，接下来我们就一直读，直到遇到“&gt;”或者空格，这样就得到了一个完整的词（token）了。</p>
+<p>实际上，我们每读入一个字符，其实都要做一次决策，而且这些决定是跟“当前状态”有关的。在这样的条件下，浏览器工程师要想实现把字符流解析成词（token），最常见的方案就是使用状态机。</p>
+<h3 id="2-状态机"><a href="#2-状态机" class="headerlink" title="2.状态机"></a>2.状态机</h3><p>绝大多数语言的词法部分都是用状态机实现的。那么我们来把部分词（token）的解析画成一个状态机看看：</p>
+<p><img src="https://static001.geekbang.org/resource/image/8b/b0/8b43d598bc1f83a8a1e7e8f922013ab0.png" alt></p>
+<p>当然了，我们这里的分析比较粗略，真正完整的HTML词法状态机，比我们描述的要复杂的多。更详细的内容，你可以参考<a href="https://html.spec.whatwg.org/multipage/parsing.html#tokenization" target="_blank" rel="noopener">HTML官方文档</a>，HTML官方文档规定了80个状态（顺便一说，HTML是我见过唯一一个标准中规定了状态机实现的语言，对大部分语言来说，状态机是一种实现而非定义）。</p>
+<p>这里我们为了理解原理，用这个简单的状态机就足够说明问题了。</p>
+<p>状态机的初始状态，我们仅仅区分 “&lt; ”和 “非&lt;”：</p>
+<ul>
+<li>如果获得的是一个非&lt;字符，那么可以认为进入了一个文本节点；</li>
+<li>如果获得的是一个&lt;字符，那么进入一个标签状态。</li>
+</ul>
+<p>不过当我们在标签状态时，则会面临着一些可能性。</p>
+<ul>
+<li><p>比如下一个字符是“ ! ” ，那么很可能是进入了注释节点或者CDATA节点。</p>
+</li>
+<li><p>如果下一个字符是 “/ ”，那么可以确定进入了一个结束标签。</p>
+</li>
+<li><p>如果下一个字符是字母，那么可以确定进入了一个开始标签。</p>
+</li>
+<li><p>如果我们要完整处理各种HTML标准中定义的东西，那么还要考虑“ ? ”“% ”等内容。</p>
+</li>
+</ul>
+<p>我们可以看到，用状态机做词法分析，其实正是把每个词的“特征字符”逐个拆开成独立状态，然后再把所有词的特征字符链合并起来，形成一个联通图结构。</p>
+<p>由于状态机设计属于编译原理的基本知识，这里我们仅作一个简要的介绍。</p>
+<p>接下来就是代码实现的事情了，在C/C++和JavaScript中，实现状态机的方式大同小异：我们把每个函数当做一个状态，参数是接受的字符，返回值是下一个状态函数。（这里我希望再次强调下，状态机真的是一种没有办法封装的东西，所以我们永远不要试图封装状态机。）</p>
+<p>为了方便理解和试验，我们这里用JavaScript来讲解，图上的data状态大概就像下面这样的：</p>
+<pre><code>var data = function(c){
+    if(c==&quot;&amp;&quot;) {
+        return characterReferenceInData;
+    }
+    if(c==&quot;&lt;&quot;) {
+        return tagOpen;
+    }
+    else if(c==&quot;\0&quot;) {
+        error();
+        emitToken(c);
+        return data;
+    }
+    else if(c==EOF) {
+        emitToken(EOF);
+        return data;
+    }
+    else {
+        emitToken(c);
+        return data;
+    }
+};
+var tagOpenState = function tagOpenState(c){
+    if(c==&quot;/&quot;) {
+        return endTagOpenState;
+    }
+    if(c.match(/[A-Z]/)) {
+        token = new StartTagToken();
+        token.name = c.toLowerCase();
+        return tagNameState;
+    }
+    if(c.match(/[a-z]/)) {
+        token = new StartTagToken();
+        token.name = c;
+        return tagNameState;
+    }
+    if(c==&quot;?&quot;) {
+        return bogusCommentState;
+    }
+    else {
+        error();
+        return dataState;
+    }
+};
+//……</code></pre><p>这段代码给出了状态机的两个状态示例：data即为初始状态，tagOpenState是接受了一个“ &lt; ” 字符，来判断标签类型的状态。</p>
+<p>这里的状态机，每一个状态是一个函数，通过“if else”来区分下一个字符做状态迁移。这里所谓的状态迁移，就是当前状态函数返回下一个状态函数。</p>
+<p>这样，我们的状态迁移代码非常的简单：</p>
+<pre><code>var state = data;
+var char
+while(char = getInput())
+    state = state(char);</code></pre><p>这段代码的关键一句是“ state = state(char) ”，不论我们用何种方式来读取字符串流，我们都可以通过state来处理输入的字符流，这里用循环是一个示例，真实场景中，可能是来自TCP的输出流。</p>
+<p>状态函数通过代码中的 emitToken 函数来输出解析好的token（词），我们只需要覆盖 emitToken，即可指定对解析结果的处理方式。</p>
+<p>词法分析器接受字符的方式很简单，就像下面这样：</p>
+<pre><code>function HTMLLexicalParser(){
+
+    //状态函数们……
+    function data() {
+        // ……
+    }
+
+    function tagOpen() {
+        // ……
+    }
+    // ……
+    var state = data;
+    this.receiveInput = function(char) {
+        state = state(char);
+    }
+}</code></pre><p>至此，我们就把字符流拆成了词（token）了。</p>
+<h2 id="构建DOM树"><a href="#构建DOM树" class="headerlink" title="构建DOM树"></a>构建DOM树</h2><p>接下来我们要把这些简单的词变成DOM树，这个过程我们是使用栈来实现的，任何语言几乎都有栈，为了给你跑着玩，我们还是用JavaScript来实现吧，毕竟JavaScript中的栈只要用数组就好了。</p>
+<pre><code>function HTMLSyntaticalParser(){
+    var stack = [new HTMLDocument];
+    this.receiveInput = function(token) {
+        //……
+    }
+    this.getOutput = function(){
+        return stack[0];
+    }
+}</code></pre><p>我们这样来设计HTML的语法分析器，receiveInput负责接收词法部分产生的词（token），通常可以由emitToken来调用。</p>
+<p>在接收的同时，即开始构建DOM树，所以我们的主要构建DOM树的算法，就写在receiveInput当中。当接收完所有输入，栈顶就是最后的根节点，我们DOM树的产出，就是这个stack的第一项。</p>
+<p>为了构建DOM树，我们需要一个Node类，接下来我们所有的节点都会是这个Node类的实例。</p>
+<p>在完全符合标准的浏览器中，不一样的HTML节点对应了不同的Node的子类，我们为了简化，就不完整实现这个继承体系了。我们仅仅把Node分为Element和Text（如果是基于类的OOP的话，我们还需要抽象工厂来创建对象），</p>
+<pre><code>function Element(){
+    this.childNodes = [];
+}
+function Text(value){
+    this.value = value || &quot;&quot;;
+}</code></pre><p>前面我们的词（token）中，以下两个是需要成对匹配的：</p>
+<ul>
+<li>tag start</li>
+<li>tag end</li>
+</ul>
+<p>根据一些编译原理中常见的技巧，我们使用的栈正是用于匹配开始和结束标签的方案。</p>
+<p>对于Text节点，我们则需要把相邻的Text节点合并起来，我们的做法是当词（token）入栈时，检查栈顶是否是Text节点，如果是的话就合并Text节点。</p>
+<p>同样我们来看看直观的解析过程：</p>
+<pre><code>&lt;html maaa=a &gt;
+    &lt;head&gt;
+        &lt;title&gt;cool&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=&quot;a&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre><p>通过这个栈，我们可以构建DOM树：</p>
+<ul>
+<li>栈顶元素就是当前节点；</li>
+<li>遇到属性，就添加到当前节点；</li>
+<li>遇到文本节点，如果当前节点是文本节点，则跟文本节点合并，否则入栈成为当前节点的子节点；</li>
+<li>遇到注释节点，作为当前节点的子节点；</li>
+<li>遇到tag start就入栈一个节点，当前节点就是这个节点的父节点；</li>
+<li>遇到tag end就出栈一个节点（还可以检查是否匹配）。</li>
+</ul>
+<p>我在文章里面放了一个视频，你可以点击查看用栈构造DOM树的全过程。</p>
+<p>当我们的源代码完全遵循XHTML（这是一种比较严谨的HTML语法）时，这非常简单问题，然而HTML具有很强的容错能力，奥妙在于当tag end跟栈顶的start tag不匹配的时候如何处理。</p>
+<p>于是，这又有一个极其复杂的规则，幸好W3C又一次很贴心地把全部规则都整理地很好，我们只要翻译成对应的代码就好了，以下这个网站呈现了全部规则。你可以点击查看。</p>
+<ul>
+<li><a href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#tree-construction" target="_blank" rel="noopener">http://www.w3.org/html/wg/drafts/html/master/syntax.html#tree-construction</a></li>
+</ul>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>好了，总结一下。在今天的文章中，我带你继续探索了浏览器的工作原理，我们主要研究了解析代码和构建DOM树两个步骤。在解析代码的环节里，我们一起详细地分析了一个词（token）被拆分的过程，并且给出了实现它所需要的一个简单的状态机。</p>
+<p>在构建DOM树的环节中，基本思路是使用栈来构建DOM树为了方便你动手实践，我用JavaScript实现了这一过程。</p>
+<p>今天给你留的题目是：在语法和词法的代码，我已经给出了大体的结构，请你试着把内容补充完整吧。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:26.008Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    22 minutes read (About 3354 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/浏览器：一个浏览器是如何工作的？（阶段一）/">浏览器：一个浏览器是如何工作的？（阶段一）</a>
+            
+        </h1>
+        <div class="content">
+            <p>对于前端开发来说，我们平时与浏览器打交道的时间是最多的。可浏览器对前端同学来说更多像一个神秘黑盒子的存在。我们仅仅知道它能做什么，而不知道它是如何做到的。</p>
+<p>在我面试和接触过的前端开发者中，70%的前端同学对这部分的知识内容只能达到“一知半解”的程度。甚至还有一部分同学会质疑这部分知识是否重要：这与我们的工作相关吗，学多了会不会偏移前端工作的方向？</p>
+<p>事实上，我们这里所需要了解的浏览器工作原理只是它的大致过程，这部分浏览器工作原理不但是前端面试的常考知识点，它还会辅助你的实际工作，学习浏览器的内部工作原理和个中缘由，对于我们做性能优化、排查错误都有很大的好处。</p>
+<p>在我们的课程中，我也会控制浏览器相关知识的粒度，把它保持在“给前端工程师了解浏览器”的水准，而不是详细到“给浏览器开发工程师实现浏览器”的水准。</p>
+<p>那么，我们今天开始，来共同思考一下。一个浏览器到底是如何工作的。</p>
+<p>实际上，对浏览器的实现者来说，他们做的事情，就是把一个URL变成一个屏幕上显示的网页。</p>
+<p>这个过程是这样的：</p>
+<ol>
+<li>浏览器首先使用HTTP协议或者HTTPS协议，向服务端请求页面；</li>
+<li>把请求回来的HTML代码经过解析，构建成DOM树；</li>
+<li>计算DOM树上的CSS属性；</li>
+<li>最后根据CSS属性对元素逐个进行渲染，得到内存中的位图；</li>
+<li>一个可选的步骤是对位图进行合成，这会极大地增加后续绘制的速度；</li>
+<li>合成之后，再绘制到界面上。</li>
+</ol>
+<p><img src="https://static001.geekbang.org/resource/image/63/4c/6391573a276c47a9a50ae0cbd2c5844c.jpg" alt></p>
+<p>我们在开始详细介绍之前，要建立一个感性认识。我们从HTTP请求回来开始，这个过程并非一般想象中的一步做完再做下一步，而是一条流水线。</p>
+<p>从HTTP请求回来，就产生了流式的数据，后续的DOM树构建、CSS计算、渲染、合成、绘制，都是尽可能地流式处理前一步的产出：即不需要等到上一步骤完全结束，就开始处理上一步的输出，这样我们在浏览网页时，才会看到逐步出现的页面。</p>
+<p>首先我们来介绍下网络通讯的部分。</p>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><p>浏览器首先要做的事就是根据URL把数据取回来，取回数据使用的是HTTP协议，实际上这个过程之前还有DNS查询，不过这里就不详细展开了。</p>
+<p>我先来了解下HTTP的标准。</p>
+<p>HTTP标准由IETF组织制定，跟它相关的标准主要有两份：</p>
+<ul>
+<li><p>HTTP1.1 <a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2616</a></p>
+</li>
+<li><p>HTTP1.1 <a href="https://tools.ietf.org/html/rfc7234" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc7234</a></p>
+</li>
+</ul>
+<p>HTTP协议是基于TCP协议出现的，对TCP协议来说，TCP协议是一条双向的通讯通道，HTTP在TCP的基础上，规定了Request-Response的模式。这个模式决定了通讯必定是由浏览器端首先发起的。</p>
+<p>大部分情况下，浏览器的实现者只需要用一个TCP库，甚至一个现成的HTTP库就可以搞定浏览器的网络通讯部分。HTTP是纯粹的文本协议，它是规定了使用TCP协议来传输文本格式的一个应用层协议。</p>
+<p>下面，我们试着用一个纯粹的TCP客户端来手工实现HTTP一下：</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>我们的实验需要使用telnet客户端，这个客户端是一个纯粹的TCP连接工具（安装方法）。</p>
+<p>首先我们运行telnet，连接到极客时间主机，在命令行里输入以下内容：</p>
+<pre><code>telnet time.geekbang.org 80</code></pre><p>这个时候，TCP连接已经建立，我们输入以下字符作为请求：</p>
+<pre><code>GET / HTTP/1.1
+Host: time.geekbang.org</code></pre><p>按下两次回车，我们收到了服务端的回复：</p>
+<pre><code>HTTP/1.1 301 Moved Permanently
+Date: Fri, 25 Jan 2019 13:28:12 GMT
+Content-Type: text/html
+Content-Length: 182
+Connection: keep-alive
+Location: https://time.geekbang.org/
+Strict-Transport-Security: max-age=15768000
+
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;301 Moved Permanently&lt;/title&gt;&lt;/head&gt;
+&lt;body bgcolor=&quot;white&quot;&gt;
+&lt;center&gt;&lt;h1&gt;301 Moved Permanently&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;openresty&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>这就是一次完整的HTTP请求的过程了，我们可以看到，在TCP通道中传输的，完全是文本。</p>
+<p>在请求部分，第一行被称作 request line，它分为三个部分，HTTP Method，也就是请求的“方法”，请求的路径和请求的协议和版本。</p>
+<p>在响应部分，第一行被称作 response line，它也分为三个部分，协议和版本、状态码和状态文本。</p>
+<p>紧随在request line或者response line之后，是请求头/响应头，这些头由若干行组成，每行是用冒号分隔的名称和值。</p>
+<p>在头之后，以一个空行（两个换行符）为分隔，是请求体/响应体，请求体可能包含文件或者表单数据，响应体则是HTML代码。</p>
+<h2 id="HTTP协议格式"><a href="#HTTP协议格式" class="headerlink" title="HTTP协议格式"></a>HTTP协议格式</h2><p>根据上面的分析，我们可以知道HTTP协议，大概可以划分成如下部分。</p>
+<p><img src="https://static001.geekbang.org/resource/image/3d/a1/3db5e0f362bc276b83c7564430ecb0a1.jpg" alt></p>
+<p>我们简单看一下，在这些部分中，path是请求的路径完全由服务端来定义，没有很多的特别内容；而version几乎都是固定字符串；response body是我们最熟悉的HTML，我在后面会有专门的课程介绍，这里也就不多讲了。</p>
+<p>下面我们就来逐个给你介绍其它部分。</p>
+<h2 id="HTTP-Method（方法）"><a href="#HTTP-Method（方法）" class="headerlink" title="HTTP Method（方法）"></a>HTTP Method（方法）</h2><p>我们首先来介绍一下request line里面的方法部分。这里的方法跟我们编程中的方法意义类似，表示我们此次HTTP请求希望执行的操作类型。方法有以下几种定义：</p>
+<ul>
+<li>GET</li>
+<li>POST</li>
+<li>HEAD</li>
+<li>PUT</li>
+<li>DELETE</li>
+<li>CONNECT</li>
+<li>OPTIONS</li>
+<li>TRACE</li>
+</ul>
+<p>浏览器通过地址栏访问页面都是GET方法。表单提交产生POST方法。</p>
+<p>HEAD则是跟GET类似，只返回请求头，多数由JavaScript发起</p>
+<p>PUT和DELETE分别表示添加资源和删除资源，但是实际上这只是语义上的一种约定，并没有强约束。</p>
+<p>CONNECT现在多用于HTTPS和WebSocket。</p>
+<p>OPTIONS和TRACE一般用于调试，多数线上服务都不支持。</p>
+<h2 id="HTTP-Status-code（状态码）和-Status-text（状态文本）"><a href="#HTTP-Status-code（状态码）和-Status-text（状态文本）" class="headerlink" title="HTTP Status code（状态码）和 Status text（状态文本）"></a>HTTP Status code（状态码）和 Status text（状态文本）</h2><p>接下来我们看看response line的状态码和状态文本。常见的状态码有以下几种。</p>
+<ul>
+<li><p>1xx：临时回应，表示客户端请继续。</p>
+</li>
+<li><p>2xx：请求成功。</p>
+</li>
+<li><p>200：请求成功。</p>
+</li>
+<li><p>3xx: 表示请求的目标有变化，希望客户端进一步处理。</p>
+</li>
+<li><p>301&amp;302：永久性与临时性跳转。</p>
+</li>
+<li><p>304：跟客户端缓存没有更新。</p>
+</li>
+<li><p>4xx：客户端请求错误。</p>
+</li>
+<li><p>403：无权限。</p>
+</li>
+<li><p>404：表示请求的页面不存在。</p>
+</li>
+<li><p>418：It’s a teapot. 这是一个彩蛋，来自ietf的一个愚人节玩笑。（<a href="https://tools.ietf.org/html/rfc2324" target="_blank" rel="noopener">超文本咖啡壶控制协议</a>）</p>
+</li>
+<li><p>5xx：服务端请求错误。</p>
+</li>
+<li><p>500：服务端错误。</p>
+</li>
+<li><p>503：服务端暂时性错误，可以一会再试。</p>
+</li>
+</ul>
+<p>对我们前端来说，1xx系列的状态码是非常陌生的，原因是1xx的状态被浏览器HTTP库直接处理掉了，不会让上层应用知晓。</p>
+<p>2xx系列的状态最熟悉的就是200，这通常是网页请求成功的标志，也是大家最喜欢的状态码。</p>
+<p>3xx系列比较复杂，301和302两个状态表示当前资源已经被转移，只不过一个是永久性转移，一个是临时性转移。实际上301更接近于一种报错，提示客户端下次别来了。</p>
+<p>304又是一个每个前端必知必会的状态，产生这个状态的前提是：客户端本地已经有缓存的版本，并且在Request中告诉了服务端，当服务端通过时间或者tag，发现没有更新的时候，就会返回一个不含body的304状态。</p>
+<h2 id="HTTP-Head-HTTP头"><a href="#HTTP-Head-HTTP头" class="headerlink" title="HTTP Head (HTTP头)"></a>HTTP Head (HTTP头)</h2><p>HTTP头可以看作一个键值对。原则上，HTTP头也是一种数据，我们可以自由定义HTTP头和值。不过在HTTP规范中，规定了一些特殊的HTTP头，我们现在就来了解一下它们。</p>
+<p>在HTTP标准中，有完整的请求/响应头规定，这里我们挑几个重点的说一下：</p>
+<p>我们先来看看Request Header。</p>
+<p><img src="https://static001.geekbang.org/resource/image/2b/a2/2be3e2457f08bdf624837dfaee01e4a2.png" alt></p>
+<p>接下来看一下Response Header。<br><img src="https://static001.geekbang.org/resource/image/ef/c9/efdeadf27313e08bf0789a3b5480f7c9.png" alt></p>
+<p>这里仅仅列出了我认为比较常见的HTTP头，这些头是我认为前端工程师应该做到不需要查阅，看到就可以知道意思的HTTP头。完整的列表还是请你参考我给出的rfc2616标准。</p>
+<h2 id="HTTP-Request-Body"><a href="#HTTP-Request-Body" class="headerlink" title="HTTP Request Body"></a>HTTP Request Body</h2><p>HTTP请求的body主要用于提交表单场景。实际上，HTTP请求的body是比较自由的，只要浏览器端发送的body服务端认可就可以了。一些常见的body格式是：</p>
+<ul>
+<li>application/json</li>
+<li>application/x-www-form-urlencoded</li>
+<li>multipart/form-data</li>
+<li>text/xml</li>
+</ul>
+<p>我们使用HTML的form标签提交产生的HTML请求，默认会产生 application/x-www-form-urlencoded 的数据格式，当有文件上传时，则会使用multipart/form-data。</p>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>在HTTP协议的基础上，HTTPS和HTTP2规定了更复杂的内容，但是它基本保持了HTTP的设计思想，即：使用上的Request-Response模式。</p>
+<p>我们首先来了解下HTTPS。HTTPS有两个作用，一是确定请求的目标服务端身份，二是保证传输的数据不会被网络中间节点窃听或者篡改。</p>
+<p>HTTPS的标准也是由RFC规定的，你可以查看它的详情链接：</p>
+<p><a href="https://tools.ietf.org/html/rfc2818" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2818</a></p>
+<p>HTTPS是使用加密通道来传输HTTP的内容。但是HTTPS首先与服务端建立一条TLS加密通道。TLS构建于TCP协议之上，它实际上是对传输的内容做一次加密，所以从传输内容上看，HTTPS跟HTTP没有任何区别。</p>
+<h2 id="HTTP-2"><a href="#HTTP-2" class="headerlink" title="HTTP 2"></a>HTTP 2</h2><p>HTTP 2是HTTP 1.1的升级版本，你可以查看它的详情链接。</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc7540" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc7540</a></li>
+</ul>
+<p>HTTP 2.0 最大的改进有两点，一是支持服务端推送，二是支持TCP连接复用。</p>
+<p>服务端推送能够在客户端发送第一个请求到服务端时，提前把一部分内容推送给客户端，放入缓存当中，这可以避免客户端请求顺序带来的并行度不高，从而导致的性能问题。</p>
+<p>TCP连接复用，则使用同一个TCP连接来传输多个HTTP请求，避免了TCP连接建立时的三次握手开销，和初建TCP连接时传输窗口小的问题。</p>
+<blockquote>
+<p>Note: 其实很多优化涉及更下层的协议。IP层的分包情况，和物理层的建连时间是需要被考虑的。</p>
+</blockquote>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>在这一节内容中，我们一起学习了浏览器的第一步工作，也就是“浏览器首先使用HTTP协议或HTTPS协议，向服务端请求页面”的这一过程。</p>
+<p>在这个过程中，掌握HTTP协议是重中之重。我从一个小实验开始，带你体验了一次完整的HTTP请求过程。我们一起先分析了HTTP协议的结构。接下来，我分别介绍了HTTP方法、HTTP状态码和状态文本、HTTP Head和HTTP Request Body几个重点需要注意的部分。</p>
+<p>最后，我还介绍了HTTPS和HTTP 2这两个补充版本，以便你可以更好地熟悉并理解新的特性。</p>
+<p>你在工作中，是否已经开始使用HTTPS和HTTP 2协议了呢？用到了它们的哪些特性，请留言告诉我吧。</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-31T10:02:24.048Z">2019-08-31</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/重学前端/">重学前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    20 minutes read (About 3018 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/08/31/重学前端/CSS语法：除了属性和选择器，你还需要知道这些带@的规则/">CSS语法：除了属性和选择器，你还需要知道这些带@的规则</a>
+            
+        </h1>
+        <div class="content">
+            <p>你好，我是winter。</p>
+<p>今天我们进入CSS的学习。CSS是前端工程师几乎每天都要用的技术了，不过CSS的学习资料却是最糟糕的，这是因为CSS并没有像HTML和JavaScript那样的一份标准文档。</p>
+<p>如果我们到W3C的网站上搜索看看，可以得到一些信息：</p>
+<ul>
+<li><a href="https://www.w3.org/TR/?title=css" target="_blank" rel="noopener">https://www.w3.org/TR/?title=css</a></li>
+</ul>
+<p>在这里，我们一共看到了98份CSS相关的标准，它们各自从一些角度规定了CSS的特性。</p>
+<p>这里我们暂且去掉Working Draft状态的标准，可以得到22份候选标准和6份推荐标准。</p>
+<p>既然我们的专栏内容强调去系统性学习CSS，于是，面对这22+6份标准，我们就又需要一条线索，才能把这些离散的标准组织成易于理解和记忆的形式。</p>
+<p>在这样的需求下，我找到的线索就是CSS语法，任何CSS的特性都必须通过一定的语法结构表达出来，所以语法可以帮助我们发现大多数CSS特性。</p>
+<p>CSS语法的最新标准，你可以戳这里查看：</p>
+<ul>
+<li><a href="https://www.w3.org/TR/css-syntax-3/" target="_blank" rel="noopener">https://www.w3.org/TR/css-syntax-3/</a></li>
+</ul>
+<p>这篇文档的阅读体验其实是非常糟糕的，它对CSS语法的描述使用了类似LL语法分析的伪代码，而且没有描述任何具体的规则。</p>
+<p>这里你就不必自己去阅读了，我来把其中一些有用的关键信息抽取出来描述一下，我们一起来看看。</p>
+<p>我们拿到这份标准可以看到，去除空格、HTML注释等无效信息，<strong>CSS的顶层样式表由两种规则组成的规则列表构成，一种被称为 at-rule，也就是at 规则，另一种是 qualified rule，也就是普通规则。</strong></p>
+<p>at-rule由一个 @ 关键字和后续的一个区块组成，如果没有区块，则以分号结束。这些at-rule在开发中使用机会远远小于普通的规则，所以它的大部分内容，你可能会感觉很陌生。</p>
+<p>这些at规则正是掌握CSS的一些高级特性所必须的内容。qualified rule则是指普通的CSS规则，也就是我们所熟识的，由选择器和属性指定构成的规则。</p>
+<h2 id="at-规则"><a href="#at-规则" class="headerlink" title="at 规则"></a>at 规则</h2><p>好了，现在我们已经知道了，CSS语法的整体结构，接下来我们要做的是一个体力活，从所有的CSS标准里找到所有可能的 at-rule（不用谢，我已经帮你找好了，如果页面定位不准，你可以打开页面搜索关键字）。</p>
+<ul>
+<li>@charset ： <a href="https://www.w3.org/TR/css-syntax-3/" target="_blank" rel="noopener">https://www.w3.org/TR/css-syntax-3/</a></li>
+<li>@import ：<a href="https://www.w3.org/TR/css-cascade-4/" target="_blank" rel="noopener">https://www.w3.org/TR/css-cascade-4/</a></li>
+<li>@media ：<a href="https://www.w3.org/TR/css3-conditional/" target="_blank" rel="noopener">https://www.w3.org/TR/css3-conditional/</a></li>
+<li>@page ： <a href="https://www.w3.org/TR/css-page-3/" target="_blank" rel="noopener">https://www.w3.org/TR/css-page-3/</a></li>
+<li>@counter-style ：<a href="https://www.w3.org/TR/css-counter-styles-3" target="_blank" rel="noopener">https://www.w3.org/TR/css-counter-styles-3</a></li>
+<li>@keyframes ：<a href="https://www.w3.org/TR/css-animations-1/" target="_blank" rel="noopener">https://www.w3.org/TR/css-animations-1/</a></li>
+<li>@fontface ：<a href="https://www.w3.org/TR/css-fonts-3/" target="_blank" rel="noopener">https://www.w3.org/TR/css-fonts-3/</a></li>
+<li>@supports ：<a href="https://www.w3.org/TR/css3-conditional/" target="_blank" rel="noopener">https://www.w3.org/TR/css3-conditional/</a></li>
+<li>@namespace ：<a href="https://www.w3.org/TR/css-namespaces-3/" target="_blank" rel="noopener">https://www.w3.org/TR/css-namespaces-3/</a></li>
+</ul>
+<p>这里的每一种@规则背后，都是一组CSS的知识。在我们的课程中，有些会重点介绍，不过，为了先给你建立起一个整体的认知，我们这里会给所有的@规则提供一些简单的例子和介绍。</p>
+<h3 id="charset"><a href="#charset" class="headerlink" title="@charset"></a>@charset</h3><p>@charset用于提示CSS文件使用的字符编码方式，它如果被使用，必须出现在最前面。这个规则只在给出语法解析阶段前使用，并不影响页面上的展示效果。</p>
+<pre><code>@charset &quot;utf-8&quot;;</code></pre><h3 id="import"><a href="#import" class="headerlink" title="@import"></a>@import</h3><p>@import用于引入一个CSS文件，除了@charset规则不会被引入，@import可以引入另一个文件的全部内容。</p>
+<pre><code>@import &quot;mystyle.css&quot;;
+@import url(&quot;mystyle.css&quot;);
+
+
+@import [ &lt;url&gt; | &lt;string&gt; ]
+        [ supports( [ &lt;supports-condition&gt; | &lt;declaration&gt; ] ) ]?
+        &lt;media-query-list&gt;? ;</code></pre><p>通过代码，我们可以看出，import还支持 supports 和media query形式。</p>
+<h3 id="media"><a href="#media" class="headerlink" title="@media"></a>@media</h3><p>media就是大名鼎鼎的media query使用的规则了，它能够对设备的类型进行一些判断。在media的区块内，是普通规则列表。</p>
+<pre><code>@media print {
+    body { font-size: 10pt }
+}</code></pre><h3 id="page"><a href="#page" class="headerlink" title="@page"></a>@page</h3><p>page用于分页媒体访问网页时的表现设置，页面是一种特殊的盒模型结构，除了页面本身，还可以设置它周围的盒。</p>
+<pre><code>@page {
+  size: 8.5in 11in;
+  margin: 10%;
+
+  @top-left {
+    content: &quot;Hamlet&quot;;
+  }
+  @top-right {
+    content: &quot;Page &quot; counter(page);
+  }
+}</code></pre><h3 id="counter-style"><a href="#counter-style" class="headerlink" title="@ counter-style"></a>@ counter-style</h3><p>counter-style产生一种数据，用于定义列表项的表现。</p>
+<pre><code>@counter-style triangle {
+  system: cyclic;
+  symbols: ‣;
+  suffix: &quot; &quot;;
+}</code></pre><h3 id="key-frames"><a href="#key-frames" class="headerlink" title="@ key-frames"></a>@ key-frames</h3><p>keyframes产生一种数据，用于定义动画关键帧。</p>
+<pre><code>@keyframes diagonal-slide {
+
+  from {
+    left: 0;
+    top: 0;
+  }
+
+  to {
+    left: 100px;
+    top: 100px;
+  }
+
+}</code></pre><h3 id="fontface"><a href="#fontface" class="headerlink" title="@ fontface"></a>@ fontface</h3><p>fontface用于定义一种字体，icon font技术就是利用这个特性来实现的。</p>
+<pre><code>@font-face {
+  font-family: Gentium;
+  src: url(http://example.com/fonts/Gentium.woff);
+}
+
+p { font-family: Gentium, serif; }</code></pre><h3 id="support"><a href="#support" class="headerlink" title="@ support"></a>@ support</h3><p>support检查环境的特性，它与media比较类似。</p>
+<h3 id="namespace"><a href="#namespace" class="headerlink" title="@ namespace"></a>@ namespace</h3><p>用于跟XML命名空间配合的一个规则，表示内部的CSS选择器全都带上特定命名空间。</p>
+<h3 id="viewport"><a href="#viewport" class="headerlink" title="@ viewport"></a>@ viewport</h3><p>用于设置视口的一些特性，不过兼容性目前不是很好，多数时候被HTML的meta代替。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>除了以上这些，还有些目前不太推荐使用的at规则。</p>
+<ul>
+<li>@color-profile 是 SVG1.0 引入的CSS特性，但是实现状况不怎么好。</li>
+<li>@document 还没讨论清楚，被推迟到了CSS4中。</li>
+<li>@font-feature-values 。</li>
+</ul>
+<h2 id="普通规则"><a href="#普通规则" class="headerlink" title="普通规则"></a>普通规则</h2><p>接下来我们进入qualified rule，也就是普通规则的部分，看看这里有什么需要我们记住的内容。</p>
+<p>qualified rule主要是由选择器和声明区块构成。声明区块又由属性和值构成。我在下面的列表中，介绍了这部分语法的组成要点。</p>
+<ul>
+<li><p>普通规则</p>
+</li>
+<li><p>选择器</p>
+</li>
+<li><p>声明列表</p>
+</li>
+<li><p>属性</p>
+</li>
+<li><p>值</p>
+</li>
+<li><p>值的类型</p>
+</li>
+<li><p>函数</p>
+</li>
+</ul>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p>我们先来看看选择器，它有一份独立的标准，我们可以参考这个网址：</p>
+<p><a href="https://www.w3.org/TR/selectors-4/" target="_blank" rel="noopener">https://www.w3.org/TR/selectors-4/</a></p>
+<p>这份标准不在我们前面的过滤条件中，它属于CSS和HTML共用的标准。</p>
+<p>关于选择器的叠加规则等知识我们后文会专门的一节课程来讲，这里我们就从语法的角度介绍一下选择器。</p>
+<p>在选择器标准的最后，附有一张选择器的语法表，从这份语法表，我们可以理清楚记忆选择器的思路。</p>
+<p>我们从语法结构可以看出，任何选择器，都是由几个符号结构连接的：空格、大于号、加号、波浪线、双竖线，这里需要注意一下，空格，即为后代选择器的优先级较低。</p>
+<p>然后对每一个选择器来说，如果它不是伪元素的话，由几个可选的部分组成，标签类型选择器，id、class、属性和伪类，它们中只要出现一个，就构成了选择器。</p>
+<p>如果它是伪元素，则在这个结构之后追加伪元素。只有伪类可以出现在伪元素之后。我在下面用一个列表（不太严谨地）整理了选择器的语法结构：<br><img src="https://static001.geekbang.org/resource/image/4f/67/4fa32e5cf47c72a58f7a8211d4e8fc67.png" alt></p>
+<p>我们在这里可以参考一个示例图：</p>
+<p><img src="https://static001.geekbang.org/resource/image/8b/7c/8bdd0a249ab1dbf8b854b2decd7eb87c.png" alt></p>
+<p>（语法结构分析示例）</p>
+<p>看完了选择器，我们继续来看看声明部分的语法。</p>
+<h2 id="声明：属性和值"><a href="#声明：属性和值" class="headerlink" title="声明：属性和值"></a>声明：属性和值</h2><p>声明部分是一个由“属性:值”组成的序列。</p>
+<p><strong>属性</strong>是由中划线、下划线、字母等组成的标识符，CSS还支持使用反斜杠转义。我们需要注意的是：属性不允许使用连续的两个中划线开头，这样的属性会被认为是CSS变量。</p>
+<p>在<a href="https://www.w3.org/TR/css-variables/" target="_blank" rel="noopener">CSS Variables标准</a>中，以双中划线开头的属性被当作变量，与之配合的则是 var 函数：</p>
+<pre><code>:root {
+  --main-color: #06c;
+  --accent-color: #006;
+}
+/* The rest of the CSS file */
+#foo h1 {
+  color: var(--main-color);
+}</code></pre><p><strong>值</strong>的部分，主要<a href="https://www.w3.org/TR/css-values-4/" target="_blank" rel="noopener">在标准 CSS Values and Unit</a>，根据每个CSS属性可以取到不同的值，这里的值可能是字符串、标识符。</p>
+<p>CSS属性值可能是以下类型。</p>
+<ul>
+<li>CSS范围的关键字：initial，unset，inherit，任何属性都可以的关键字。</li>
+<li>字符串：比如content属性。</li>
+<li>URL：使用url() 函数的URL值。</li>
+<li>整数/实数：比如flex属性。</li>
+<li>维度：单位的整数/实数，比如width属性。</li>
+<li>百分比：大部分维度都支持。</li>
+<li>颜色：比如background-color属性。</li>
+<li>图片：比如background-image属性。</li>
+<li>2D位置：比如background-position属性。</li>
+<li>函数：来自函数的值，比如transform属性。</li>
+</ul>
+<p>这里我们要重点介绍一下函数。一些属性会要求产生函数类型的值，比如easing-function会要求cubic-bezier()函数的值：</p>
+<p>CSS支持一批特定的计算型函数：</p>
+<ul>
+<li>calc()</li>
+<li>max()</li>
+<li>min()</li>
+<li>clamp()</li>
+<li>toggle()</li>
+<li>attr()</li>
+</ul>
+<p><strong>calc()</strong>函数是基本的表达式计算，它支持加减乘除四则运算。在针对维度进行计算时，calc()函数允许不同单位混合运算，这非常的有用。</p>
+<p>例如：</p>
+<pre><code>section {
+  float: left;
+  margin: 1em; border: solid 1px;
+  width: calc(100%/3 - 2*1em - 2*1px);
+}</code></pre><p><strong>max()、min()和clamp()</strong>则是一些比较大小的函数，max()表示取两数中较大的一个，min()表示取两数之中较小的一个，clamp()则是给一个值限定一个范围，超出范围外则使用范围的最大或者最小值。</p>
+<p>toggle()函数在规则选中多于一个元素时生效，它会在几个值之间来回切换，比如我们要让一个列表项的样式圆点和方点间隔出现，可以使用下面代码：</p>
+<pre><code>ul { list-style-type: toggle(circle, square); }</code></pre><p>attr()函数允许CSS接受属性值的控制。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在这一部分，我们介绍了CSS语法的总体结构，CSS的语法总体结构是由两种规则列表构成，一种是at 规则，另一种是普通规则。</p>
+<p>在at规则中，我举了13个以上的例子，并逐个进行了简单的介绍。而在普通规则的部分，我介绍了选择器和声明区块是普通规则的主要组成部分。</p>
+<p>并且，我给出了一个（不太严谨）的选择器语法结构，声明区块则由属性和值构成，这一部分我们重点介绍了函数。</p>
+<p>从整体上去掌握内容，再去定位到单个细节，这对于我们学习CSS有非常重要的提示作用。</p>
+<p>最后，给你留一个思考问题，CSS的函数有很多，本文也提到了不少，请你也一起查阅资料，试着总结一下，你能找到多少种CSS函数？</p>
+<p><img src="https://static001.geekbang.org/resource/image/7c/b1/7ca7c24e92d25bde2e8609ed5386b5b1.jpg" alt></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/page/7/">Previous</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/page/9/">Next</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/">1</a></li>
+            
+            <li><span class="pagination-ellipsis has-text-black-ter">&hellip;</span></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/7/">7</a></li>
+            
+            <li><a class="pagination-link is-current" href="/page/8/">8</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/9/">9</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/10/">10</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/avatar.png" alt="xcool">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        xcool
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        enchanter
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>http://www.enchanter.tech</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        99
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        2
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/zhangxiongxin/blog" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/zhangxiongxin">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/许世伟的架构课/">
+            <span class="level-start">
+                <span class="level-item">许世伟的架构课</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">42</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/重学前端/">
+            <span class="level-start">
+                <span class="level-item">重学前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">57</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="37 | 键值存储与数据库">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:23.566Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/37 | 键值存储与数据库/" class="title has-link-black-ter is-size-6 has-text-weight-normal">37 | 键值存储与数据库</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="36 | 业务状态与存储中间件">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:21.648Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/36 | 业务状态与存储中间件/" class="title has-link-black-ter is-size-6 has-text-weight-normal">36 | 业务状态与存储中间件</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="35 | 流量调度与负载均衡">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:19.672Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/35 | 流量调度与负载均衡/" class="title has-link-black-ter is-size-6 has-text-weight-normal">35 | 流量调度与负载均衡</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="34 | 服务端开发的宏观视角">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:17.750Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/34 | 服务端开发的宏观视角/" class="title has-link-black-ter is-size-6 has-text-weight-normal">34 | 服务端开发的宏观视角</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="33 | 桌面开发篇：回顾与总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-08-31T10:08:15.818Z">2019-08-31</time></div>
+                    <a href="/2019/08/31/许世伟的架构课/33 | 桌面开发篇：回顾与总结/" class="title has-link-black-ter is-size-6 has-text-weight-normal">33 | 桌面开发篇：回顾与总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/许世伟的架构课/">许世伟的架构课</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">99</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Enchanter" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 xcool&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
