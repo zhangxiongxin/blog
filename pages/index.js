@@ -6,9 +6,7 @@ import Header from '../components/Header'
 import '../static/style/pages/index.css'
 
 const Home = (list) => {
-  console.dir(list)
   const [mylist] = useState(list.data.result)
-  console.log(mylist)
   return(
     <div>
     <Head>
@@ -56,14 +54,4 @@ Home.getInitialProps = async ()=>{
   })
   return await promise
 }
-// Home.getInitialProps = async ()=>{
-//   const promise = new Promise((resolve)=>{
-//     axios('http://127.0.0.1:7001/default/getArticleList').then(
-//       (res)=>{
-//         resolve(res.data)
-//       }
-//     )
-//   })
-//   return await promise
-// }
 export default Home
